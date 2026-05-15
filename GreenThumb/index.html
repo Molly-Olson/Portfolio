@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GreenThumb Landscaping — Professional lawn care, garden design, hardscaping, and seasonal cleanup serving the local area. Licensed &amp; insured. Get a free quote today." />
+  <title>GreenThumb Landscaping | Your Yard. Our Passion.</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =============================================
+       NAVBAR
+       ============================================= -->
+  <header id="navbar" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+
+        <a href="#hero" class="nav-logo" aria-label="GreenThumb Landscaping — Home">
+          <i class="bi bi-tree-fill" aria-hidden="true"></i>
+          <span><span>Green</span>Thumb</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#services" data-scroll class="nav-link">Services</a></li>
+          <li><a href="#why-us"   data-scroll class="nav-link">Why Us</a></li>
+          <li><a href="#process"  data-scroll class="nav-link">Our Process</a></li>
+          <li><a href="#gallery"  data-scroll class="nav-link">Gallery</a></li>
+          <li><a href="#testimonials" data-scroll class="nav-link">Reviews</a></li>
+          <li><a href="#quote"    data-scroll class="nav-link nav-cta">Get a Free Quote</a></li>
+        </ul>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =============================================
+         HERO
+         ============================================= -->
+    <section id="hero" aria-label="Hero">
+      <div class="container">
+        <div class="hero-inner">
+
+          <!-- Copy -->
+          <div class="hero-copy">
+            <div class="hero-badge">
+              <i class="bi bi-patch-check-fill" aria-hidden="true"></i>
+              Locally Owned &amp; Operated Since 2009
+            </div>
+
+            <h1 class="hero-headline">
+              Your Yard.<br /><em>Our Passion.</em>
+            </h1>
+
+            <p class="hero-subtext">
+              We transform ordinary outdoor spaces into landscapes you'll love coming home to.
+              From weekly lawn care to complete yard makeovers — done right, every time.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#quote" class="btn btn-primary">
+                <i class="bi bi-calendar-check" aria-hidden="true"></i>
+                Get a Free Quote
+              </a>
+              <a href="#gallery" class="btn btn-outline">
+                <i class="bi bi-images" aria-hidden="true"></i>
+                View Our Work
+              </a>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="hero-credentials" role="list" aria-label="Trust credentials">
+              <div class="cred-badge" role="listitem">
+                <i class="bi bi-shield-check" aria-hidden="true"></i>
+                <div>
+                  <strong>Licensed &amp; Insured</strong>
+                  <span>Fully bonded &amp; covered</span>
+                </div>
+              </div>
+              <div class="cred-badge" role="listitem">
+                <i class="bi bi-award" aria-hidden="true"></i>
+                <div>
+                  <strong>15+ Years Experience</strong>
+                  <span>Since 2009</span>
+                </div>
+              </div>
+              <div class="cred-badge" role="listitem">
+                <i class="bi bi-people" aria-hidden="true"></i>
+                <div>
+                  <strong>500+ Happy Clients</strong>
+                  <span>And growing every season</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual Panel -->
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-img-main">
+              <img
+                src="https://picsum.photos/seed/landscapehero/700/525"
+                alt="A beautifully landscaped backyard with lush green lawn"
+                loading="eager"
+              />
+            </div>
+            <div class="hero-stat-strip">
+              <div class="hero-stat">
+                <span class="stat-num" data-count="500" data-suffix="+">500+</span>
+                <span class="stat-label">Clients Served</span>
+              </div>
+              <div class="hero-stat">
+                <span class="stat-num" data-count="15" data-suffix="+">15+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <div class="hero-stat">
+                <span class="stat-num" data-count="98" data-suffix="%">98%</span>
+                <span class="stat-label">Satisfaction Rate</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         SERVICES
+         ============================================= -->
+    <section id="services" aria-labelledby="services-heading">
+      <div class="container">
+
+        <header class="services-header reveal">
+          <span class="section-label">What We Do</span>
+          <h2 class="section-title" id="services-heading">
+            Full-Service Landscaping,<br />Start to Finish
+          </h2>
+          <p class="section-subtitle">
+            Whether you need a quick tune-up or a complete outdoor transformation,
+            our team brings the same level of care and craftsmanship to every job.
+          </p>
+        </header>
+
+        <div class="services-grid">
+
+          <!-- Lawn Mowing -->
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <i class="bi bi-scissors" aria-hidden="true"></i>
+            </div>
+            <h3>Lawn Mowing &amp; Maintenance</h3>
+            <p>
+              Consistent, reliable mowing keeps your lawn healthy and looking sharp all season long.
+              We edge, trim, and blow every visit — no shortcuts, no mess left behind.
+            </p>
+            <a href="#quote" class="service-link">
+              Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <!-- Garden Design -->
+          <article class="service-card reveal reveal-delay-1">
+            <div class="service-icon">
+              <i class="bi bi-flower3" aria-hidden="true"></i>
+            </div>
+            <h3>Garden Design</h3>
+            <p>
+              We design and install custom garden beds tailored to your soil, sun exposure, and style.
+              Native plants, seasonal color, perennial borders — we plan it so it thrives for years.
+            </p>
+            <a href="#quote" class="service-link">
+              Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <!-- Tree & Shrub Trimming -->
+          <article class="service-card reveal reveal-delay-2">
+            <div class="service-icon">
+              <i class="bi bi-tree" aria-hidden="true"></i>
+            </div>
+            <h3>Tree &amp; Shrub Trimming</h3>
+            <p>
+              Properly trimmed trees and shrubs are healthier, safer, and better-looking.
+              We shape overgrown hedges, remove deadwood, and restore natural structure without over-cutting.
+            </p>
+            <a href="#quote" class="service-link">
+              Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <!-- Irrigation -->
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <i class="bi bi-droplet" aria-hidden="true"></i>
+            </div>
+            <h3>Irrigation Systems</h3>
+            <p>
+              Save water and keep your landscape green without the hassle. We design, install,
+              and service smart irrigation systems that water the right zones at the right times.
+            </p>
+            <a href="#quote" class="service-link">
+              Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <!-- Hardscaping -->
+          <article class="service-card reveal reveal-delay-1">
+            <div class="service-icon">
+              <i class="bi bi-bricks" aria-hidden="true"></i>
+            </div>
+            <h3>Hardscaping &amp; Patios</h3>
+            <p>
+              Expand your living space outdoors. We build custom patios, retaining walls, walkways,
+              and fire pit areas using quality materials that stand up to the seasons.
+            </p>
+            <a href="#quote" class="service-link">
+              Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
+
+          <!-- Seasonal Cleanup -->
+          <article class="service-card reveal reveal-delay-2">
+            <div class="service-icon">
+              <i class="bi bi-wind" aria-hidden="true"></i>
+            </div>
+            <h3>Seasonal Cleanup</h3>
+            <p>
+              Spring and fall cleanups that clear out debris, prep beds, and set your yard up for
+              the season ahead. Leaf removal, mulch refresh, aeration, overseeding — we do it all.
+            </p>
+            <a href="#quote" class="service-link">
+              Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         WHY US
+         ============================================= -->
+    <section id="why-us" aria-labelledby="why-us-heading">
+      <div class="container">
+        <div class="why-us-inner">
+
+          <!-- Image -->
+          <div class="why-us-img reveal">
+            <img
+              src="https://picsum.photos/seed/gardener1/600/750"
+              alt="GreenThumb crew member tending a garden bed"
+              loading="lazy"
+            />
+            <div class="why-us-img-badge">
+              <span class="big-num">#1</span>
+              <span class="badge-label">Rated Landscaper<br />in the Area</span>
+            </div>
+          </div>
+
+          <!-- Copy -->
+          <div class="why-us-copy">
+            <span class="section-label">Why Choose Us</span>
+            <h2 class="section-title" id="why-us-heading">
+              We Treat Your Yard<br />Like It's Our Own
+            </h2>
+            <p class="section-subtitle">
+              There's no shortage of lawn crews out there. Here's what sets GreenThumb apart —
+              and why our clients keep calling us back season after season.
+            </p>
+
+            <div class="why-features">
+
+              <div class="why-feature reveal">
+                <div class="why-feature-icon">
+                  <i class="bi bi-clock-history" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h4>Reliable &amp; On-Time, Every Time</h4>
+                  <p>
+                    We show up when we say we will — no excuses, no rescheduling at the last minute.
+                    Your scheduled visits are locked in, and our crew is there rain or shine (unless
+                    weather makes the work unsafe or counterproductive).
+                  </p>
+                </div>
+              </div>
+
+              <div class="why-feature reveal reveal-delay-1">
+                <div class="why-feature-icon">
+                  <i class="bi bi-shield-fill-check" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h4>Fully Insured &amp; Licensed</h4>
+                  <p>
+                    GreenThumb carries full general liability insurance and workers' compensation
+                    coverage on every job. You're never on the hook if something unexpected happens
+                    on your property. Licensed by the state — we don't cut corners, legally or otherwise.
+                  </p>
+                </div>
+              </div>
+
+              <div class="why-feature reveal reveal-delay-2">
+                <div class="why-feature-icon">
+                  <i class="bi bi-emoji-smile" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h4>Satisfaction Guaranteed</h4>
+                  <p>
+                    We don't leave until you're happy. If something isn't right, we make it right —
+                    same day, no extra charge. Our reputation is built on referrals, and we've earned
+                    every single one of them.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         PROCESS
+         ============================================= -->
+    <section id="process" aria-labelledby="process-heading">
+      <div class="container">
+
+        <header class="process-header text-center reveal">
+          <span class="section-label">How It Works</span>
+          <h2 class="section-title" id="process-heading">
+            From First Call to Finished Yard
+          </h2>
+          <p class="section-subtitle">
+            Getting started is easy. Our four-step process keeps things simple,
+            transparent, and hassle-free — so you can just enjoy the results.
+          </p>
+        </header>
+
+        <div class="process-steps">
+
+          <div class="process-step reveal">
+            <div class="step-num">
+              <span class="num">1</span>
+            </div>
+            <h3>Free Consultation</h3>
+            <p>
+              We come to you. Walk us around your property, tell us what's bugging you and
+              what you're dreaming about. No pressure, no obligation — just honest conversation.
+            </p>
+          </div>
+
+          <div class="process-step reveal reveal-delay-1">
+            <div class="step-num">
+              <span class="num">2</span>
+            </div>
+            <h3>Custom Plan &amp; Quote</h3>
+            <p>
+              We put together a detailed plan and a clear, itemized quote. No hidden fees, no
+              surprise add-ons. You'll know exactly what we're doing and exactly what it costs.
+            </p>
+          </div>
+
+          <div class="process-step reveal reveal-delay-2">
+            <div class="step-num">
+              <span class="num">3</span>
+            </div>
+            <h3>Professional Installation</h3>
+            <p>
+              Our experienced crew gets to work on a schedule that fits your life. We use
+              quality materials, clean up after every visit, and keep you informed from start to finish.
+            </p>
+          </div>
+
+          <div class="process-step reveal reveal-delay-3">
+            <div class="step-num">
+              <span class="num">4</span>
+            </div>
+            <h3>Ongoing Care</h3>
+            <p>
+              Great landscapes don't maintain themselves. Sign up for a recurring maintenance
+              plan and we'll keep things looking pristine all year — you won't lift a finger.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         GALLERY
+         ============================================= -->
+    <section id="gallery" aria-labelledby="gallery-heading">
+      <div class="container">
+
+        <header class="gallery-header reveal">
+          <span class="section-label">Our Work</span>
+          <h2 class="section-title" id="gallery-heading">
+            Projects We're Proud Of
+          </h2>
+          <p class="section-subtitle">
+            Every project is different, and we love it that way. Here's a sample of
+            what the GreenThumb crew has been up to lately.
+          </p>
+        </header>
+
+        <div class="gallery-grid" role="list" aria-label="Project gallery">
+
+          <div class="gallery-item reveal" role="listitem">
+            <img
+              src="https://picsum.photos/seed/garden1/600/400"
+              alt="Lush backyard garden with custom plantings"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <span><i class="bi bi-zoom-in" aria-hidden="true"></i> View Project</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal reveal-delay-1" role="listitem">
+            <img
+              src="https://picsum.photos/seed/patio2/600/400"
+              alt="Custom stone patio with retaining wall"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <span><i class="bi bi-zoom-in" aria-hidden="true"></i> View Project</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal reveal-delay-2" role="listitem">
+            <img
+              src="https://picsum.photos/seed/lawn3/600/400"
+              alt="Perfectly manicured front lawn and flower beds"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <span><i class="bi bi-zoom-in" aria-hidden="true"></i> View Project</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal reveal-delay-1" role="listitem">
+            <img
+              src="https://picsum.photos/seed/hedge4/600/400"
+              alt="Trimmed hedge row along driveway"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <span><i class="bi bi-zoom-in" aria-hidden="true"></i> View Project</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal reveal-delay-2" role="listitem">
+            <img
+              src="https://picsum.photos/seed/flowers5/600/400"
+              alt="Colorful seasonal flower bed installation"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <span><i class="bi bi-zoom-in" aria-hidden="true"></i> View Project</span>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal reveal-delay-3" role="listitem">
+            <img
+              src="https://picsum.photos/seed/yard6/600/400"
+              alt="Full yard makeover with sod, beds, and mulch"
+              loading="lazy"
+            />
+            <div class="gallery-overlay">
+              <span><i class="bi bi-zoom-in" aria-hidden="true"></i> View Project</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         TESTIMONIALS
+         ============================================= -->
+    <section id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+
+        <header class="testimonials-header text-center reveal">
+          <span class="section-label">Client Reviews</span>
+          <h2 class="section-title" id="testimonials-heading">
+            Don't Take Our Word for It
+          </h2>
+          <p class="section-subtitle">
+            We let our results speak for themselves. Here's what a few of our neighbors
+            have to say after working with the GreenThumb team.
+          </p>
+        </header>
+
+        <div class="testimonials-grid">
+
+          <article class="testimonial-card reveal">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+            </div>
+            <blockquote>
+              "GreenThumb redesigned our entire front yard and we could not be happier.
+              They listened to exactly what we wanted, stayed on budget, and the finished
+              result blew us away. We've gotten more compliments from neighbors in the last
+              month than in the twelve years we've lived here."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">SK</div>
+              <div class="author-meta">
+                <strong>Sandra &amp; Kevin M.</strong>
+                <span>Riverside Heights — Front Yard Redesign</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal reveal-delay-1">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+            </div>
+            <blockquote>
+              "After three different lawn services that kept no-showing, a friend recommended
+              GreenThumb. They've been coming every other week for two years and have missed
+              exactly zero visits. The lawn looks incredible and I never have to worry about
+              it — that reliability alone is worth every penny."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">DT</div>
+              <div class="author-meta">
+                <strong>David T.</strong>
+                <span>Oak Park — Weekly Lawn Maintenance</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal reveal-delay-2">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+              <i class="bi bi-star-fill" aria-hidden="true"></i>
+            </div>
+            <blockquote>
+              "We hired GreenThumb to build a backyard patio and they knocked it out of the
+              park. The stonework is gorgeous, the drainage is perfect, and they finished
+              two days ahead of schedule. They cleaned up so thoroughly each day you'd
+              barely know they were here. Would hire again without hesitation."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">LP</div>
+              <div class="author-meta">
+                <strong>Laura P.</strong>
+                <span>Elmwood — Patio &amp; Hardscape Installation</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         QUOTE FORM
+         ============================================= -->
+    <section id="quote" aria-labelledby="quote-heading">
+      <div class="container">
+        <div class="quote-inner">
+
+          <!-- Form -->
+          <div class="quote-form-wrap reveal">
+            <span class="section-label">Free Estimate</span>
+            <h2 class="section-title" id="quote-heading">
+              Let's Talk About<br />Your Project
+            </h2>
+            <p class="section-subtitle">
+              Fill out the form and we'll get back to you within one business day with a
+              no-obligation quote. All consultations are free.
+            </p>
+
+            <form id="quoteForm" novalidate aria-label="Quote request form">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name <span aria-hidden="true">*</span></label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="Jane"
+                    required
+                    autocomplete="given-name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name <span aria-hidden="true">*</span></label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Smith"
+                    required
+                    autocomplete="family-name"
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Phone Number <span aria-hidden="true">*</span></label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="(555) 867-5309"
+                    required
+                    autocomplete="tel"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="jane@example.com"
+                    autocomplete="email"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="address">Property Address <span aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="address"
+                  name="address"
+                  placeholder="123 Maple Street, Springfield"
+                  required
+                  autocomplete="street-address"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="service">Service Needed <span aria-hidden="true">*</span></label>
+                <select id="service" name="service" required>
+                  <option value="" disabled selected>Select a service…</option>
+                  <option value="mowing">Lawn Mowing &amp; Maintenance</option>
+                  <option value="garden-design">Garden Design</option>
+                  <option value="tree-shrub">Tree &amp; Shrub Trimming</option>
+                  <option value="irrigation">Irrigation Systems</option>
+                  <option value="hardscaping">Hardscaping &amp; Patios</option>
+                  <option value="seasonal">Seasonal Cleanup</option>
+                  <option value="multiple">Multiple Services / Full Property</option>
+                  <option value="other">Other — I'll describe below</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="description">Project Description</label>
+                <textarea
+                  id="description"
+                  name="description"
+                  placeholder="Tell us about your yard, what you're hoping to achieve, and any details that would help us understand your project…"
+                  rows="4"
+                ></textarea>
+              </div>
+
+              <div class="form-submit">
+                <button type="submit" class="btn btn-primary">
+                  <i class="bi bi-send-fill" aria-hidden="true"></i>
+                  Request My Free Quote
+                </button>
+              </div>
+
+            </form>
+
+            <!-- Success message (shown after submit) -->
+            <div id="formSuccess" class="form-success" role="alert" aria-live="polite">
+              <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+              <h3>Request Received!</h3>
+              <p>
+                Thanks for reaching out. We'll review your project and get back to you
+                within one business day to schedule your free consultation.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Contact Info Sidebar -->
+          <aside class="contact-sidebar reveal reveal-delay-2" aria-label="Contact information">
+            <span class="section-label">Get in Touch</span>
+            <h2 class="section-title">We'd Love to<br />Hear From You</h2>
+            <p class="section-subtitle">
+              Prefer to talk to someone directly? Give us a call or stop by during business hours.
+            </p>
+
+            <div class="contact-items">
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <strong>Call Us</strong>
+                  <a href="tel:+15558675309">(555) 867-5309</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <strong>Email Us</strong>
+                  <a href="mailto:hello@greenthumblandscaping.com">hello@greenthumblandscaping.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="bi bi-clock-fill" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <strong>Business Hours</strong>
+                  <span>Mon–Fri 7am–6pm · Sat 8am–3pm</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <strong>Our Office</strong>
+                  <span>456 Garden Way, Springfield, IL 62701</span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="service-area-box">
+              <h4><i class="bi bi-map" aria-hidden="true"></i> Service Area</h4>
+              <p>
+                We proudly serve Springfield, Oak Park, Riverside Heights, Elmwood, Greenfield,
+                and all surrounding communities within a 30-mile radius. Not sure if we come
+                to you? Just give us a call.
+              </p>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =============================================
+       FOOTER
+       ============================================= -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo" aria-label="GreenThumb Landscaping — Home">
+            <i class="bi bi-tree-fill" aria-hidden="true"></i>
+            <span><span>Green</span>Thumb</span>
+          </a>
+          <p>
+            Professional landscaping and lawn care services for homeowners who want
+            an outdoor space they're proud of — without the hassle of doing it themselves.
+          </p>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Google Business"><i class="bi bi-google" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Nextdoor"><i class="bi bi-house-heart" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <!-- Services Links -->
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services"><i class="bi bi-caret-right-fill" aria-hidden="true"></i>Lawn Mowing</a></li>
+            <li><a href="#services"><i class="bi bi-caret-right-fill" aria-hidden="true"></i>Garden Design</a></li>
+            <li><a href="#services"><i class="bi bi-caret-right-fill" aria-hidden="true"></i>Tree &amp; Shrub Trimming</a></li>
+            <li><a href="#services"><i class="bi bi-caret-right-fill" aria-hidden="true"></i>Irrigation Systems</a></li>
+            <li><a href="#services"><i class="bi bi-caret-right-fill" aria-hidden="true"></i>Hardscaping &amp; Patios</a></li>
+            <li><a href="#services"><i class="bi bi-caret-right-fill" aria-hidden="true"></i>Seasonal Cleanup</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#why-us"><i class="bi bi-caret-right-fill" aria-hidden="true"></i>Why GreenThumb</a></li>
+            <li><a href="#process"><i class="bi bi-caret-right-fill" aria-hidden="true"></i>Our Process</a></li>
+            <li><a href="#gallery"><i class="bi bi-caret-right-fill" aria-hidden="true"></i>Project Gallery</a></li>
+            <li><a href="#testimonials"><i class="bi bi-caret-right-fill" aria-hidden="true"></i>Client Reviews</a></li>
+            <li><a href="#quote"><i class="bi bi-caret-right-fill" aria-hidden="true"></i>Get a Free Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+            <span><a href="tel:+15558675309">(555) 867-5309</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+            <span><a href="mailto:hello@greenthumblandscaping.com">hello@greenthumb<br />landscaping.com</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+            <span>456 Garden Way<br />Springfield, IL 62701</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-clock-fill" aria-hidden="true"></i>
+            <span>Mon–Fri 7am–6pm<br />Sat 8am–3pm</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024 GreenThumb Landscaping. All rights reserved.
+          Licensed &amp; Insured · IL Contractor Lic. #LC-84291
+        </p>
+        <p>
+          Site designed by <a href="mailto:olsonm85@gmail.com">Mo Olson</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+
+</body>
+</html>
