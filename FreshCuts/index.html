@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fresh Cuts Barbershop — Sharp looks, clean lines, every time. Book your appointment today." />
+  <title>Fresh Cuts Barbershop</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================================================
+       NAVBAR
+  ================================================ -->
+  <nav id="navbar" class="navbar navbar-expand-lg py-3">
+    <div class="container">
+
+      <a class="navbar-brand" href="#hero">
+        <span class="scissors">✂</span> Fresh <span>Cuts</span>
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#booking">Contact</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="nav-link nav-book-btn px-4" href="#booking">Book Now</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ================================================
+       HERO
+  ================================================ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-7 hero-content">
+
+          <div class="hero-eyebrow">
+            <i class="bi bi-scissors"></i>
+            Est. 2018 &nbsp;·&nbsp; Walk-ins Welcome
+          </div>
+
+          <h1 class="hero-title">
+            Sharp Looks.<br />
+            <span class="accent">Clean Lines.</span><br />
+            Every Time.
+          </h1>
+
+          <p class="hero-subtitle">
+            Fresh Cuts is your neighborhood barbershop, where old-school craft meets modern style.
+            Whether you want a clean fade, a classic taper, or a hot towel shave — we've got you covered.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#booking" class="btn-gold">
+              <i class="bi bi-calendar-check me-2"></i>Book Appointment
+            </a>
+            <a href="#services" class="btn-outline">
+              <i class="bi bi-grid me-2"></i>View Services
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">6+</span>
+              <div class="stat-label">Years Open</div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5,000+</span>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">4.9★</span>
+              <div class="stat-label">Google Rating</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Barber Pole -->
+    <div class="barber-pole-wrap">
+      <div class="pole-cap"></div>
+      <div class="barber-pole">
+        <div class="pole-stripes"></div>
+        <div class="pole-glare"></div>
+      </div>
+      <div class="pole-cap bottom"></div>
+      <div class="pole-label">Since 2018</div>
+    </div>
+
+  </section>
+
+  <!-- ================================================
+       SERVICES
+  ================================================ -->
+  <section id="services">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <span class="section-label">What We Offer</span>
+        <h2 class="section-title">Our Services &amp; Pricing</h2>
+        <div class="divider centered"></div>
+        <p class="section-subtitle mx-auto">
+          Every service is performed by an experienced barber using premium products.
+          No rush, no shortcuts — just a great cut every single time.
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Classic Haircut -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="bi bi-scissors"></i>
+            </div>
+            <div class="service-name">Classic Haircut</div>
+            <div class="service-price">$25</div>
+            <p class="service-desc">
+              A timeless cut shaped and styled to your preference.
+              Includes a shampoo, towel dry, and finish with your choice of product.
+            </p>
+          </div>
+        </div>
+
+        <!-- Fade -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="bi bi-subtract"></i>
+            </div>
+            <div class="service-name">Fade</div>
+            <div class="service-price">$30</div>
+            <p class="service-desc">
+              Low, mid, or high — our barbers blend tight and clean every time.
+              Includes line-up and edge detail around the neck and temples.
+            </p>
+          </div>
+        </div>
+
+        <!-- Beard Trim -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="bi bi-person-fill"></i>
+            </div>
+            <div class="service-name">Beard Trim</div>
+            <div class="service-price">$15</div>
+            <p class="service-desc">
+              Shape, define, and clean up your beard with clippers and a straight razor.
+              Add this to any haircut service for the full look.
+            </p>
+          </div>
+        </div>
+
+        <!-- Hot Towel Shave -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="bi bi-moisture"></i>
+            </div>
+            <div class="service-name">Hot Towel Shave</div>
+            <div class="service-price">$35</div>
+            <p class="service-desc">
+              The full experience — hot towel prep, premium shaving cream, straight razor shave,
+              and a cool towel finish with aftershave balm.
+            </p>
+          </div>
+        </div>
+
+        <!-- Kids Cut -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="bi bi-stars"></i>
+            </div>
+            <div class="service-name">Kids Cut</div>
+            <div class="service-price">$20</div>
+            <p class="service-desc">
+              Gentle, patient service for children 12 and under.
+              We make sure every kid leaves looking sharp and feeling confident.
+            </p>
+          </div>
+        </div>
+
+        <!-- Full Package -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="bi bi-award-fill"></i>
+            </div>
+            <div class="service-name">Full Package</div>
+            <div class="service-price">$55</div>
+            <p class="service-desc">
+              Haircut, beard trim, hot towel treatment, and scalp massage — the works.
+              Treat yourself to the complete Fresh Cuts experience.
+            </p>
+          </div>
+        </div>
+
+      </div><!-- /row -->
+
+      <div class="text-center mt-5">
+        <p class="text-muted mb-3" style="font-size:0.9rem;">
+          <i class="bi bi-info-circle me-1"></i>
+          All prices are base rates. Prices may vary based on hair length and complexity.
+        </p>
+        <a href="#booking" class="btn-gold">Book Your Service</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================
+       ABOUT
+  ================================================ -->
+  <section id="about">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <!-- Text -->
+        <div class="col-lg-6 order-2 order-lg-1">
+          <span class="section-label">Our Story</span>
+          <h2 class="section-title">More Than Just a Haircut</h2>
+          <div class="divider"></div>
+
+          <p class="mb-4" style="color: var(--clr-muted); font-size: 1rem; line-height: 1.8;">
+            Founded in 2018, Fresh Cuts has been the neighborhood's go-to spot for clean, precise cuts
+            and a genuine barbershop experience. What started as a single chair in a small studio has
+            grown into a trusted destination for men of all ages — from the Friday night date-night fresh-up
+            to the weekly maintenance crew who wouldn't go anywhere else.
+          </p>
+
+          <p class="mb-4" style="color: var(--clr-muted); font-size: 1rem; line-height: 1.8;">
+            Owner and master barber <strong style="color: var(--clr-text);">Marcus Webb</strong> built
+            Fresh Cuts on a simple belief: every person who sits in the chair deserves undivided attention,
+            skill, and a cut they're proud to walk out with. That philosophy drives everything we do —
+            from the products we use to the music we play.
+          </p>
+
+          <div class="about-feature">
+            <div class="about-feature-icon">
+              <i class="bi bi-patch-check-fill"></i>
+            </div>
+            <div class="about-feature-text">
+              <h5>Licensed & Experienced</h5>
+              <p>All our barbers are fully licensed with a combined 20+ years of experience.</p>
+            </div>
+          </div>
+
+          <div class="about-feature">
+            <div class="about-feature-icon">
+              <i class="bi bi-droplet-half"></i>
+            </div>
+            <div class="about-feature-text">
+              <h5>Premium Products Only</h5>
+              <p>We use top-shelf grooming products — because your hair deserves the best.</p>
+            </div>
+          </div>
+
+          <div class="about-feature">
+            <div class="about-feature-icon">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <div class="about-feature-text">
+              <h5>Community First</h5>
+              <p>We're proud to serve this neighborhood and give back whenever we can.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Image -->
+        <div class="col-lg-6 order-1 order-lg-2">
+          <div class="about-img-wrap">
+            <img
+              src="https://picsum.photos/seed/barbershop-about/600/750"
+              alt="Marcus Webb, owner of Fresh Cuts Barbershop"
+              loading="lazy"
+            />
+            <div class="about-img-badge">
+              <span class="badge-number">6+</span>
+              <span class="badge-text">Years Serving<br>the Neighborhood</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       GALLERY
+  ================================================ -->
+  <section id="gallery">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <span class="section-label">Our Work</span>
+        <h2 class="section-title light">Fresh Out the Chair</h2>
+        <div class="divider centered"></div>
+        <p class="section-subtitle light mx-auto">
+          Every cut tells a story. Here's a look at some of the work we're proud to put out.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-item">
+          <img src="https://picsum.photos/seed/barber1/600/420" alt="Clean fade haircut" loading="lazy" />
+          <div class="gallery-overlay"><span>Skin Fade</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://picsum.photos/seed/barber2/600/420" alt="Classic taper cut" loading="lazy" />
+          <div class="gallery-overlay"><span>Classic Taper</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://picsum.photos/seed/barber3/600/420" alt="Beard styling" loading="lazy" />
+          <div class="gallery-overlay"><span>Beard Style</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://picsum.photos/seed/barber4/600/420" alt="Hot towel shave" loading="lazy" />
+          <div class="gallery-overlay"><span>Hot Towel Shave</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://picsum.photos/seed/barber5/600/420" alt="Kids cut" loading="lazy" />
+          <div class="gallery-overlay"><span>Kids Cut</span></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://picsum.photos/seed/barber6/600/420" alt="Full package service" loading="lazy" />
+          <div class="gallery-overlay"><span>Full Package</span></div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================
+       TESTIMONIALS
+  ================================================ -->
+  <section id="testimonials">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <span class="section-label">Customer Reviews</span>
+        <h2 class="section-title">What People Are Saying</h2>
+        <div class="divider centered"></div>
+        <p class="section-subtitle mx-auto">
+          Don't take our word for it — here's what our regulars have to say.
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Review 1 -->
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">
+              "I've been coming to Fresh Cuts every two weeks for three years and I wouldn't go anywhere else.
+              Marcus knows exactly how I like my fade and never misses. The shop has great energy —
+              it's the kind of place you actually look forward to visiting."
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://picsum.photos/seed/customer1/80/80"
+                alt="Darius T."
+                class="author-avatar"
+                loading="lazy"
+              />
+              <div>
+                <p class="author-name">Darius T.</p>
+                <p class="author-since">Regular since 2020</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">
+              "Took my son here for his first real haircut and they were so patient and calm with him.
+              He came out looking like a little gentleman and hasn't stopped asking to go back.
+              Great with kids, great with adults — honestly the best barbershop in the area."
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://picsum.photos/seed/customer2/80/80"
+                alt="Jennifer M."
+                class="author-avatar"
+                loading="lazy"
+              />
+              <div>
+                <p class="author-name">Jennifer M.</p>
+                <p class="author-since">Customer since 2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-text">
+              "Got the Full Package before my wedding day and it was absolutely worth every penny.
+              The hot towel shave alone was an experience. I walked out feeling like a new man.
+              Clean, professional, and they actually take their time. Highly recommend."
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://picsum.photos/seed/customer3/80/80"
+                alt="Kevin R."
+                class="author-avatar"
+                loading="lazy"
+              />
+              <div>
+                <p class="author-name">Kevin R.</p>
+                <p class="author-since">Customer since 2021</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row -->
+
+    </div>
+  </section>
+
+  <!-- ================================================
+       BOOKING / CONTACT
+  ================================================ -->
+  <section id="booking">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <span class="section-label">Get in Touch</span>
+        <h2 class="section-title light">Book Your Appointment</h2>
+        <div class="divider centered"></div>
+        <p class="section-subtitle light mx-auto">
+          Ready for a fresh look? Fill out the form and we'll confirm your spot within a few hours.
+          Walk-ins are always welcome too.
+        </p>
+      </div>
+
+      <div class="row g-5 align-items-start">
+
+        <!-- Form -->
+        <div class="col-lg-7">
+          <div class="booking-form-card">
+            <h4 class="mb-4" style="color: var(--clr-white); font-family: var(--font-heading);">
+              Request an Appointment
+            </h4>
+
+            <form id="bookingForm" novalidate>
+              <div class="row g-3">
+
+                <div class="col-sm-6">
+                  <label class="form-label" for="bookName">Full Name</label>
+                  <input
+                    type="text"
+                    id="bookName"
+                    name="name"
+                    class="form-control"
+                    placeholder="Your name"
+                    required
+                  />
+                  <div class="invalid-feedback" style="color: #e07878; font-size: 0.8rem;">
+                    Please enter your name.
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label class="form-label" for="bookPhone">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="bookPhone"
+                    name="phone"
+                    class="form-control"
+                    placeholder="(555) 000-0000"
+                    required
+                  />
+                  <div class="invalid-feedback" style="color: #e07878; font-size: 0.8rem;">
+                    Please enter a phone number.
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label" for="bookEmail">Email Address</label>
+                  <input
+                    type="email"
+                    id="bookEmail"
+                    name="email"
+                    class="form-control"
+                    placeholder="you@example.com"
+                    required
+                  />
+                  <div class="invalid-feedback" style="color: #e07878; font-size: 0.8rem;">
+                    Please enter a valid email address.
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label class="form-label" for="bookService">Service</label>
+                  <select id="bookService" name="service" class="form-select" required>
+                    <option value="" disabled selected>Select a service...</option>
+                    <option value="classic">Classic Haircut — $25</option>
+                    <option value="fade">Fade — $30</option>
+                    <option value="beard">Beard Trim — $15</option>
+                    <option value="shave">Hot Towel Shave — $35</option>
+                    <option value="kids">Kids Cut — $20</option>
+                    <option value="package">Full Package — $55</option>
+                  </select>
+                  <div class="invalid-feedback" style="color: #e07878; font-size: 0.8rem;">
+                    Please select a service.
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <label class="form-label" for="bookDate">Preferred Date</label>
+                  <input
+                    type="date"
+                    id="bookDate"
+                    name="date"
+                    class="form-control"
+                    required
+                  />
+                  <div class="invalid-feedback" style="color: #e07878; font-size: 0.8rem;">
+                    Please pick a date.
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label" for="bookMessage">Notes (Optional)</label>
+                  <textarea
+                    id="bookMessage"
+                    name="message"
+                    class="form-control"
+                    placeholder="Anything we should know? Preferred barber, specific style, etc."
+                  ></textarea>
+                </div>
+
+                <div class="col-12 mt-1">
+                  <button type="submit" class="btn-gold w-100 py-3" style="font-size: 1rem;">
+                    <i class="bi bi-calendar-check me-2"></i>Request Appointment
+                  </button>
+
+                  <div id="formSuccess" class="success-alert mt-3">
+                    <i class="bi bi-check-circle-fill"></i>
+                    You're all set! We'll text or call you to confirm your appointment.
+                  </div>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-5">
+          <div class="contact-info">
+
+            <h3>Visit Us</h3>
+            <div class="divider" style="background: var(--clr-gold);"></div>
+
+            <div class="contact-block">
+              <div class="contact-block-title">Address</div>
+              <div class="contact-icon-row">
+                <i class="bi bi-geo-alt-fill"></i>
+                <address>
+                  2847 Elmwood Avenue<br />
+                  Suite 101<br />
+                  Chicago, IL 60614
+                </address>
+              </div>
+            </div>
+
+            <div class="contact-block">
+              <div class="contact-block-title">Phone</div>
+              <div class="contact-icon-row">
+                <i class="bi bi-telephone-fill"></i>
+                <a href="tel:+17735550192" style="color: rgba(255,255,255,0.7);">(773) 555-0192</a>
+              </div>
+            </div>
+
+            <div class="contact-block">
+              <div class="contact-block-title">Hours</div>
+              <div class="contact-icon-row mb-1">
+                <i class="bi bi-clock-fill"></i>
+                <span>We're open 6 days a week</span>
+              </div>
+              <div style="margin-left: 1.75rem;">
+                <div class="hours-row">
+                  <span class="day">Monday</span>
+                  <span>Closed</span>
+                </div>
+                <div class="hours-row">
+                  <span class="day">Tue – Fri</span>
+                  <span>9:00 AM – 7:00 PM</span>
+                </div>
+                <div class="hours-row">
+                  <span class="day">Saturday</span>
+                  <span>8:00 AM – 6:00 PM</span>
+                </div>
+                <div class="hours-row">
+                  <span class="day">Sunday</span>
+                  <span>10:00 AM – 4:00 PM</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-block">
+              <div class="contact-block-title">Follow Us</div>
+              <div class="footer-social mt-2">
+                <a href="#" class="social-link" aria-label="Instagram">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="Facebook">
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="TikTok">
+                  <i class="bi bi-tiktok"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /row -->
+    </div>
+  </section>
+
+  <!-- ================================================
+       FOOTER
+  ================================================ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Brand -->
+        <div class="col-lg-4">
+          <div class="footer-logo">✂ Fresh <span>Cuts</span></div>
+          <p class="footer-tagline">Sharp looks. Clean lines. Every time.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="TikTok">
+              <i class="bi bi-tiktok"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Google">
+              <i class="bi bi-google"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-sm-6 col-lg-2 offset-lg-1">
+          <p style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.75rem;">
+            Quick Links
+          </p>
+          <ul class="footer-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#booking">Book Now</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-sm-6 col-lg-2">
+          <p style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.75rem;">
+            Services
+          </p>
+          <ul class="footer-links">
+            <li><a href="#services">Classic Haircut</a></li>
+            <li><a href="#services">Fade</a></li>
+            <li><a href="#services">Beard Trim</a></li>
+            <li><a href="#services">Hot Towel Shave</a></li>
+            <li><a href="#services">Full Package</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-3">
+          <p style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.75rem;">
+            Contact
+          </p>
+          <ul class="footer-links" style="line-height: 1.9;">
+            <li>
+              <i class="bi bi-geo-alt me-1" style="color: var(--clr-gold);"></i>
+              2847 Elmwood Ave, Suite 101<br />
+              <span style="margin-left: 1.35rem;">Chicago, IL 60614</span>
+            </li>
+            <li>
+              <a href="tel:+17735550192">
+                <i class="bi bi-telephone me-1" style="color: var(--clr-gold);"></i>
+                (773) 555-0192
+              </a>
+            </li>
+            <li style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">
+              <i class="bi bi-clock me-1" style="color: var(--clr-gold);"></i>
+              Tue–Fri 9AM–7PM
+            </li>
+          </ul>
+        </div>
+
+      </div><!-- /row -->
+
+      <div class="footer-bottom">
+        <span class="footer-copy">
+          &copy; 2024 Fresh Cuts Barbershop. All rights reserved.
+        </span>
+        <span class="footer-credit">
+          Website designed by <a href="mailto:olsonm85@gmail.com">Mo</a>
+        </span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTop" aria-label="Scroll to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
