@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Capital Diner — Olympia's favorite neighborhood breakfast and lunch spot since 2001. Homemade food, fresh coffee, and a warm welcome near the Washington State Capitol." />
+  <title>The Capital Diner | Breakfast &amp; Lunch in Olympia, WA</title>
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================================================
+       NAVBAR
+  ================================================= -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+
+      <a href="#hero" class="nav-logo" aria-label="The Capital Diner — home">
+        <i class="bi bi-cup-hot-fill" aria-hidden="true"></i>
+        <span>The Capital <span class="diner-word">Diner</span></span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#findus">Find Us</a></li>
+      </ul>
+
+      <a href="#menu" class="btn btn-amber nav-cta sans">See Our Menu</a>
+
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-label="Toggle mobile menu"
+        aria-expanded="false"
+        aria-controls="navbar"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </nav>
+
+
+  <!-- ================================================
+       HERO
+  ================================================= -->
+  <section id="hero" aria-label="Hero">
+
+    <p class="hero-eyebrow">Olympia, Washington · Est. 2001</p>
+
+    <h1 class="hero-title">
+      Where Olympia Comes<br />for <em>Breakfast</em>
+    </h1>
+
+    <p class="hero-subtitle">
+      Homemade biscuits, hand-pressed burgers, and coffee that's always hot.
+      A neighborhood table — open every morning, rain or shine.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#menu"   class="btn btn-amber sans">View Our Menu</a>
+      <a href="#findus" class="btn btn-outline-cream sans">Find Us</a>
+    </div>
+
+    <div class="trust-badges" role="list" aria-label="Trust badges">
+      <div class="badge" role="listitem">
+        <i class="bi bi-calendar-heart" aria-hidden="true"></i>
+        <span>Open Since 2001</span>
+      </div>
+      <div class="badge" role="listitem">
+        <i class="bi bi-egg-fried" aria-hidden="true"></i>
+        <span>Homemade Daily</span>
+      </div>
+      <div class="badge" role="listitem">
+        <i class="bi bi-people-fill" aria-hidden="true"></i>
+        <span>Family Owned</span>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ================================================
+       HOURS & QUICK INFO BAR
+  ================================================= -->
+  <div id="infobar" role="complementary" aria-label="Hours and contact info">
+    <div class="infobar-inner">
+
+      <div class="info-item">
+        <i class="bi bi-clock" aria-hidden="true"></i>
+        <span>Mon–Sat: 6 am – 3 pm</span>
+      </div>
+
+      <div class="info-divider" aria-hidden="true"></div>
+
+      <div class="info-item">
+        <i class="bi bi-clock" aria-hidden="true"></i>
+        <span>Sun: 7 am – 2 pm</span>
+      </div>
+
+      <div class="info-divider" aria-hidden="true"></div>
+
+      <div class="info-item">
+        <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+        <a href="tel:+13607551892" style="color:inherit;font-weight:600;">(360) 755-1892</a>
+      </div>
+
+      <div class="info-divider" aria-hidden="true"></div>
+
+      <div class="info-item">
+        <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+        <span>412 Capitol Way S, Olympia, WA 98501</span>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ================================================
+       MENU
+  ================================================= -->
+  <section id="menu" aria-labelledby="menu-heading">
+    <div class="container">
+
+      <header class="menu-header fade-in-up">
+        <span class="section-label">What We're Cooking</span>
+        <h2 class="section-title" id="menu-heading">Made From Scratch, Every Morning</h2>
+        <p class="section-subtitle">
+          Everything on our menu is prepared fresh each day — from our biscuit dough
+          to our burger patties. No shortcuts, no freezer shortcuts, just real food.
+        </p>
+      </header>
+
+      <!-- Tab Buttons -->
+      <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+        <button
+          class="tab-btn active sans"
+          role="tab"
+          aria-selected="true"
+          aria-controls="tab-breakfast"
+          data-tab="tab-breakfast"
+        >
+          <i class="bi bi-egg-fried" aria-hidden="true"></i> Breakfast
+        </button>
+        <button
+          class="tab-btn sans"
+          role="tab"
+          aria-selected="false"
+          aria-controls="tab-lunch"
+          data-tab="tab-lunch"
+        >
+          <i class="bi bi-sandwich" aria-hidden="true"></i> Lunch
+        </button>
+        <button
+          class="tab-btn sans"
+          role="tab"
+          aria-selected="false"
+          aria-controls="tab-drinks"
+          data-tab="tab-drinks"
+        >
+          <i class="bi bi-cup-hot" aria-hidden="true"></i> Drinks &amp; Sides
+        </button>
+      </div>
+
+      <!-- ── BREAKFAST PANEL ── -->
+      <div id="tab-breakfast" class="tab-panel active" role="tabpanel" aria-labelledby="tab-btn-breakfast">
+        <p class="menu-note">Breakfast served all day · Prices do not include tax</p>
+        <div class="menu-grid">
+
+          <article class="menu-card fade-in-up">
+            <div class="menu-card-top">
+              <h3 class="menu-card-name">Buttermilk Pancake Stack</h3>
+              <span class="menu-card-price">$10</span>
+            </div>
+            <p class="menu-card-desc">Three thick-cut buttermilk pancakes, golden on the griddle, served with real maple syrup and a pat of house butter. Add blueberries or chocolate chips for $1.</p>
+            <span class="menu-card-tag">Customer Favorite</span>
+          </article>
+
+          <article class="menu-card fade-in-up">
+            <div class="menu-card-top">
+              <h3 class="menu-card-name">Capitol Scramble</h3>
+              <span class="menu-card-price">$12</span>
+            </div>
+            <p class="menu-card-desc">Three eggs scrambled with roasted red peppers, caramelized onions, baby spinach, and crumbled feta. Served with your choice of toast and home fries.</p>
+            <span class="menu-card-tag">Chef's Pick</span>
+          </article>
+
+          <article class="menu-card fade-in-up">
+            <div class="menu-card-top">
+              <h3 class="menu-card-name">Biscuits &amp; Gravy</h3>
+              <span class="menu-card-price">$11</span>
+            </div>
+            <p class="menu-card-desc">Two house-made buttermilk biscuits, split open and smothered in our slow-cooked pork sausage gravy. A Pacific Northwest morning staple done right.</p>
+          </article>
+
+          <article class="menu-card fade-in-up">
+            <div class="menu-card-top">
+              <h3 class="menu-card-name">Avocado Toast</h3>
+              <span class="menu-card-price">$13</span>
+            </div>
+            <p class="menu-card-desc">Two thick slices of toasted sourdough, smashed avocado, cherry tomatoes, everything-bagel seasoning, and a drizzle of hot honey. Top with a poached egg for $2.</p>
+          </article>
+
+          <article class="menu-card fade-in-up">
+            <div class="menu-card-top">
+              <h3 class="menu-card-name">French Toast</h3>
+              <span class="menu-card-price">$11</span>
+            </div>
+            <p class="menu-card-desc">Thick brioche dipped in a vanilla-cinnamon custard, griddled until caramelized. Dusted with powdered sugar and served with fresh seasonal fruit and warm syrup.</p>
+          </article>
+
+          <article class="menu-card fade-in-up">
+            <div class="menu-card-top">
+              <h3 class="menu-card-name">Two Eggs Your Way</h3>
+              <span class="menu-card-price">$9</span>
+            </div>
+            <p class="menu-card-desc">Two eggs cooked however you like — fried, scrambled, or poached — with your choice of toast (white, wheat, sourdough, or English muffin) and home fries.</p>
+          </article>
+
+        </div>
+      </div><!-- /tab-breakfast -->
+
+      <!-- ── LUNCH PANEL ── -->
+      <div id="tab-lunch" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-lunch" style="display:none;">
+        <p class="menu-note">Lunch served from 11 am · Prices do not include tax</p>
+        <div class="menu-grid">
+
+          <article class="menu-card fade-in-up">
+            <div class="menu-card-top">
+              <h3 class="menu-card-name">Club Sandwich</h3>
+              <span class="menu-card-price">$13</span>
+            </div>
+            <p class="menu-card-desc">Triple-decker toasted white bread loaded with oven-roasted turkey, crispy bacon, cheddar, lettuce, tomato, and house mayo. Served with house-cut fries or a side salad.</p>
+            <span class="menu-card-tag">Lunch Favorite</span>
+          </article>
+
+          <article class="menu-card fade-in-up">
+            <div class="menu-card-top">
+              <h3 class="menu-card-name">Patty Melt</h3>
+              <span class="menu-card-price">$13</span>
+            </div>
+            <p class="menu-card-desc">A hand-formed beef patty on grilled marble rye with Swiss cheese and a heap of slow-caramelized onions. Simple, honest, and deeply satisfying.</p>
+          </article>
+
+          <article class="menu-card fade-in-up">
+            <div class="menu-card-top">
+              <h3 class="menu-card-name">Capitol Burger</h3>
+              <span class="menu-card-price">$14</span>
+            </div>
+            <p class="menu-card-desc">Our signature half-pound, hand-pressed beef burger on a toasted brioche bun with aged cheddar, butter lettuce, vine tomato, red onion, and Capitol sauce. Served with fries.</p>
+            <span class="menu-card-tag">House Specialty</span>
+          </article>
+
+          <article class="menu-card fade-in-up">
+            <div class="menu-card-top">
+              <h3 class="menu-card-name">BLT</h3>
+              <span class="menu-card-price">$11</span>
+            </div>
+            <p class="menu-card-desc">Thick-cut applewood-smoked bacon, iceberg lettuce, vine-ripe tomato, and real mayo on golden-toasted sourdough. Clean, classic, and never disappointing.</p>
+          </article>
+
+          <article class="menu-card fade-in-up">
+            <div class="menu-card-top">
+              <h3 class="menu-card-name">Soup &amp; Half Sandwich</h3>
+              <span class="menu-card-price">$12</span>
+            </div>
+            <p class="menu-card-desc">A rotating bowl of made-from-scratch daily soup paired with half a deli sandwich of your choice — turkey, ham, or tuna salad. Ask your server what's in the pot today.</p>
+          </article>
+
+        </div>
+      </div><!-- /tab-lunch -->
+
+      <!-- ── DRINKS & SIDES PANEL ── -->
+      <div id="tab-drinks" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-drinks" style="display:none;">
+        <p class="menu-note">Available all day with any meal · Prices do not include tax</p>
+        <div class="menu-grid">
+
+          <article class="menu-card fade-in-up">
+            <div class="menu-card-top">
+              <h3 class="menu-card-name">Drip Coffee</h3>
+              <span class="menu-card-price">$3</span>
+            </div>
+            <p class="menu-card-desc">Fresh-brewed every 30 minutes from locally roasted beans. Regular or decaf, with unlimited refills at the table. Because a good cup of coffee is non-negotiable.</p>
+            <span class="menu-card-tag">Free Refills</span>
+          </article>
+
+          <article class="menu-card fade-in-up">
+            <div class="menu-card-top">
+              <h3 class="menu-card-name">Fresh-Squeezed Orange Juice</h3>
+              <span class="menu-card-price">$4.50</span>
+            </div>
+            <p class="menu-card-desc">Squeezed to order from fresh navel oranges. Small or large. No added sugar, no concentrate — just fruit. A Capital Diner morning classic.</p>
+          </article>
+
+          <article class="menu-card fade-in-up">
+            <div class="menu-card-top">
+              <h3 class="menu-card-name">Home Fries</h3>
+              <span class="menu-card-price">$4</span>
+            </div>
+            <p class="menu-card-desc">Skillet-fried diced potatoes with onion, bell pepper, and our house seasoning blend, cooked golden and crispy. The perfect breakfast side.</p>
+          </article>
+
+          <article class="menu-card fade-in-up">
+            <div class="menu-card-top">
+              <h3 class="menu-card-name">Seasonal Fruit Cup</h3>
+              <span class="menu-card-price">$4</span>
+            </div>
+            <p class="menu-card-desc">Fresh-cut melon, strawberries, grapes, and whatever looks best at the market this week. A lighter side that pairs with anything on the menu.</p>
+          </article>
+
+          <article class="menu-card fade-in-up">
+            <div class="menu-card-top">
+              <h3 class="menu-card-name">Toast &amp; Jam</h3>
+              <span class="menu-card-price">$3</span>
+            </div>
+            <p class="menu-card-desc">Two slices of your choice — white, wheat, sourdough, or English muffin — served with butter and a house-made seasonal jam from a local Olympia producer.</p>
+          </article>
+
+          <article class="menu-card fade-in-up">
+            <div class="menu-card-top">
+              <h3 class="menu-card-name">Fountain &amp; Juice Drinks</h3>
+              <span class="menu-card-price">$3</span>
+            </div>
+            <p class="menu-card-desc">Pepsi, Diet Pepsi, lemonade, iced tea (sweet or unsweet), cranberry, and apple juice. Free refills on fountain. Ask about our seasonal lemonade special.</p>
+          </article>
+
+        </div>
+      </div><!-- /tab-drinks -->
+
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       ABOUT
+  ================================================= -->
+  <section id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Text Column -->
+        <div class="about-text fade-in-up">
+          <span class="section-label">Our Story</span>
+          <h2 class="section-title" id="about-heading">Built on Early Mornings and Good Company</h2>
+
+          <p>
+            Linda and Dave Kowalski met as teenagers at a diner not unlike this one — Dave washing dishes, Linda waiting tables. They always said someday they'd have a place of their own. In May 2001, that someday finally arrived when they opened The Capital Diner in a little corner spot on Capitol Way South, just a short walk from the Washington State Capitol dome.
+          </p>
+          <p>
+            Over two decades later, the Kowalskis still open the doors themselves most mornings. Linda runs the kitchen, refining the same biscuit recipe she's been making since day one. Dave works the floor, knowing the regulars by name — and usually knowing their order before they sit down.
+          </p>
+          <p>
+            We don't do trendy. We do consistent. The same hash browns, the same sausage gravy, the same warm, unhurried atmosphere that Olympia's nurses, lawmakers, students, and families have relied on every morning for more than twenty years.
+          </p>
+
+          <blockquote class="about-quote">
+            <p>"Just good food, good coffee, and good people. That's all we ever wanted to be."</p>
+            <cite>— Linda &amp; Dave Kowalski, Owners</cite>
+          </blockquote>
+
+          <a href="#findus" class="btn btn-outline-amber sans">Come Say Hello</a>
+        </div>
+
+        <!-- Photo Column -->
+        <div class="about-photo fade-in-up">
+          <img
+            src="https://picsum.photos/seed/diner-interior/700/480"
+            alt="The warm, welcoming interior of The Capital Diner"
+            loading="lazy"
+            width="700"
+            height="480"
+          />
+          <div class="about-photo-caption">
+            The Capital Diner — Capitol Way South, Olympia, WA
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       GALLERY
+  ================================================= -->
+  <section id="gallery" aria-labelledby="gallery-heading">
+    <div class="container">
+
+      <header class="gallery-header fade-in-up">
+        <span class="section-label">The Diner in Photos</span>
+        <h2 class="section-title" id="gallery-heading">Come See What's Cooking</h2>
+        <p class="section-subtitle">
+          From golden pancakes at 6 am to a packed lunch counter on a rainy Tuesday —
+          this is what a real neighborhood diner looks like.
+        </p>
+      </header>
+
+      <div class="gallery-grid" role="list" aria-label="Photo gallery">
+
+        <div class="gallery-item fade-in-up" role="listitem">
+          <img
+            src="https://picsum.photos/seed/pancakes-stack/600/400"
+            alt="Stack of golden buttermilk pancakes with syrup"
+            loading="lazy"
+            width="600"
+            height="400"
+          />
+          <div class="gallery-item-overlay"><span>Buttermilk Pancakes</span></div>
+        </div>
+
+        <div class="gallery-item fade-in-up" role="listitem">
+          <img
+            src="https://picsum.photos/seed/diner-counter/600/400"
+            alt="The diner's counter with stools and a warm morning light"
+            loading="lazy"
+            width="600"
+            height="400"
+          />
+          <div class="gallery-item-overlay"><span>The Counter</span></div>
+        </div>
+
+        <div class="gallery-item fade-in-up" role="listitem">
+          <img
+            src="https://picsum.photos/seed/coffee-morning/600/400"
+            alt="A fresh cup of drip coffee on the diner table"
+            loading="lazy"
+            width="600"
+            height="400"
+          />
+          <div class="gallery-item-overlay"><span>Morning Coffee</span></div>
+        </div>
+
+        <div class="gallery-item fade-in-up" role="listitem">
+          <img
+            src="https://picsum.photos/seed/burger-melt/600/400"
+            alt="The Capitol Burger with fries"
+            loading="lazy"
+            width="600"
+            height="400"
+          />
+          <div class="gallery-item-overlay"><span>The Capitol Burger</span></div>
+        </div>
+
+        <div class="gallery-item fade-in-up" role="listitem">
+          <img
+            src="https://picsum.photos/seed/biscuits-gravy/600/400"
+            alt="House-made biscuits covered in sausage gravy"
+            loading="lazy"
+            width="600"
+            height="400"
+          />
+          <div class="gallery-item-overlay"><span>Biscuits &amp; Gravy</span></div>
+        </div>
+
+        <div class="gallery-item fade-in-up" role="listitem">
+          <img
+            src="https://picsum.photos/seed/diner-booth/600/400"
+            alt="A cozy booth by the window on a rainy Olympia morning"
+            loading="lazy"
+            width="600"
+            height="400"
+          />
+          <div class="gallery-item-overlay"><span>A Cozy Corner Booth</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       FIND US / CONTACT
+  ================================================= -->
+  <section id="findus" aria-labelledby="findus-heading">
+    <div class="container">
+
+      <header class="text-center fade-in-up" style="margin-bottom:2.5rem;">
+        <span class="section-label">Getting Here</span>
+        <h2 class="section-title" id="findus-heading">Find Us &amp; Get in Touch</h2>
+        <p class="section-subtitle" style="margin:0 auto;">
+          We're just two blocks south of the Capitol dome. Street parking is easy, and there's
+          a city lot half a block north. Walk-ins always welcome.
+        </p>
+      </header>
+
+      <div class="findus-grid">
+
+        <!-- Left: Map placeholder + Hours card -->
+        <div>
+
+          <!-- Map Placeholder -->
+          <div class="map-placeholder fade-in-up" role="img" aria-label="Map showing The Capital Diner location at 412 Capitol Way S, Olympia, WA">
+            <div class="map-inner">
+              <div class="map-pin-icon">
+                <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+              </div>
+              <div class="map-address-block">
+                <strong>The Capital Diner</strong>
+                <p>
+                  412 Capitol Way South<br />
+                  Olympia, WA 98501<br />
+                  <a href="https://www.google.com/maps/search/412+Capitol+Way+S+Olympia+WA" target="_blank" rel="noopener noreferrer" style="color:var(--amber);font-family:'Segoe UI',sans-serif;font-size:.85rem;font-weight:600;">Open in Google Maps ↗</a>
+                </p>
+              </div>
+            </div>
+            <div class="map-footer">
+              <span><i class="bi bi-car-front-fill" aria-hidden="true"></i> Street parking available on Capitol Way</span>
+              <a href="tel:+13607551892">(360) 755-1892</a>
+            </div>
+          </div><!-- /map-placeholder -->
+
+          <!-- Hours Card -->
+          <div class="hours-card fade-in-up" style="margin-top:1.5rem;">
+            <h4><i class="bi bi-clock" aria-hidden="true"></i> &nbsp;Hours</h4>
+            <div class="hours-row">
+              <span class="day">Monday – Friday</span>
+              <span class="time">6:00 am – 3:00 pm</span>
+            </div>
+            <div class="hours-row">
+              <span class="day">Saturday</span>
+              <span class="time">6:00 am – 3:00 pm</span>
+            </div>
+            <div class="hours-row">
+              <span class="day">Sunday</span>
+              <span class="time">7:00 am – 2:00 pm</span>
+            </div>
+            <div class="hours-row" style="margin-top:.5rem;border-top:1px solid rgba(253,246,227,.15);padding-top:.7rem;">
+              <span class="day" style="color:rgba(253,246,227,.5);font-size:.82rem;">Kitchen closes 30 min before closing</span>
+            </div>
+          </div>
+
+        </div><!-- /left col -->
+
+        <!-- Right: Catering Inquiry Form -->
+        <div class="contact-form fade-in-up">
+          <h3>Catering &amp; Private Event Inquiries</h3>
+          <p class="form-intro">
+            Planning a Capitol Hill morning meeting, office breakfast, or a special occasion?
+            We'd love to bring The Capital Diner experience to your event. Fill out the form
+            below and Linda will be in touch within one business day.
+          </p>
+
+          <form id="catering-form" novalidate>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-name">Your Name <span style="color:#c0392b;">*</span></label>
+                <input type="text" id="f-name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="f-email">Email Address <span style="color:#c0392b;">*</span></label>
+                <input type="email" id="f-email" name="email" placeholder="jane@example.com" required autocomplete="email" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-phone">Phone Number</label>
+                <input type="tel" id="f-phone" name="phone" placeholder="(360) 555-0100" autocomplete="tel" />
+              </div>
+              <div class="form-group">
+                <label for="f-guests">Estimated Guest Count <span style="color:#c0392b;">*</span></label>
+                <select id="f-guests" name="guests" required>
+                  <option value="">Select a range…</option>
+                  <option value="10-25">10 – 25 guests</option>
+                  <option value="25-50">25 – 50 guests</option>
+                  <option value="50-100">50 – 100 guests</option>
+                  <option value="100+">100+ guests</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="f-date">Preferred Date</label>
+              <input type="date" id="f-date" name="date" />
+            </div>
+
+            <div class="form-group">
+              <label for="f-message">Tell Us About Your Event <span style="color:#c0392b;">*</span></label>
+              <textarea id="f-message" name="message" placeholder="What's the occasion? Any dietary needs we should know about? The more you share, the better we can help." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-amber sans" style="width:100%;padding:.85rem;">
+              Send Inquiry
+            </button>
+
+          </form>
+
+          <div id="form-success" class="form-success" role="alert">
+            <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+            <strong>Thank you — your inquiry is on its way!</strong><br />
+            Linda will reach out within one business day.
+            In the meantime, feel free to call us at <a href="tel:+13607551892">(360) 755-1892</a>.
+          </div>
+
+        </div><!-- /contact-form -->
+
+      </div><!-- /findus-grid -->
+
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       FOOTER
+  ================================================= -->
+  <footer id="footer" role="contentinfo">
+    <div class="footer-inner">
+
+      <div class="footer-top">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo" aria-label="The Capital Diner — back to top">
+            <i class="bi bi-cup-hot-fill" aria-hidden="true"></i>
+            <span>The Capital <span class="diner-word">Diner</span></span>
+          </a>
+          <p>
+            A family-run breakfast and lunch diner in the heart of Olympia, Washington.
+            Open most mornings, always warm, and perpetually out of biscuits by 10 am.
+          </p>
+          <span class="footer-tagline">Breakfast served with heart since 2001.</span>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#findus">Hours &amp; Location</a></li>
+            <li><a href="#findus">Catering Inquiries</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <address>
+            412 Capitol Way South<br />
+            Olympia, WA 98501<br /><br />
+            <a href="tel:+13607551892">(360) 755-1892</a><br />
+            <a href="mailto:hello@capitaldiner.com">hello@capitaldiner.com</a>
+          </address>
+        </div>
+
+      </div><!-- /footer-top -->
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2024 The Capital Diner &mdash; Linda &amp; Dave Kowalski, Olympia, WA.
+          All rights reserved.
+        </p>
+
+        <div class="social-links" aria-label="Social media links">
+          <a href="#" aria-label="The Capital Diner on Facebook" rel="noopener">
+            <i class="bi bi-facebook" aria-hidden="true"></i>
+          </a>
+          <a href="#" aria-label="The Capital Diner on Instagram" rel="noopener">
+            <i class="bi bi-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="#" aria-label="The Capital Diner on Yelp" rel="noopener">
+            <i class="bi bi-yelp" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- Scroll-to-top -->
+  <button id="scroll-top" aria-label="Scroll back to top" title="Back to top">
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+
+
+  <!-- Script -->
+  <script src="script.js"></script>
+
+</body>
+</html>

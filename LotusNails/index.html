@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lotus Nail Studio — Olympia, WA's premier nail salon. Expert manicures, pedicures, gel, acrylics, nail art, and more. Book your appointment today." />
+  <title>Lotus Nail Studio | Olympia, WA</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- =========================================================
+       NAVBAR
+  ========================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon" aria-hidden="true">&#10057;</span>
+        <span class="logo-text">Lotus Nail Studio</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+        <ul>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#booking" class="btn btn-primary nav-cta">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       HERO
+  ========================================================= -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Olympia's Premier Nail Studio</p>
+      <h1 class="hero-headline">Where Beauty<br><em>Blooms</em></h1>
+      <p class="hero-sub">
+        Expert nail care, indulgent spa treatments, and a warm, welcoming space
+        designed for your total relaxation — right here in Olympia, WA.
+      </p>
+      <div class="hero-ctas">
+        <a href="#booking" class="btn btn-primary">Book Appointment</a>
+        <a href="#services" class="btn btn-outline">View Services</a>
+      </div>
+      <div class="trust-badges">
+        <div class="badge">
+          <span class="badge-icon">&#9733;</span>
+          <span>5-Star Rated</span>
+        </div>
+        <div class="badge">
+          <span class="badge-icon">&#10003;</span>
+          <span>Clean &amp; Sanitized</span>
+        </div>
+        <div class="badge">
+          <span class="badge-icon">&#9825;</span>
+          <span>Walk-Ins Welcome</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SERVICES & PRICING
+  ========================================================= -->
+  <section class="services" id="services">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-eyebrow">What We Offer</p>
+        <h2 class="section-title">Services &amp; Pricing</h2>
+        <p class="section-subtitle">
+          Every treatment is performed with hospital-grade sanitized tools, premium products,
+          and the personal attention you deserve.
+        </p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true">&#9792;</div>
+          <h3 class="service-name">Classic Manicure</h3>
+          <p class="service-price">From <strong>$28</strong></p>
+          <p class="service-desc">Shape, buff, cuticle care, relaxing hand massage, and your choice of polish from our full OPI collection.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true">&#10057;</div>
+          <h3 class="service-name">Gel Manicure</h3>
+          <p class="service-price">From <strong>$42</strong></p>
+          <p class="service-desc">Long-lasting gel polish cured under UV light for a chip-free, glossy finish that stays perfect for weeks.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true">&#10022;</div>
+          <h3 class="service-name">Full Set Acrylic</h3>
+          <p class="service-price">From <strong>$55</strong></p>
+          <p class="service-desc">Custom-shaped acrylic extensions with your choice of length, shape, and finish — coffin, almond, square, or stiletto.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true">&#9729;</div>
+          <h3 class="service-name">Classic Pedicure</h3>
+          <p class="service-price">From <strong>$38</strong></p>
+          <p class="service-desc">Soak, exfoliation, callus treatment, nail shaping, cuticle care, relaxing foot massage, and polish.</p>
+        </div>
+
+        <div class="service-card service-card--featured">
+          <div class="service-badge">Most Popular</div>
+          <div class="service-icon" aria-hidden="true">&#10047;</div>
+          <h3 class="service-name">Spa Pedicure</h3>
+          <p class="service-price">From <strong>$55</strong></p>
+          <p class="service-desc">Our signature experience — hot stone massage, sugar scrub, collagen mask, and extended massage for the ultimate relaxation.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true">&#9830;</div>
+          <h3 class="service-name">Nail Art</h3>
+          <p class="service-price">From <strong>$8 / nail</strong></p>
+          <p class="service-desc">Freehand designs, chrome powder, stamping, florals, abstract art, and more. The canvas is your nails — let's create.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true">&#9775;</div>
+          <h3 class="service-name">Waxing Services</h3>
+          <p class="service-price">From <strong>$15</strong></p>
+          <p class="service-desc">Brow shaping, upper lip, chin, full face, underarms, and more. Smooth, precise, and always gentle on skin.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon" aria-hidden="true">&#10048;</div>
+          <h3 class="service-name">Lash Extensions</h3>
+          <p class="service-price">From <strong>$85</strong></p>
+          <p class="service-desc">Classic, volume, or hybrid sets applied by our certified lash artist. Wake up looking effortlessly polished every day.</p>
+        </div>
+
+      </div>
+      <p class="services-note">Prices vary by length, design complexity, and add-ons. Ask about our monthly membership for regulars.</p>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       ABOUT
+  ========================================================= -->
+  <section class="about" id="about">
+    <div class="section-container">
+      <div class="about-grid">
+        <div class="about-copy">
+          <p class="section-eyebrow">Our Story</p>
+          <h2 class="section-title">More Than a Nail Salon</h2>
+          <p>
+            Lotus Nail Studio was founded by May Nguyen in 2015 with one mission: to create a clean,
+            welcoming space where every client feels like royalty. What started as a modest studio on
+            Olympia's Eastside has grown into one of the most trusted names in nail care in Thurston County —
+            built entirely on word of mouth, five-star reviews, and genuine relationships with our clients.
+          </p>
+          <p>
+            We believe that a great nail appointment is more than polish and shine. It's an hour of quiet,
+            a moment of care, a small act of self-respect. That's why every station is sterilized between
+            every client, every product is premium, and every technician is licensed, trained, and genuinely
+            passionate about their craft.
+          </p>
+          <p>
+            Whether you're celebrating a milestone, decompressing after a hard week, or just treating yourself
+            because you deserve it — Lotus is your place. Come as you are. Leave feeling beautiful.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">9+</span>
+              <span class="stat-label">Years in Business</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">5&#9733;</span>
+              <span class="stat-label">Average Rating</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">2,000+</span>
+              <span class="stat-label">Happy Clients</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-image-wrap">
+          <img
+            src="https://picsum.photos/seed/nailsalon/600/700"
+            alt="Inside Lotus Nail Studio — warm, elegant, and welcoming"
+            class="about-img"
+            loading="lazy"
+          />
+          <div class="about-badge">
+            <span class="badge-year">Est.</span>
+            <span class="badge-num">2015</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       GALLERY
+  ========================================================= -->
+  <section class="gallery" id="gallery">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-eyebrow">Our Work</p>
+        <h2 class="section-title">The Gallery</h2>
+        <p class="section-subtitle">A look at some of our favorite recent work — from clean classics to intricate art.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item" data-lightbox="true">
+          <img src="https://picsum.photos/seed/nails1/600/600" alt="Gel manicure with soft pink tones" loading="lazy" />
+          <div class="gallery-overlay"><span>View</span></div>
+        </div>
+        <div class="gallery-item" data-lightbox="true">
+          <img src="https://picsum.photos/seed/nails2/600/600" alt="Almond-shaped acrylic set with nude finish" loading="lazy" />
+          <div class="gallery-overlay"><span>View</span></div>
+        </div>
+        <div class="gallery-item" data-lightbox="true">
+          <img src="https://picsum.photos/seed/nails3/600/600" alt="Intricate floral nail art" loading="lazy" />
+          <div class="gallery-overlay"><span>View</span></div>
+        </div>
+        <div class="gallery-item" data-lightbox="true">
+          <img src="https://picsum.photos/seed/nails4/600/600" alt="Chrome powder manicure" loading="lazy" />
+          <div class="gallery-overlay"><span>View</span></div>
+        </div>
+        <div class="gallery-item" data-lightbox="true">
+          <img src="https://picsum.photos/seed/nails5/600/600" alt="Spa pedicure with hot stone treatment" loading="lazy" />
+          <div class="gallery-overlay"><span>View</span></div>
+        </div>
+        <div class="gallery-item" data-lightbox="true">
+          <img src="https://picsum.photos/seed/nails6/600/600" alt="Coffin-shaped acrylic with ombre design" loading="lazy" />
+          <div class="gallery-overlay"><span>View</span></div>
+        </div>
+        <div class="gallery-item" data-lightbox="true">
+          <img src="https://picsum.photos/seed/nails7/600/600" alt="Classic French manicure" loading="lazy" />
+          <div class="gallery-overlay"><span>View</span></div>
+        </div>
+        <div class="gallery-item" data-lightbox="true">
+          <img src="https://picsum.photos/seed/nails8/600/600" alt="Bold dark gel set" loading="lazy" />
+          <div class="gallery-overlay"><span>View</span></div>
+        </div>
+        <div class="gallery-item" data-lightbox="true">
+          <img src="https://picsum.photos/seed/nails9/600/600" alt="Minimalist nail art with gold foil" loading="lazy" />
+          <div class="gallery-overlay"><span>View</span></div>
+        </div>
+      </div>
+    </div>
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">&times;</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+    </div>
+  </section>
+
+  <!-- =========================================================
+       BOOKING / CONTACT
+  ========================================================= -->
+  <section class="booking" id="booking">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-eyebrow">Ready When You Are</p>
+        <h2 class="section-title">Book Your Appointment</h2>
+        <p class="section-subtitle">
+          Fill out the form below and we'll confirm your appointment within a few hours.
+          Prefer to call? We're always happy to hear from you.
+        </p>
+      </div>
+      <div class="booking-grid">
+
+        <!-- Form -->
+        <div class="booking-form-wrap">
+          <form class="booking-form" id="bookingForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="clientName">Full Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="clientName" name="clientName" placeholder="Jane Smith" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="clientPhone">Phone Number <span aria-hidden="true">*</span></label>
+                <input type="tel" id="clientPhone" name="clientPhone" placeholder="(360) 555-0100" required autocomplete="tel" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service">Service <span aria-hidden="true">*</span></label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service...</option>
+                <option value="classic-mani">Classic Manicure ($28+)</option>
+                <option value="gel-mani">Gel Manicure ($42+)</option>
+                <option value="acrylic">Full Set Acrylic ($55+)</option>
+                <option value="classic-pedi">Classic Pedicure ($38+)</option>
+                <option value="spa-pedi">Spa Pedicure ($55+)</option>
+                <option value="mani-pedi">Mani + Pedi Combo</option>
+                <option value="nail-art">Nail Art (from $8/nail)</option>
+                <option value="waxing">Waxing ($15+)</option>
+                <option value="lash">Lash Extensions ($85+)</option>
+                <option value="other">Other / Not Sure</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="prefDate">Preferred Date <span aria-hidden="true">*</span></label>
+                <input type="date" id="prefDate" name="prefDate" required />
+              </div>
+              <div class="form-group">
+                <label for="prefTime">Preferred Time <span aria-hidden="true">*</span></label>
+                <select id="prefTime" name="prefTime" required>
+                  <option value="" disabled selected>Select a time...</option>
+                  <option value="9:30">9:30 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="10:30">10:30 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="11:30">11:30 AM</option>
+                  <option value="12:00">12:00 PM</option>
+                  <option value="12:30">12:30 PM</option>
+                  <option value="13:00">1:00 PM</option>
+                  <option value="13:30">1:30 PM</option>
+                  <option value="14:00">2:00 PM</option>
+                  <option value="14:30">2:30 PM</option>
+                  <option value="15:00">3:00 PM</option>
+                  <option value="15:30">3:30 PM</option>
+                  <option value="16:00">4:00 PM</option>
+                  <option value="16:30">4:30 PM</option>
+                  <option value="17:00">5:00 PM</option>
+                  <option value="17:30">5:30 PM</option>
+                  <option value="18:00">6:00 PM</option>
+                  <option value="18:30">6:30 PM</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="notes">Additional Notes</label>
+              <textarea id="notes" name="notes" rows="4" placeholder="Any allergies, special requests, or questions for us? We want to make your visit perfect."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              Request Appointment
+            </button>
+          </form>
+          <div class="form-success" id="formSuccess" aria-live="polite">
+            <div class="success-icon" aria-hidden="true">&#10057;</div>
+            <h3>We got your request!</h3>
+            <p>Thank you! We'll confirm your appointment via text or call within a few hours. We can't wait to see you at Lotus.</p>
+          </div>
+        </div>
+
+        <!-- Info Sidebar -->
+        <aside class="booking-info">
+          <div class="info-card">
+            <h3 class="info-heading">Visit Us</h3>
+            <div class="info-item">
+              <span class="info-icon" aria-hidden="true">&#9679;</span>
+              <div>
+                <strong>Address</strong>
+                <p>412 Eastside Ave SE<br />Olympia, WA 98501</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon" aria-hidden="true">&#9679;</span>
+              <div>
+                <strong>Phone</strong>
+                <p><a href="tel:+13605550194">(360) 555-0194</a></p>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon" aria-hidden="true">&#9679;</span>
+              <div>
+                <strong>Hours</strong>
+                <ul class="hours-list">
+                  <li><span>Mon – Sat</span><span>9:30 AM – 7:00 PM</span></li>
+                  <li><span>Sunday</span><span>10:00 AM – 5:00 PM</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="info-walkin">
+              <span class="walkin-icon" aria-hidden="true">&#9825;</span>
+              Walk-ins are always welcome — we'll do our best to fit you in!
+            </div>
+          </div>
+          <div class="info-card info-card--map">
+            <img
+              src="https://picsum.photos/seed/olympiamap/500/280"
+              alt="Map placeholder — 412 Eastside Ave SE, Olympia WA"
+              class="map-placeholder"
+              loading="lazy"
+            />
+            <a
+              href="https://maps.google.com/?q=412+Eastside+Ave+SE+Olympia+WA+98501"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline btn-full map-btn"
+            >
+              Get Directions
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================= -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo footer-logo">
+            <span class="logo-icon" aria-hidden="true">&#10057;</span>
+            <span class="logo-text">Lotus Nail Studio</span>
+          </a>
+          <p class="footer-tagline">Where Beauty Blooms — Olympia, WA</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Follow us on Instagram" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="Follow us on Facebook" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="See our reviews on Yelp" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1.086 13.95l-2.172-1.083c-.277-.139-.341-.496-.135-.717l2.622-2.856c.18-.197.488-.197.668 0l2.622 2.856c.206.221.142.578-.135.717l-2.172 1.083a.504.504 0 0 1-.298 0zm.54-5.45V6c0-.276.224-.5.5-.5h.092c.276 0 .5.224.5.5v4.5a.5.5 0 0 1-.5.5h-.092a.5.5 0 0 1-.5-.5z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Manicures</a></li>
+            <li><a href="#services">Pedicures</a></li>
+            <li><a href="#services">Acrylic Sets</a></li>
+            <li><a href="#services">Nail Art</a></li>
+            <li><a href="#services">Lash Extensions</a></li>
+            <li><a href="#services">Waxing</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#booking">Book Appointment</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>412 Eastside Ave SE<br />Olympia, WA 98501</p>
+          <p><a href="tel:+13605550194">(360) 555-0194</a></p>
+          <p>Mon–Sat: 9:30 AM – 7 PM<br />Sun: 10 AM – 5 PM</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; <span id="footerYear">2024</span> Lotus Nail Studio. All rights reserved.</p>
+        <p class="footer-credit">Site by <a href="#" class="footer-credit-link">Mo Olson</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -10,11 +10,16 @@
 </head>
 <body>
 
+  <!-- Ambient orbs (background atmosphere) -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
   <!-- ── Navbar ─────────────────────────────────────────────────────── -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#hero">
-        <span class="brand-mo">Mo</span><span class="brand-dot">.</span>
+      <a class="navbar-brand" href="#hero">
+        <span class="brand-text"><span class="b1">Mo</span><span class="b2">lly</span><span class="b3">.</span></span>
       </a>
       <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks">
         <span class="navbar-toggler-icon"></span>
@@ -26,7 +31,7 @@
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           <li class="nav-item ms-2">
-            <a class="btn btn-outline-accent btn-sm px-3" href="https://github.com/Molly-Olson" target="_blank" rel="noopener">
+            <a class="btn btn-aurora btn-sm px-3" href="https://github.com/Molly-Olson" target="_blank" rel="noopener">
               <i class="bi bi-github me-1"></i>GitHub
             </a>
           </li>
@@ -36,82 +41,121 @@
   </nav>
 
   <!-- ── Hero ───────────────────────────────────────────────────────── -->
-  <section id="hero" class="hero-section d-flex align-items-center">
-    <div class="hero-bg-orb orb1"></div>
-    <div class="hero-bg-orb orb2"></div>
-    <div class="container text-center position-relative">
-      <div class="hero-badge mb-4">
-        <span class="badge-dot"></span> Available for opportunities
+  <section id="hero" class="hero-section">
+    <div class="container position-relative" style="z-index:1;">
+      <div class="row align-items-center g-5 justify-content-center">
+
+        <!-- Photo -->
+        <div class="col-lg-4 text-center">
+          <div class="hero-photo-wrap mx-auto" style="width:fit-content;">
+            <div class="hero-photo-ring"></div>
+            <img
+              class="hero-photo"
+              src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=300&h=300&fit=crop&crop=faces&auto=format"
+              alt="Molly Olson — Software Developer"
+            />
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="col-lg-7">
+          <div class="hero-label mb-3">
+            <span class="dot"></span> Available for opportunities
+          </div>
+          <h1 class="hero-name">
+            Molly <span class="shimmer">Olson</span>
+          </h1>
+          <p class="hero-sub">
+            Building real-world web apps with ASP.NET Core, Node.js, and a serious eye for clean UI.
+            Capstone-level projects. Production-quality code. Just getting started.
+          </p>
+          <div class="hero-chips">
+            <span class="hero-chip"><i class="bi bi-code-slash me-1"></i>ASP.NET Core</span>
+            <span class="hero-chip"><i class="bi bi-diagram-3 me-1"></i>MVC Architecture</span>
+            <span class="hero-chip"><i class="bi bi-broadcast-pin me-1"></i>Node.js + Socket.io</span>
+            <span class="hero-chip"><i class="bi bi-database me-1"></i>SQL Server + EF Core</span>
+            <span class="hero-chip"><i class="bi bi-geo-alt me-1"></i>Olympia, WA</span>
+          </div>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="#projects" class="btn btn-primary-glow btn-lg px-5 rounded-pill">
+              See My Work <i class="bi bi-arrow-down ms-2"></i>
+            </a>
+            <a href="#contact" class="btn btn-ghost btn-lg px-5 rounded-pill">
+              Get In Touch
+            </a>
+          </div>
+        </div>
+
       </div>
-      <h1 class="hero-name">Molly <span class="text-accent">Olson</span></h1>
-      <p class="hero-title">Software Developer &amp; CS Student</p>
-      <p class="hero-sub mx-auto">
-        Building real-world web apps with ASP.NET Core, Node.js, and a serious eye for clean UI.
-        Capstone-level projects. Production-quality code. Just getting started.
-      </p>
-      <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
-        <a href="#projects" class="btn btn-accent btn-lg px-5 rounded-pill shadow">
-          See My Work <i class="bi bi-arrow-down ms-2"></i>
-        </a>
-        <a href="#contact" class="btn btn-outline-light btn-lg px-5 rounded-pill">
-          Get In Touch
-        </a>
-      </div>
-      <div class="hero-scroll-hint mt-5">
+
+      <div class="text-center mt-5 scroll-hint">
         <i class="bi bi-chevron-double-down"></i>
       </div>
     </div>
   </section>
 
   <!-- ── About ──────────────────────────────────────────────────────── -->
-  <section id="about" class="py-6 bg-dark-2">
+  <section id="about" class="py-6 bg-2">
     <div class="container">
       <div class="row align-items-center g-5">
-        <div class="col-lg-5 text-center">
-          <div class="about-avatar mx-auto">
-            <i class="bi bi-person-circle"></i>
+
+        <!-- Photo frame -->
+        <div class="col-lg-4 text-center">
+          <div class="about-photo-frame mx-auto" style="width:fit-content;">
+            <img
+              class="about-photo"
+              src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=340&h=425&fit=crop&auto=format"
+              alt="Developer workspace"
+            />
+            <div class="crystal-badge">
+              <div class="num">3+</div>
+              <div class="lbl">Projects Live</div>
+            </div>
           </div>
         </div>
-        <div class="col-lg-7">
+
+        <!-- Copy + stats -->
+        <div class="col-lg-8">
           <span class="section-label">About Me</span>
           <h2 class="section-title">Code. Build. Ship.</h2>
-          <p class="text-muted-light lh-lg">
+          <p style="color:var(--muted);line-height:1.8;" class="mb-3">
             I'm a CS student completing my Application Development capstone, building full-stack web apps
             from the ground up. My focus is on creating software that solves real problems for real people —
             not just class assignments, but actual products worth selling and deploying.
           </p>
-          <p class="text-muted-light lh-lg">
+          <p style="color:var(--muted);line-height:1.8;" class="mb-4">
             I work in C# and ASP.NET Core MVC for backend, Bootstrap 5 for responsive UI, Node.js for
             real-time applications, and SQL Server with Entity Framework for data. Every project in this
             portfolio is production-quality and version-controlled on GitHub.
           </p>
-          <div class="row g-3 mt-2">
+          <div class="row g-3">
             <div class="col-6 col-sm-3">
-              <div class="stat-card">
-                <div class="stat-num">3</div>
-                <div class="stat-label">Live Projects</div>
+              <div class="stat-crystal">
+                <div class="num">3</div>
+                <div class="lbl">Live Projects</div>
               </div>
             </div>
             <div class="col-6 col-sm-3">
-              <div class="stat-card">
-                <div class="stat-num">2</div>
-                <div class="stat-label">Languages</div>
+              <div class="stat-crystal">
+                <div class="num">2</div>
+                <div class="lbl">Languages</div>
               </div>
             </div>
             <div class="col-6 col-sm-3">
-              <div class="stat-card">
-                <div class="stat-num">1</div>
-                <div class="stat-label">Capstone</div>
+              <div class="stat-crystal">
+                <div class="num">1</div>
+                <div class="lbl">Capstone</div>
               </div>
             </div>
             <div class="col-6 col-sm-3">
-              <div class="stat-card">
-                <div class="stat-num">∞</div>
-                <div class="stat-label">Ambition</div>
+              <div class="stat-crystal">
+                <div class="num">∞</div>
+                <div class="lbl">Ambition</div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -122,8 +166,8 @@
       <div class="text-center mb-5">
         <span class="section-label">Portfolio</span>
         <h2 class="section-title">Projects</h2>
-        <p class="text-muted-light mx-auto" style="max-width:560px">
-          Full-stack applications built for real use cases — an e-commerce platform, a local business website, and a social viewing app.
+        <p style="color:var(--muted);max-width:560px;" class="mx-auto">
+          Full-stack applications and client-ready websites — built for real use cases, version-controlled on GitHub.
         </p>
       </div>
 
@@ -131,43 +175,43 @@
       <div class="project-featured mb-5">
         <div class="row g-0 align-items-stretch">
           <div class="col-lg-5 project-featured-visual">
-            <div class="project-mockup">
+            <div class="mockup">
               <div class="mockup-bar"><span></span><span></span><span></span></div>
-              <div class="mockup-screen mocashro-screen">
-                <div class="ms-nav"><i class="bi bi-shop-window me-2"></i>MoCashRo<span>Web</span></div>
-                <div class="ms-hero">
-                  <div class="ms-badge">New Arrivals</div>
-                  <div class="ms-title">Quality You Can<br><span>Count On.</span></div>
-                  <div class="ms-btn">Shop Now →</div>
+              <div class="mockup-body">
+                <div class="mockup-nav"></div>
+                <div class="mockup-hero-block">
+                  <div class="mockup-line"></div>
+                  <div class="mockup-line short"></div>
+                  <div class="mockup-line accent"></div>
                 </div>
-                <div class="ms-cards">
-                  <div class="ms-card"></div>
-                  <div class="ms-card"></div>
-                  <div class="ms-card"></div>
+                <div class="mockup-cards">
+                  <div class="mockup-card"></div>
+                  <div class="mockup-card"></div>
+                  <div class="mockup-card"></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-7 project-featured-content">
+          <div class="col-lg-7">
             <div class="p-4 p-lg-5">
               <div class="d-flex align-items-center gap-2 mb-3">
-                <span class="project-tag tag-featured">Capstone</span>
+                <span class="project-tag tag-capstone">Capstone</span>
                 <span class="project-tag tag-csharp">C# / ASP.NET Core</span>
               </div>
               <h3 class="project-title">MoCashRo Web Co.</h3>
-              <p class="text-muted-light lh-lg">
-                A full-stack e-commerce platform and POS system built with ASP.NET Core 9 MVC. Features a customer storefront,
-                session-based shopping cart, product catalog with search and filtering, and a complete authentication system
-                for both customers and admins. Designed as a reusable, deployable template for small business clients.
+              <p style="color:var(--muted);line-height:1.8;" class="mb-3">
+                A full-stack e-commerce platform built with ASP.NET Core 9 MVC. Features a customer storefront,
+                session-based shopping cart, full checkout flow with order persistence, and authentication for
+                both customers and admins. Designed as a reusable, deployable template for small business clients.
               </p>
-              <div class="feature-list mb-4">
-                <div class="feature-item"><i class="bi bi-check-circle-fill text-accent"></i> Customer login &amp; registration</div>
-                <div class="feature-item"><i class="bi bi-check-circle-fill text-accent"></i> Session-based shopping cart</div>
-                <div class="feature-item"><i class="bi bi-check-circle-fill text-accent"></i> Product catalog with search &amp; filter</div>
-                <div class="feature-item"><i class="bi bi-check-circle-fill text-accent"></i> EF Core + SQL Server database</div>
-                <div class="feature-item"><i class="bi bi-hourglass-split text-warning"></i> Checkout flow &amp; admin portal (in progress)</div>
+              <div class="mb-4">
+                <div class="feature-item"><i class="bi bi-check-circle-fill text-aurora"></i> Customer login &amp; registration</div>
+                <div class="feature-item"><i class="bi bi-check-circle-fill text-aurora"></i> Session-based shopping cart</div>
+                <div class="feature-item"><i class="bi bi-check-circle-fill text-aurora"></i> Full checkout flow — orders saved to DB</div>
+                <div class="feature-item"><i class="bi bi-check-circle-fill text-aurora"></i> Product catalog with search &amp; filter</div>
+                <div class="feature-item"><i class="bi bi-hourglass-split text-gold"></i> Admin portal (in progress)</div>
               </div>
-              <div class="tech-stack mb-4">
+              <div class="mb-4">
                 <span class="tech-pill">ASP.NET Core 9</span>
                 <span class="tech-pill">C#</span>
                 <span class="tech-pill">EF Core</span>
@@ -175,7 +219,7 @@
                 <span class="tech-pill">Bootstrap 5</span>
                 <span class="tech-pill">BCrypt</span>
               </div>
-              <a href="https://github.com/Molly-Olson/MoCashRoCo" target="_blank" rel="noopener" class="btn btn-accent px-4 rounded-pill">
+              <a href="https://github.com/Molly-Olson/MoCashRoCo" target="_blank" rel="noopener" class="btn btn-primary-glow px-4 rounded-pill">
                 <i class="bi bi-github me-2"></i>View on GitHub
               </a>
             </div>
@@ -183,50 +227,44 @@
         </div>
       </div>
 
-      <!-- SyncStream + FreshCuts side by side -->
-      <div class="row g-4">
+      <!-- SyncStream + FreshCuts -->
+      <div class="row g-4 mb-4">
 
         <!-- SyncStream -->
         <div class="col-lg-6">
           <div class="project-card h-100">
-            <div class="project-card-header syncstream-header">
-              <div class="project-icon-wrap">
-                <i class="bi bi-broadcast-pin"></i>
-              </div>
-              <div class="project-header-lines">
-                <div class="phl phl-1"></div>
-                <div class="phl phl-2"></div>
-                <div class="phl phl-3"></div>
+            <div class="project-card-header sync-header">
+              <div class="proj-icon"><i class="bi bi-broadcast-pin"></i></div>
+              <div class="proj-lines">
+                <span></span><span></span><span></span>
               </div>
             </div>
-            <div class="project-card-body">
+            <div class="p-4">
               <div class="d-flex gap-2 mb-3 flex-wrap">
                 <span class="project-tag tag-node">Node.js</span>
-                <span class="project-tag tag-idea">Original Product Idea</span>
+                <span class="project-tag tag-idea">Original Product</span>
               </div>
               <h3 class="project-title">SyncStream</h3>
-              <p class="text-muted-light lh-lg">
+              <p style="color:var(--muted);line-height:1.8;" class="mb-3">
                 Watch shows in perfect sync with friends — no matter where they are. Each person logs into
                 their own streaming service, creates or joins a room, and SyncStream keeps everyone's
-                playback locked in sync via WebSockets. Built with Node.js, Express, and Socket.io.
+                playback locked in sync via WebSockets.
               </p>
-              <div class="feature-list mb-4">
-                <div class="feature-item"><i class="bi bi-check-circle-fill text-accent"></i> Create &amp; join rooms with a 4-char code</div>
-                <div class="feature-item"><i class="bi bi-check-circle-fill text-accent"></i> Play, pause, seek synced in real time</div>
-                <div class="feature-item"><i class="bi bi-check-circle-fill text-accent"></i> Live in-room chat</div>
-                <div class="feature-item"><i class="bi bi-check-circle-fill text-accent"></i> Connected users list</div>
+              <div class="mb-4">
+                <div class="feature-item"><i class="bi bi-check-circle-fill text-aurora"></i> Create &amp; join rooms with a 4-char code</div>
+                <div class="feature-item"><i class="bi bi-check-circle-fill text-aurora"></i> Play, pause, seek synced in real time</div>
+                <div class="feature-item"><i class="bi bi-check-circle-fill text-aurora"></i> Live in-room chat</div>
+                <div class="feature-item"><i class="bi bi-check-circle-fill text-aurora"></i> Connected users list</div>
               </div>
-              <div class="tech-stack mb-4">
+              <div class="mb-4">
                 <span class="tech-pill">Node.js</span>
                 <span class="tech-pill">Socket.io</span>
                 <span class="tech-pill">Express</span>
                 <span class="tech-pill">HTML5 Video API</span>
               </div>
-              <div class="d-flex gap-2">
-                <a href="https://github.com/Molly-Olson/SyncStream" target="_blank" rel="noopener" class="btn btn-outline-accent px-4 rounded-pill">
-                  <i class="bi bi-github me-2"></i>GitHub
-                </a>
-              </div>
+              <a href="https://github.com/Molly-Olson/SyncStream" target="_blank" rel="noopener" class="btn btn-aurora px-4 rounded-pill">
+                <i class="bi bi-github me-2"></i>GitHub
+              </a>
             </div>
           </div>
         </div>
@@ -234,41 +272,37 @@
         <!-- FreshCuts -->
         <div class="col-lg-6">
           <div class="project-card h-100">
-            <div class="project-card-header freshcuts-header">
-              <div class="project-icon-wrap">
-                <i class="bi bi-scissors"></i>
-              </div>
-              <div class="project-header-lines">
-                <div class="phl phl-1"></div>
-                <div class="phl phl-2"></div>
-                <div class="phl phl-3"></div>
+            <div class="project-card-header fresh-header">
+              <div class="proj-icon"><i class="bi bi-scissors"></i></div>
+              <div class="proj-lines">
+                <span></span><span></span><span></span>
               </div>
             </div>
-            <div class="project-card-body">
+            <div class="p-4">
               <div class="d-flex gap-2 mb-3 flex-wrap">
                 <span class="project-tag tag-html">HTML / CSS / JS</span>
                 <span class="project-tag tag-client">Client-Ready</span>
               </div>
-              <h3 class="project-title">Fresh Cuts — Local Business Site</h3>
-              <p class="text-muted-light lh-lg">
+              <h3 class="project-title">Fresh Cuts Barbershop</h3>
+              <p style="color:var(--muted);line-height:1.8;" class="mb-3">
                 A production-ready website for a local barbershop — the kind of business that still relies on
                 word of mouth because they don't have a real web presence. Full single-page design with services,
-                gallery, testimonials, and a booking form. Template can be adapted for any local business.
+                gallery, testimonials, and a booking form.
               </p>
-              <div class="feature-list mb-4">
-                <div class="feature-item"><i class="bi bi-check-circle-fill text-accent"></i> Animated hero with CSS barber pole</div>
-                <div class="feature-item"><i class="bi bi-check-circle-fill text-accent"></i> Services, gallery &amp; testimonials</div>
-                <div class="feature-item"><i class="bi bi-check-circle-fill text-accent"></i> Booking inquiry form</div>
-                <div class="feature-item"><i class="bi bi-check-circle-fill text-accent"></i> Fully responsive, no dependencies</div>
+              <div class="mb-4">
+                <div class="feature-item"><i class="bi bi-check-circle-fill text-aurora"></i> Animated hero with CSS barber pole</div>
+                <div class="feature-item"><i class="bi bi-check-circle-fill text-aurora"></i> Services, gallery &amp; testimonials</div>
+                <div class="feature-item"><i class="bi bi-check-circle-fill text-aurora"></i> Booking inquiry form</div>
+                <div class="feature-item"><i class="bi bi-check-circle-fill text-aurora"></i> Fully responsive, no dependencies</div>
               </div>
-              <div class="tech-stack mb-4">
+              <div class="mb-4">
                 <span class="tech-pill">HTML5</span>
                 <span class="tech-pill">CSS3</span>
                 <span class="tech-pill">Vanilla JS</span>
                 <span class="tech-pill">Bootstrap 5</span>
               </div>
               <div class="d-flex gap-2">
-                <a href="FreshCuts/index.html" class="btn btn-outline-accent px-4 rounded-pill">
+                <a href="FreshCuts/index.html" class="btn btn-aurora px-4 rounded-pill">
                   <i class="bi bi-eye me-2"></i>Live Preview
                 </a>
                 <a href="https://github.com/Molly-Olson/Portfolio" target="_blank" rel="noopener" class="btn btn-ghost px-4 rounded-pill">
@@ -280,77 +314,275 @@
         </div>
 
       </div>
+
+      <!-- CasaVerde + GreenThumb -->
+      <div class="row g-4">
+
+        <!-- CasaVerde -->
+        <div class="col-lg-6">
+          <div class="project-card h-100">
+            <div class="project-card-header" style="background:linear-gradient(135deg,#1a1500,#2a2000,#3a2c00);">
+              <div class="proj-icon"><i class="bi bi-cup-hot"></i></div>
+              <div class="proj-lines">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="d-flex gap-2 mb-3 flex-wrap">
+                <span class="project-tag tag-html">HTML / CSS / JS</span>
+                <span class="project-tag tag-client">Client-Ready</span>
+              </div>
+              <h3 class="project-title">Casa Verde Restaurant</h3>
+              <p style="color:var(--muted);line-height:1.8;" class="mb-3">
+                A vibrant website for a local Mexican restaurant with animated hero, full menu, hours, and
+                reservation form. Warm, welcoming design built to drive foot traffic and online visibility.
+              </p>
+              <div class="mb-4">
+                <div class="feature-item"><i class="bi bi-check-circle-fill text-aurora"></i> Full menu with categories &amp; pricing</div>
+                <div class="feature-item"><i class="bi bi-check-circle-fill text-aurora"></i> Reservation inquiry form</div>
+                <div class="feature-item"><i class="bi bi-check-circle-fill text-aurora"></i> Google Maps embed &amp; hours</div>
+                <div class="feature-item"><i class="bi bi-check-circle-fill text-aurora"></i> Fully responsive mobile-first</div>
+              </div>
+              <div class="mb-4">
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3</span>
+                <span class="tech-pill">Vanilla JS</span>
+                <span class="tech-pill">Bootstrap 5</span>
+              </div>
+              <div class="d-flex gap-2">
+                <a href="CasaVerde/index.html" class="btn btn-aurora px-4 rounded-pill">
+                  <i class="bi bi-eye me-2"></i>Live Preview
+                </a>
+                <a href="https://github.com/Molly-Olson/Portfolio" target="_blank" rel="noopener" class="btn btn-ghost px-4 rounded-pill">
+                  <i class="bi bi-github me-2"></i>GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GreenThumb -->
+        <div class="col-lg-6">
+          <div class="project-card h-100">
+            <div class="project-card-header" style="background:linear-gradient(135deg,#0a150a,#0f200f,#152a15);">
+              <div class="proj-icon"><i class="bi bi-tree"></i></div>
+              <div class="proj-lines">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="d-flex gap-2 mb-3 flex-wrap">
+                <span class="project-tag tag-html">HTML / CSS / JS</span>
+                <span class="project-tag tag-client">Client-Ready</span>
+              </div>
+              <h3 class="project-title">GreenThumb Landscaping</h3>
+              <p style="color:var(--muted);line-height:1.8;" class="mb-3">
+                A clean, professional site for a local landscaping company — services overview, project gallery,
+                seasonal specials, and a quote request form. Built to turn online searches into real leads.
+              </p>
+              <div class="mb-4">
+                <div class="feature-item"><i class="bi bi-check-circle-fill text-aurora"></i> Services catalog with seasonal offers</div>
+                <div class="feature-item"><i class="bi bi-check-circle-fill text-aurora"></i> Before/after project gallery</div>
+                <div class="feature-item"><i class="bi bi-check-circle-fill text-aurora"></i> Free quote request form</div>
+                <div class="feature-item"><i class="bi bi-check-circle-fill text-aurora"></i> Fully responsive mobile-first</div>
+              </div>
+              <div class="mb-4">
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3</span>
+                <span class="tech-pill">Vanilla JS</span>
+                <span class="tech-pill">Bootstrap 5</span>
+              </div>
+              <div class="d-flex gap-2">
+                <a href="GreenThumb/index.html" class="btn btn-aurora px-4 rounded-pill">
+                  <i class="bi bi-eye me-2"></i>Live Preview
+                </a>
+                <a href="https://github.com/Molly-Olson/Portfolio" target="_blank" rel="noopener" class="btn btn-ghost px-4 rounded-pill">
+                  <i class="bi bi-github me-2"></i>GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <!-- SoundAuto + CapitalDiner + LotusNails (Olympia demo sites) -->
+      <div class="row g-4 mt-0">
+
+        <!-- Sound Auto Repair -->
+        <div class="col-lg-4">
+          <div class="project-card h-100">
+            <div class="project-card-header" style="background:linear-gradient(135deg,#140a0a,#201010,#2a1414);">
+              <div class="proj-icon"><i class="bi bi-wrench-adjustable"></i></div>
+              <div class="proj-lines"><span></span><span></span><span></span></div>
+            </div>
+            <div class="p-4">
+              <div class="d-flex gap-2 mb-3 flex-wrap">
+                <span class="project-tag tag-html">HTML / CSS / JS</span>
+                <span class="project-tag tag-client">Olympia, WA</span>
+              </div>
+              <h3 class="project-title">Sound Auto Repair</h3>
+              <p style="color:var(--muted);line-height:1.8;" class="mb-3">
+                Charcoal &amp; red site for a family-run auto shop in business 35+ years. Animated counters,
+                services grid, appointment form, and a trust-forward design built to convert local searches.
+              </p>
+              <div class="mb-4">
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3</span>
+                <span class="tech-pill">Vanilla JS</span>
+              </div>
+              <a href="SoundAuto/index.html" class="btn btn-aurora px-4 rounded-pill">
+                <i class="bi bi-eye me-2"></i>Live Preview
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Capital Diner -->
+        <div class="col-lg-4">
+          <div class="project-card h-100">
+            <div class="project-card-header" style="background:linear-gradient(135deg,#1a1000,#2a1a00,#3a2600);">
+              <div class="proj-icon"><i class="bi bi-cup-hot-fill"></i></div>
+              <div class="proj-lines"><span></span><span></span><span></span></div>
+            </div>
+            <div class="p-4">
+              <div class="d-flex gap-2 mb-3 flex-wrap">
+                <span class="project-tag tag-html">HTML / CSS / JS</span>
+                <span class="project-tag tag-client">Olympia, WA</span>
+              </div>
+              <h3 class="project-title">Capital Diner</h3>
+              <p style="color:var(--muted);line-height:1.8;" class="mb-3">
+                Warm amber diner site with a tabbed menu (Breakfast / Lunch / Drinks), gallery, catering
+                form, and full hours &amp; location section. Open since 2001 family restaurant vibe.
+              </p>
+              <div class="mb-4">
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3</span>
+                <span class="tech-pill">Vanilla JS</span>
+              </div>
+              <a href="CapitalDiner/index.html" class="btn btn-aurora px-4 rounded-pill">
+                <i class="bi bi-eye me-2"></i>Live Preview
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lotus Nail Studio -->
+        <div class="col-lg-4">
+          <div class="project-card h-100">
+            <div class="project-card-header" style="background:linear-gradient(135deg,#1a0a1a,#2a1030,#3a1540);">
+              <div class="proj-icon"><i class="bi bi-flower1"></i></div>
+              <div class="proj-lines"><span></span><span></span><span></span></div>
+            </div>
+            <div class="p-4">
+              <div class="d-flex gap-2 mb-3 flex-wrap">
+                <span class="project-tag tag-html">HTML / CSS / JS</span>
+                <span class="project-tag tag-client">Olympia, WA</span>
+              </div>
+              <h3 class="project-title">Lotus Nail Studio</h3>
+              <p style="color:var(--muted);line-height:1.8;" class="mb-3">
+                Deep plum &amp; rose gold nail salon site with services grid, lightbox gallery, booking form,
+                and a founder story section. Accessible lightbox with keyboard navigation.
+              </p>
+              <div class="mb-4">
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3</span>
+                <span class="tech-pill">Vanilla JS</span>
+              </div>
+              <a href="LotusNails/index.html" class="btn btn-aurora px-4 rounded-pill">
+                <i class="bi bi-eye me-2"></i>Live Preview
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
   <!-- ── Skills ─────────────────────────────────────────────────────── -->
-  <section id="skills" class="py-6 bg-dark-2">
+  <section id="skills" class="py-6 bg-2">
     <div class="container">
       <div class="text-center mb-5">
         <span class="section-label">Toolkit</span>
         <h2 class="section-title">Skills &amp; Technologies</h2>
       </div>
       <div class="row g-4">
+
         <div class="col-md-4">
-          <div class="skills-card">
+          <div class="skills-crystal s1">
             <i class="bi bi-server skills-icon"></i>
             <h5 class="skills-title">Backend</h5>
-            <div class="skills-list">
-              <span>C#</span><span>ASP.NET Core MVC</span><span>Node.js</span>
-              <span>Entity Framework Core</span><span>SQL Server</span><span>REST APIs</span>
+            <div>
+              <span class="skill-gem">C#</span>
+              <span class="skill-gem">ASP.NET Core MVC</span>
+              <span class="skill-gem">Node.js</span>
+              <span class="skill-gem">Entity Framework Core</span>
+              <span class="skill-gem">SQL Server</span>
+              <span class="skill-gem">REST APIs</span>
             </div>
           </div>
         </div>
+
         <div class="col-md-4">
-          <div class="skills-card">
+          <div class="skills-crystal s2">
             <i class="bi bi-layout-text-window skills-icon"></i>
             <h5 class="skills-title">Frontend</h5>
-            <div class="skills-list">
-              <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-              <span>Bootstrap 5</span><span>Razor Views</span><span>Socket.io</span>
+            <div>
+              <span class="skill-gem">HTML5</span>
+              <span class="skill-gem">CSS3</span>
+              <span class="skill-gem">JavaScript</span>
+              <span class="skill-gem">Bootstrap 5</span>
+              <span class="skill-gem">Razor Views</span>
+              <span class="skill-gem">Socket.io</span>
             </div>
           </div>
         </div>
+
         <div class="col-md-4">
-          <div class="skills-card">
+          <div class="skills-crystal s3">
             <i class="bi bi-tools skills-icon"></i>
             <h5 class="skills-title">Tools &amp; Practices</h5>
-            <div class="skills-list">
-              <span>Git &amp; GitHub</span><span>Visual Studio 2022</span><span>EF Migrations</span>
-              <span>MVC Architecture</span><span>Session Auth</span><span>BCrypt</span>
+            <div>
+              <span class="skill-gem">Git &amp; GitHub</span>
+              <span class="skill-gem">Visual Studio 2022</span>
+              <span class="skill-gem">EF Migrations</span>
+              <span class="skill-gem">MVC Architecture</span>
+              <span class="skill-gem">Session Auth</span>
+              <span class="skill-gem">BCrypt</span>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- ── Contact ────────────────────────────────────────────────────── -->
-  <section id="contact" class="py-6">
+  <section id="contact" class="py-6 contact-glow">
     <div class="container">
-      <div class="contact-wrap text-center mx-auto">
+      <div class="text-center mx-auto" style="max-width:600px;">
         <span class="section-label">Contact</span>
         <h2 class="section-title">Let's Work Together</h2>
-        <p class="text-muted-light mb-5">
+        <p style="color:var(--muted);" class="mb-5">
           Open to freelance work, client projects, and entry-level opportunities.
           If you need a website built or have a project in mind, let's talk.
         </p>
         <div class="d-flex justify-content-center gap-3 flex-wrap mb-5">
-          <a href="mailto:olsonm85@gmail.com" class="btn btn-accent btn-lg px-5 rounded-pill">
+          <a href="mailto:olsonm85@gmail.com" class="btn btn-primary-glow btn-lg px-5 rounded-pill">
             <i class="bi bi-envelope me-2"></i>Email Me
           </a>
-          <a href="https://github.com/Molly-Olson" target="_blank" rel="noopener" class="btn btn-outline-light btn-lg px-5 rounded-pill">
+          <a href="https://github.com/Molly-Olson" target="_blank" rel="noopener" class="btn btn-ghost btn-lg px-5 rounded-pill">
             <i class="bi bi-github me-2"></i>GitHub Profile
           </a>
         </div>
-        <div class="contact-links d-flex justify-content-center gap-4">
-          <a href="mailto:olsonm85@gmail.com" class="contact-icon-link" title="Email">
+        <div class="d-flex justify-content-center gap-4">
+          <a href="mailto:olsonm85@gmail.com" class="contact-icon" title="Email">
             <i class="bi bi-envelope-fill"></i>
           </a>
-          <a href="https://github.com/Molly-Olson" target="_blank" rel="noopener" class="contact-icon-link" title="GitHub">
+          <a href="https://github.com/Molly-Olson" target="_blank" rel="noopener" class="contact-icon" title="GitHub">
             <i class="bi bi-github"></i>
           </a>
-          <a href="https://linkedin.com/in/molly-olson" target="_blank" rel="noopener" class="contact-icon-link" title="LinkedIn">
+          <a href="https://linkedin.com/in/molly-olson" target="_blank" rel="noopener" class="contact-icon" title="LinkedIn">
             <i class="bi bi-linkedin"></i>
           </a>
         </div>
@@ -359,10 +591,10 @@
   </section>
 
   <!-- ── Footer ─────────────────────────────────────────────────────── -->
-  <footer class="footer-bar text-center py-4">
-    <p class="mb-0 text-muted-light small">
+  <footer class="site-footer">
+    <p class="mb-0" style="color:var(--muted);font-size:.875rem;">
       &copy; 2025 Molly Olson &nbsp;·&nbsp; Built with HTML, CSS &amp; caffeine
-      &nbsp;·&nbsp; <a href="https://github.com/Molly-Olson/Portfolio" target="_blank" rel="noopener" class="text-accent text-decoration-none">View Source</a>
+      &nbsp;·&nbsp; <a href="https://github.com/Molly-Olson/Portfolio" target="_blank" rel="noopener" class="text-amethyst text-decoration-none">View Source</a>
     </p>
   </footer>
 
