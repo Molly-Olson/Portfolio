@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Olympia Roasting Co. — Specialty Coffee & Café</title>
+  <meta name="description" content="Olympia Roasting Co. is a specialty third-wave coffee roaster and café in downtown Olympia, WA. Small-batch roasted, direct-sourced beans, open seven days a week." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======================================================
+       NAVBAR
+  ====================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#hero" class="navbar__logo" aria-label="Olympia Roasting Co. home">
+        <i class="bi bi-cup-hot-fill"></i>
+        <span class="navbar__brand">Olympia Roasting Co.</span>
+      </a>
+      <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="bi bi-list"></i>
+      </button>
+      <nav class="navbar__nav" id="navMenu">
+        <a href="#menu" class="navbar__link">Menu</a>
+        <a href="#roasts" class="navbar__link">Our Roasts</a>
+        <a href="#about" class="navbar__link">About</a>
+        <a href="#visit" class="navbar__link">Visit Us</a>
+        <a href="#menu" class="btn btn--primary navbar__cta">Order Online</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ======================================================
+         HERO
+    ====================================================== -->
+    <section class="hero" id="hero">
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <p class="hero__eyebrow reveal">Downtown Olympia, WA</p>
+        <h1 class="hero__headline reveal">Coffee Worth&nbsp;<em>Slowing Down</em>&nbsp;For.</h1>
+        <p class="hero__sub reveal">Small-batch roasted in the heart of Olympia. Every cup tells the story of the farmer who grew it.</p>
+        <div class="hero__ctas reveal">
+          <a href="#menu" class="btn btn--primary btn--lg">See Our Menu</a>
+          <a href="#roasts" class="btn btn--outline btn--lg">Shop Beans</a>
+        </div>
+        <div class="hero__badges reveal">
+          <div class="badge">
+            <i class="bi bi-award-fill"></i>
+            <span>Small-Batch Roasted</span>
+          </div>
+          <div class="badge">
+            <i class="bi bi-globe-americas"></i>
+            <span>Sourced Direct</span>
+          </div>
+          <div class="badge">
+            <i class="bi bi-calendar2-check-fill"></i>
+            <span>Open 7 Days</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <i class="bi bi-chevron-double-down"></i>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         INFO BAR
+    ====================================================== -->
+    <div class="info-bar">
+      <div class="container info-bar__inner">
+        <div class="info-bar__item">
+          <i class="bi bi-clock-fill"></i>
+          <span><strong>Mon–Fri</strong> 6am–7pm &nbsp;|&nbsp; <strong>Sat–Sun</strong> 7am–8pm</span>
+        </div>
+        <div class="info-bar__divider" aria-hidden="true"></div>
+        <div class="info-bar__item">
+          <i class="bi bi-telephone-fill"></i>
+          <a href="tel:+13605550182">(360) 555-0182</a>
+        </div>
+        <div class="info-bar__divider" aria-hidden="true"></div>
+        <div class="info-bar__item">
+          <i class="bi bi-geo-alt-fill"></i>
+          <span>412 Capitol Way S, Olympia WA 98501</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================
+         COUNTERS
+    ====================================================== -->
+    <section class="counters" aria-label="By the numbers">
+      <div class="container counters__grid">
+        <div class="counter reveal">
+          <span class="counter__number" data-target="4">0</span>
+          <span class="counter__label">Origins Roasted</span>
+        </div>
+        <div class="counter reveal">
+          <span class="counter__number" data-target="12000" data-suffix="+">0</span>
+          <span class="counter__label">Bags Sold</span>
+        </div>
+        <div class="counter reveal">
+          <span class="counter__number" data-target="7">0</span>
+          <span class="counter__label">Years in Business</span>
+        </div>
+        <div class="counter reveal">
+          <span class="counter__number" data-target="100" data-suffix="%">0</span>
+          <span class="counter__label">Direct Trade</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         MENU
+    ====================================================== -->
+    <section class="menu section" id="menu">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__eyebrow">What We're Brewing</p>
+          <h2 class="section__title">Our Menu</h2>
+          <p class="section__desc">Everything made to order, every time. We don't pre-batch anything — your drink is pulled, poured, or brewed fresh when you order it.</p>
+        </div>
+
+        <div class="tabs reveal">
+          <div class="tabs__nav" role="tablist" aria-label="Menu categories">
+            <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-espresso" id="btn-espresso" data-tab="espresso">
+              <i class="bi bi-cup-straw"></i> Espresso Drinks
+            </button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-pourover" id="btn-pourover" data-tab="pourover">
+              <i class="bi bi-droplet-fill"></i> Pour Over &amp; Drip
+            </button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-food" id="btn-food" data-tab="food">
+              <i class="bi bi-egg-fried"></i> Food &amp; Pastries
+            </button>
+          </div>
+
+          <!-- Espresso -->
+          <div class="tab-panel active" id="tab-espresso" role="tabpanel" aria-labelledby="btn-espresso">
+            <div class="menu-grid">
+
+              <article class="menu-card">
+                <div class="menu-card__img-wrap">
+                  <img src="https://picsum.photos/seed/orc-esp1/400/260" alt="Double espresso in a ceramic demitasse" loading="lazy" />
+                </div>
+                <div class="menu-card__body">
+                  <div class="menu-card__row">
+                    <h3 class="menu-card__name">Double Espresso</h3>
+                    <span class="menu-card__price">$3.75</span>
+                  </div>
+                  <p class="menu-card__desc">Two shots of our House Blend pulled on a La Marzocco. Dark chocolate, caramel finish, velvet crema.</p>
+                  <div class="menu-card__tags">
+                    <span class="tag">Signature</span>
+                    <span class="tag">16 oz available</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__img-wrap">
+                  <img src="https://picsum.photos/seed/orc-esp2/400/260" alt="Cortado in a small glass" loading="lazy" />
+                </div>
+                <div class="menu-card__body">
+                  <div class="menu-card__row">
+                    <h3 class="menu-card__name">Cortado</h3>
+                    <span class="menu-card__price">$4.50</span>
+                  </div>
+                  <p class="menu-card__desc">Equal parts espresso and steamed milk in a gibraltar glass. Clean, balanced, no fluff — just flavor.</p>
+                  <div class="menu-card__tags">
+                    <span class="tag">Staff Favorite</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__img-wrap">
+                  <img src="https://picsum.photos/seed/orc-esp3/400/260" alt="Latte with latte art in a ceramic mug" loading="lazy" />
+                </div>
+                <div class="menu-card__body">
+                  <div class="menu-card__row">
+                    <h3 class="menu-card__name">Oat Milk Latte</h3>
+                    <span class="menu-card__price">$5.75</span>
+                  </div>
+                  <p class="menu-card__desc">Double shot with locally sourced Cascadia Creamery oat milk, steamed silky smooth. Rosette latte art standard.</p>
+                  <div class="menu-card__tags">
+                    <span class="tag">Dairy-Free</span>
+                    <span class="tag">Plant-Based</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__img-wrap">
+                  <img src="https://picsum.photos/seed/orc-esp4/400/260" alt="Cappuccino with thick foam" loading="lazy" />
+                </div>
+                <div class="menu-card__body">
+                  <div class="menu-card__row">
+                    <h3 class="menu-card__name">Dry Cappuccino</h3>
+                    <span class="menu-card__price">$5.25</span>
+                  </div>
+                  <p class="menu-card__desc">Traditional 6 oz cappuccino with thick, dry microfoam. The espresso shines through without milk dominating.</p>
+                  <div class="menu-card__tags">
+                    <span class="tag">Classic</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__img-wrap">
+                  <img src="https://picsum.photos/seed/orc-esp5/400/260" alt="Honey lavender latte with lavender sprig" loading="lazy" />
+                </div>
+                <div class="menu-card__body">
+                  <div class="menu-card__row">
+                    <h3 class="menu-card__name">Honey Lavender Latte</h3>
+                    <span class="menu-card__price">$6.25</span>
+                  </div>
+                  <p class="menu-card__desc">House lavender syrup, local raw honey, double shot, steamed whole milk. Floral, sweet, subtly earthy.</p>
+                  <div class="menu-card__tags">
+                    <span class="tag">Seasonal</span>
+                    <span class="tag">House Syrup</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__img-wrap">
+                  <img src="https://picsum.photos/seed/orc-esp6/400/260" alt="Iced brown sugar shaken espresso" loading="lazy" />
+                </div>
+                <div class="menu-card__body">
+                  <div class="menu-card__row">
+                    <h3 class="menu-card__name">Shaken Brown Sugar Espresso</h3>
+                    <span class="menu-card__price">$6.00</span>
+                  </div>
+                  <p class="menu-card__desc">Three shots shaken over ice with brown sugar syrup and cinnamon, poured over oat milk. Bold and refreshing.</p>
+                  <div class="menu-card__tags">
+                    <span class="tag">Iced</span>
+                    <span class="tag">Popular</span>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- Pour Over & Drip -->
+          <div class="tab-panel" id="tab-pourover" role="tabpanel" aria-labelledby="btn-pourover">
+            <div class="menu-grid">
+
+              <article class="menu-card">
+                <div class="menu-card__img-wrap">
+                  <img src="https://picsum.photos/seed/orc-po1/400/260" alt="V60 pour over with gooseneck kettle" loading="lazy" />
+                </div>
+                <div class="menu-card__body">
+                  <div class="menu-card__row">
+                    <h3 class="menu-card__name">V60 Pour Over</h3>
+                    <span class="menu-card__price">$6.50</span>
+                  </div>
+                  <p class="menu-card__desc">Single-origin, brewed to order with a Hario V60. Choose your bean from today's selection — ask your barista.</p>
+                  <div class="menu-card__tags">
+                    <span class="tag">Single Origin</span>
+                    <span class="tag">Made to Order</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__img-wrap">
+                  <img src="https://picsum.photos/seed/orc-po2/400/260" alt="Kalita wave brewer on a wooden stand" loading="lazy" />
+                </div>
+                <div class="menu-card__body">
+                  <div class="menu-card__row">
+                    <h3 class="menu-card__name">Kalita Wave</h3>
+                    <span class="menu-card__price">$6.75</span>
+                  </div>
+                  <p class="menu-card__desc">A more forgiving, even extraction. Great for lighter roasts with complex floral or fruit notes. 12 oz cup.</p>
+                  <div class="menu-card__tags">
+                    <span class="tag">Light Roast</span>
+                    <span class="tag">Specialty</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__img-wrap">
+                  <img src="https://picsum.photos/seed/orc-po3/400/260" alt="Drip coffee in a simple white mug" loading="lazy" />
+                </div>
+                <div class="menu-card__body">
+                  <div class="menu-card__row">
+                    <h3 class="menu-card__name">House Drip</h3>
+                    <span class="menu-card__price">$3.25</span>
+                  </div>
+                  <p class="menu-card__desc">Fresh batch brewed every 45 minutes. House Blend medium roast — approachable, consistent, and always hot.</p>
+                  <div class="menu-card__tags">
+                    <span class="tag">Free Refills</span>
+                    <span class="tag">Medium Roast</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__img-wrap">
+                  <img src="https://picsum.photos/seed/orc-po4/400/260" alt="Cold brew in a tall glass with ice" loading="lazy" />
+                </div>
+                <div class="menu-card__body">
+                  <div class="menu-card__row">
+                    <h3 class="menu-card__name">Cold Brew</h3>
+                    <span class="menu-card__price">$5.00</span>
+                  </div>
+                  <p class="menu-card__desc">18-hour steep in cold water, poured over ice. Low acid, naturally sweet, hits different on a warm Olympia afternoon.</p>
+                  <div class="menu-card__tags">
+                    <span class="tag">Iced</span>
+                    <span class="tag">Low Acid</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__img-wrap">
+                  <img src="https://picsum.photos/seed/orc-po5/400/260" alt="Chemex brewer with coffee" loading="lazy" />
+                </div>
+                <div class="menu-card__body">
+                  <div class="menu-card__row">
+                    <h3 class="menu-card__name">Chemex (2-cup)</h3>
+                    <span class="menu-card__price">$9.00</span>
+                  </div>
+                  <p class="menu-card__desc">Perfect for sharing or lingering over. Clean, bright cup that highlights clarity of origin. Ask about today's feature.</p>
+                  <div class="menu-card__tags">
+                    <span class="tag">Shareable</span>
+                    <span class="tag">Table Service</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__img-wrap">
+                  <img src="https://picsum.photos/seed/orc-po6/400/260" alt="Iced coffee with cream being poured" loading="lazy" />
+                </div>
+                <div class="menu-card__body">
+                  <div class="menu-card__row">
+                    <h3 class="menu-card__name">Flash-Chilled Iced Coffee</h3>
+                    <span class="menu-card__price">$4.75</span>
+                  </div>
+                  <p class="menu-card__desc">Hot-brewed directly over ice — preserves bright flavor without dilution. Cleaner than cold brew, quicker to order.</p>
+                  <div class="menu-card__tags">
+                    <span class="tag">Iced</span>
+                    <span class="tag">Bright</span>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- Food & Pastries -->
+          <div class="tab-panel" id="tab-food" role="tabpanel" aria-labelledby="btn-food">
+            <div class="menu-grid">
+
+              <article class="menu-card">
+                <div class="menu-card__img-wrap">
+                  <img src="https://picsum.photos/seed/orc-food1/400/260" alt="Almond croissant on a white plate" loading="lazy" />
+                </div>
+                <div class="menu-card__body">
+                  <div class="menu-card__row">
+                    <h3 class="menu-card__name">Almond Croissant</h3>
+                    <span class="menu-card__price">$4.50</span>
+                  </div>
+                  <p class="menu-card__desc">Laminated dough from Breadfarm Bakery in Edison, WA. Filled with almond frangipane, dusted with powdered sugar.</p>
+                  <div class="menu-card__tags">
+                    <span class="tag">Local Bakery</span>
+                    <span class="tag">Vegetarian</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__img-wrap">
+                  <img src="https://picsum.photos/seed/orc-food2/400/260" alt="Avocado toast on sourdough bread" loading="lazy" />
+                </div>
+                <div class="menu-card__body">
+                  <div class="menu-card__row">
+                    <h3 class="menu-card__name">Avocado Toast</h3>
+                    <span class="menu-card__price">$9.75</span>
+                  </div>
+                  <p class="menu-card__desc">Sourdough from Olympia's own Bread Peddler, smashed avo, chili flake, lemon, flaky salt, microgreens.</p>
+                  <div class="menu-card__tags">
+                    <span class="tag">Vegan</span>
+                    <span class="tag">Savory</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__img-wrap">
+                  <img src="https://picsum.photos/seed/orc-food3/400/260" alt="Granola bowl with berries and yogurt" loading="lazy" />
+                </div>
+                <div class="menu-card__body">
+                  <div class="menu-card__row">
+                    <h3 class="menu-card__name">Granola Yogurt Bowl</h3>
+                    <span class="menu-card__price">$8.50</span>
+                  </div>
+                  <p class="menu-card__desc">House-toasted oat granola, Noosa whole-milk yogurt, seasonal berries, drizzle of local wildflower honey.</p>
+                  <div class="menu-card__tags">
+                    <span class="tag">Gluten-Free Option</span>
+                    <span class="tag">Wholesome</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__img-wrap">
+                  <img src="https://picsum.photos/seed/orc-food4/400/260" alt="Cardamom morning bun dusted with sugar" loading="lazy" />
+                </div>
+                <div class="menu-card__body">
+                  <div class="menu-card__row">
+                    <h3 class="menu-card__name">Cardamom Morning Bun</h3>
+                    <span class="menu-card__price">$4.25</span>
+                  </div>
+                  <p class="menu-card__desc">Flaky, buttery, rolled in orange zest sugar with a cardamom-cinnamon swirl. Baked in-house daily. Pairs perfectly with our cortado.</p>
+                  <div class="menu-card__tags">
+                    <span class="tag">Baked In-House</span>
+                    <span class="tag">Morning</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__img-wrap">
+                  <img src="https://picsum.photos/seed/orc-food5/400/260" alt="Egg and cheese breakfast sandwich on brioche" loading="lazy" />
+                </div>
+                <div class="menu-card__body">
+                  <div class="menu-card__row">
+                    <h3 class="menu-card__name">Egg &amp; Cheese Sandwich</h3>
+                    <span class="menu-card__price">$8.00</span>
+                  </div>
+                  <p class="menu-card__desc">Soft scrambled egg, aged white cheddar, house-made hot honey aioli on a toasted brioche bun. Simple and satisfying.</p>
+                  <div class="menu-card__tags">
+                    <span class="tag">Breakfast</span>
+                    <span class="tag">Hot</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__img-wrap">
+                  <img src="https://picsum.photos/seed/orc-food6/400/260" alt="Slice of banana bread with walnut topping" loading="lazy" />
+                </div>
+                <div class="menu-card__body">
+                  <div class="menu-card__row">
+                    <h3 class="menu-card__name">Banana Walnut Loaf</h3>
+                    <span class="menu-card__price">$4.00</span>
+                  </div>
+                  <p class="menu-card__desc">Moist, dense, not too sweet. Ripe bananas, toasted walnuts, brown butter. Available warm. Vegan-friendly.</p>
+                  <div class="menu-card__tags">
+                    <span class="tag">Vegan</span>
+                    <span class="tag">Can Be Warmed</span>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         OUR ROASTS
+    ====================================================== -->
+    <section class="roasts section" id="roasts">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__eyebrow">Single Origin &amp; Blends</p>
+          <h2 class="section__title">Our Roasts</h2>
+          <p class="section__desc">We roast every Tuesday and Friday in small batches on our Probat drum roaster. Beans ship same day — you'll taste the difference.</p>
+        </div>
+        <div class="roasts__grid">
+
+          <article class="roast-card reveal">
+            <div class="roast-card__img-wrap">
+              <img src="https://picsum.photos/seed/orc-roast1/600/380" alt="Ethiopian Yirgacheffe coffee cherries on a drying bed" loading="lazy" />
+              <span class="roast-card__level roast-card__level--light">Light</span>
+            </div>
+            <div class="roast-card__body">
+              <div class="roast-card__origin">
+                <i class="bi bi-geo-fill"></i>
+                <span>Yirgacheffe, Ethiopia</span>
+              </div>
+              <h3 class="roast-card__name">Kochere Natural</h3>
+              <p class="roast-card__process">Natural Process &mdash; Washed Station</p>
+              <p class="roast-card__notes-label">Tasting Notes</p>
+              <ul class="roast-card__notes">
+                <li><i class="bi bi-flower1"></i> Jasmine &amp; bergamot</li>
+                <li><i class="bi bi-heart-fill"></i> Blueberry &amp; stone fruit</li>
+                <li><i class="bi bi-droplet"></i> Honey sweetness, clean finish</li>
+              </ul>
+              <div class="roast-card__footer">
+                <span class="roast-card__price">$18 / 12 oz</span>
+                <button class="btn btn--primary" onclick="handleBuyBeans(this)">
+                  <i class="bi bi-bag-plus-fill"></i> Buy Beans
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="roast-card reveal">
+            <div class="roast-card__img-wrap">
+              <img src="https://picsum.photos/seed/orc-roast2/600/380" alt="Colombian coffee farm on a hillside" loading="lazy" />
+              <span class="roast-card__level roast-card__level--medium">Medium</span>
+            </div>
+            <div class="roast-card__body">
+              <div class="roast-card__origin">
+                <i class="bi bi-geo-fill"></i>
+                <span>Huila, Colombia</span>
+              </div>
+              <h3 class="roast-card__name">El Paraíso Washed</h3>
+              <p class="roast-card__process">Washed Process &mdash; Small Cooperative</p>
+              <p class="roast-card__notes-label">Tasting Notes</p>
+              <ul class="roast-card__notes">
+                <li><i class="bi bi-patch-check-fill"></i> Milk chocolate &amp; caramel</li>
+                <li><i class="bi bi-heart-fill"></i> Red apple, apricot</li>
+                <li><i class="bi bi-droplet"></i> Smooth, medium body</li>
+              </ul>
+              <div class="roast-card__footer">
+                <span class="roast-card__price">$16 / 12 oz</span>
+                <button class="btn btn--primary" onclick="handleBuyBeans(this)">
+                  <i class="bi bi-bag-plus-fill"></i> Buy Beans
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="roast-card reveal">
+            <div class="roast-card__img-wrap">
+              <img src="https://picsum.photos/seed/orc-roast3/600/380" alt="Guatemala coffee plantation with volcano backdrop" loading="lazy" />
+              <span class="roast-card__level roast-card__level--dark">Dark</span>
+            </div>
+            <div class="roast-card__body">
+              <div class="roast-card__origin">
+                <i class="bi bi-geo-fill"></i>
+                <span>Antigua, Guatemala</span>
+              </div>
+              <h3 class="roast-card__name">Volcano House Blend</h3>
+              <p class="roast-card__process">Washed Process &mdash; Our Signature Blend</p>
+              <p class="roast-card__notes-label">Tasting Notes</p>
+              <ul class="roast-card__notes">
+                <li><i class="bi bi-fire"></i> Dark chocolate &amp; brown sugar</li>
+                <li><i class="bi bi-heart-fill"></i> Dried cherry, walnut</li>
+                <li><i class="bi bi-droplet"></i> Bold, full body, long finish</li>
+              </ul>
+              <div class="roast-card__footer">
+                <span class="roast-card__price">$15 / 12 oz</span>
+                <button class="btn btn--primary" onclick="handleBuyBeans(this)">
+                  <i class="bi bi-bag-plus-fill"></i> Buy Beans
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         ABOUT
+    ====================================================== -->
+    <section class="about section" id="about">
+      <div class="container about__inner">
+        <div class="about__img-col reveal">
+          <div class="about__img-frame">
+            <img src="https://picsum.photos/seed/orc-about/700/500" alt="Sam and Priya Chen behind the counter of Olympia Roasting Co." loading="lazy" />
+          </div>
+          <div class="about__img-accent" aria-hidden="true"></div>
+        </div>
+        <div class="about__text-col reveal">
+          <p class="section__eyebrow">Our Story</p>
+          <h2 class="section__title">Built on Coffee, Community &amp; Craft</h2>
+          <p>When Sam and Priya Chen moved to Olympia from Portland in 2017, they had one shared obsession: finding a coffee shop that took the bean as seriously as the experience around it. They couldn't find one.</p>
+          <p>So in March 2018, they opened Olympia Roasting Co. in a converted 1920s storefront on Capitol Way. What started as a 12-seat café with a used Probat roaster and a hand-painted sign has grown into a beloved neighborhood anchor — without losing a single thing that made it special.</p>
+          <p>Sam handles the sourcing, traveling twice a year to origin countries to meet the farmers whose work ends up in your cup. Priya runs operations and is responsible for nearly every recipe on the menu — including those cardamom morning buns that sell out by 9am on weekends.</p>
+          <div class="about__values">
+            <div class="about__value">
+              <i class="bi bi-hand-thumbs-up-fill"></i>
+              <div>
+                <strong>Relationships First</strong>
+                <span>We pay above Fair Trade minimums to every farmer we work with.</span>
+              </div>
+            </div>
+            <div class="about__value">
+              <i class="bi bi-tree-fill"></i>
+              <div>
+                <strong>Low Waste Operation</strong>
+                <span>Spent grounds go to local community gardens. Cups are compostable.</span>
+              </div>
+            </div>
+            <div class="about__value">
+              <i class="bi bi-people-fill"></i>
+              <div>
+                <strong>Community Space</strong>
+                <span>Free WiFi, no time limits, real talk. Stay as long as you want.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         VISIT US
+    ====================================================== -->
+    <section class="visit section" id="visit">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__eyebrow">Come See Us</p>
+          <h2 class="section__title">Visit Us</h2>
+        </div>
+        <div class="visit__grid">
+
+          <div class="visit__info reveal">
+            <div class="visit__card">
+              <h3><i class="bi bi-clock"></i> Hours</h3>
+              <table class="hours-table">
+                <tbody>
+                  <tr><td>Monday</td><td>6:00 am – 7:00 pm</td></tr>
+                  <tr><td>Tuesday</td><td>6:00 am – 7:00 pm</td></tr>
+                  <tr><td>Wednesday</td><td>6:00 am – 7:00 pm</td></tr>
+                  <tr><td>Thursday</td><td>6:00 am – 7:00 pm</td></tr>
+                  <tr><td>Friday</td><td>6:00 am – 7:00 pm</td></tr>
+                  <tr class="hours-table__weekend"><td>Saturday</td><td>7:00 am – 8:00 pm</td></tr>
+                  <tr class="hours-table__weekend"><td>Sunday</td><td>7:00 am – 8:00 pm</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="visit__card">
+              <h3><i class="bi bi-geo-alt"></i> Location</h3>
+              <address>
+                412 Capitol Way S<br />
+                Olympia, WA 98501
+              </address>
+              <p class="visit__parking"><i class="bi bi-p-circle-fill"></i> Free street parking on Capitol Way. City Parking Garage #4 is one block north — first hour free.</p>
+              <a href="https://www.google.com/maps/search/412+Capitol+Way+S+Olympia+WA" target="_blank" rel="noopener" class="btn btn--outline btn--sm">
+                <i class="bi bi-map"></i> Get Directions
+              </a>
+            </div>
+            <div class="visit__card">
+              <h3><i class="bi bi-telephone"></i> Contact</h3>
+              <p><a href="tel:+13605550182">(360) 555-0182</a></p>
+              <p><a href="mailto:hello@olympiaroasting.com">hello@olympiaroasting.com</a></p>
+            </div>
+          </div>
+
+          <div class="visit__map reveal">
+            <a href="https://www.google.com/maps/search/412+Capitol+Way+S+Olympia+WA" target="_blank" rel="noopener" class="visit__map-link" aria-label="Open location in Google Maps">
+              <img src="https://picsum.photos/seed/orc-map/700/500" alt="Map placeholder showing downtown Olympia area" loading="lazy" class="visit__map-img" />
+              <div class="visit__map-overlay">
+                <div class="visit__map-pin">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <span class="visit__map-label">Open in Google Maps</span>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#hero" class="footer__logo" aria-label="Olympia Roasting Co. home">
+          <i class="bi bi-cup-hot-fill"></i>
+          <span>Olympia Roasting Co.</span>
+        </a>
+        <p class="footer__tagline">Small-batch roasted in downtown Olympia, WA since 2018.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram" class="footer__social-link"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Facebook" class="footer__social-link"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Twitter / X" class="footer__social-link"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" aria-label="TikTok" class="footer__social-link"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <div class="footer__nav-col">
+          <h4 class="footer__nav-title">Visit</h4>
+          <a href="#menu">Menu</a>
+          <a href="#roasts">Our Roasts</a>
+          <a href="#visit">Hours &amp; Location</a>
+          <a href="tel:+13605550182">Call Us</a>
+        </div>
+        <div class="footer__nav-col">
+          <h4 class="footer__nav-title">Learn</h4>
+          <a href="#about">Our Story</a>
+          <a href="#roasts">Direct Trade</a>
+          <a href="#">Brewing Guides</a>
+          <a href="#">Wholesale</a>
+        </div>
+        <div class="footer__nav-col">
+          <h4 class="footer__nav-title">Order</h4>
+          <a href="#menu">Order Online</a>
+          <a href="#roasts">Buy Beans</a>
+          <a href="#">Gift Cards</a>
+          <a href="#">Subscriptions</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; 2025 Olympia Roasting Co. All rights reserved.</p>
+        <p>Site by <a href="https://github.com/Molly-Olson" target="_blank" rel="noopener">Mo Olson</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

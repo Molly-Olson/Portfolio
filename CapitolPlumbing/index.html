@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Capitol Plumbing & Drain — Family-owned residential and light commercial plumber serving Olympia, Lacey, Tumwater, and Yelm, WA. 24/7 emergency service. Call (360) 555-0192." />
+  <title>Capitol Plumbing & Drain | Olympia, WA | (360) 555-0192</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =====================================================================
+       NAVBAR
+  ====================================================================== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-brand" aria-label="Capitol Plumbing & Drain — Home">
+        <span class="brand-icon" aria-hidden="true">
+          <i class="bi bi-wrench-adjustable"></i>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Capitol Plumbing</span>
+          <span class="brand-sub">&amp; Drain</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <i class="bi bi-list" id="toggleIcon"></i>
+      </button>
+
+      <ul class="nav-menu" id="navMenu" role="list">
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#why-us" class="nav-link">Why Us</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li>
+          <a href="tel:+13605550192" class="btn btn-accent nav-cta phone-link" data-track="navbar">
+            <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+            Call Now: (360) 555-0192
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- =====================================================================
+       HERO
+  ====================================================================== -->
+  <section class="hero" id="hero" aria-label="Hero — Fast, Reliable, Local plumbing">
+    <div class="hero-bg-pattern" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-content reveal">
+        <div class="emergency-badge">
+          <i class="bi bi-lightning-charge-fill" aria-hidden="true"></i>
+          24/7 Emergency Service Available
+        </div>
+        <h1 class="hero-headline">
+          Fast. Reliable. Local.
+        </h1>
+        <p class="hero-sub">
+          Olympia's trusted family plumber since 1984. From clogged drains to full remodels, we fix it right the first time.
+        </p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-accent btn-lg">
+            <i class="bi bi-calendar-check" aria-hidden="true"></i>
+            Request Service
+          </a>
+          <a href="tel:+13605550192" class="btn btn-outline-light btn-lg phone-link" data-track="hero">
+            <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+            (360) 555-0192
+          </a>
+        </div>
+        <div class="trust-badges" role="list" aria-label="Trust badges">
+          <div class="trust-badge" role="listitem">
+            <i class="bi bi-patch-check-fill" aria-hidden="true"></i>
+            <span>Licensed &amp; Insured</span>
+          </div>
+          <div class="trust-badge" role="listitem">
+            <i class="bi bi-clock-fill" aria-hidden="true"></i>
+            <span>24/7 Emergency</span>
+          </div>
+          <div class="trust-badge" role="listitem">
+            <i class="bi bi-house-heart-fill" aria-hidden="true"></i>
+            <span>40+ Years Local</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#emergency-banner" class="hero-scroll-hint" aria-label="Scroll down">
+      <i class="bi bi-chevron-double-down" aria-hidden="true"></i>
+    </a>
+  </section>
+
+  <!-- =====================================================================
+       EMERGENCY BANNER
+  ====================================================================== -->
+  <div class="emergency-banner" id="emergency-banner" role="alert" aria-live="polite">
+    <div class="container emergency-inner">
+      <i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i>
+      <strong>24/7 Emergency Service Available</strong>
+      <span class="em-sep" aria-hidden="true">—</span>
+      Burst pipe? Sewage backup? We answer around the clock.
+      <a href="tel:+13605550192" class="em-phone phone-link" data-track="emergency-banner">
+        <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+        (360) 555-0192
+      </a>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       SERVICES
+  ====================================================================== -->
+  <section class="section section-services" id="services" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">What We Do</span>
+        <h2 id="services-heading" class="section-title">Full-Service Plumbing Solutions</h2>
+        <p class="section-sub">From routine maintenance to emergency repairs — we handle it all for homes and light commercial properties across Thurston County.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service-card reveal" aria-label="Drain Cleaning service">
+          <div class="service-icon" aria-hidden="true">
+            <i class="bi bi-droplet-half"></i>
+          </div>
+          <h3 class="service-title">Drain Cleaning</h3>
+          <p class="service-desc">Slow or blocked drains cleared fast using hydro-jet and snake methods. Kitchen, bath, floor drains — no clog too stubborn.</p>
+          <a href="#contact" class="service-link">Get a Quote <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </article>
+
+        <article class="service-card reveal" aria-label="Water Heater Install & Repair service">
+          <div class="service-icon" aria-hidden="true">
+            <i class="bi bi-thermometer-half"></i>
+          </div>
+          <h3 class="service-title">Water Heater Install &amp; Repair</h3>
+          <p class="service-desc">Tank and tankless water heater installation, repairs, and replacements. Energy-efficient options available. Same-day service in most cases.</p>
+          <a href="#contact" class="service-link">Get a Quote <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </article>
+
+        <article class="service-card reveal" aria-label="Leak Detection service">
+          <div class="service-icon" aria-hidden="true">
+            <i class="bi bi-search-heart"></i>
+          </div>
+          <h3 class="service-title">Leak Detection</h3>
+          <p class="service-desc">Advanced electronic leak detection to find hidden leaks before they cause major damage — walls, slabs, and underground lines.</p>
+          <a href="#contact" class="service-link">Get a Quote <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </article>
+
+        <article class="service-card reveal" aria-label="Sewer Line service">
+          <div class="service-icon" aria-hidden="true">
+            <i class="bi bi-diagram-3"></i>
+          </div>
+          <h3 class="service-title">Sewer Line Service</h3>
+          <p class="service-desc">Camera inspection, hydro-jetting, repair, and replacement of main sewer lines. We diagnose the problem right the first time.</p>
+          <a href="#contact" class="service-link">Get a Quote <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </article>
+
+        <article class="service-card reveal" aria-label="Bathroom Remodel Plumbing service">
+          <div class="service-icon" aria-hidden="true">
+            <i class="bi bi-tools"></i>
+          </div>
+          <h3 class="service-title">Bathroom Remodel Plumbing</h3>
+          <p class="service-desc">Rough-in and finish plumbing for bathroom renovations. Showers, tubs, toilets, vanities — precise work that keeps your project on schedule.</p>
+          <a href="#contact" class="service-link">Get a Quote <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </article>
+
+        <article class="service-card reveal" aria-label="Backflow Prevention service">
+          <div class="service-icon" aria-hidden="true">
+            <i class="bi bi-shield-check"></i>
+          </div>
+          <h3 class="service-title">Backflow Prevention</h3>
+          <p class="service-desc">Certified backflow testing, installation, and annual inspections. Protect your drinking water and stay compliant with city regulations.</p>
+          <a href="#contact" class="service-link">Get a Quote <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       WHY CHOOSE US
+  ====================================================================== -->
+  <section class="section section-why" id="why-us" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Why Capitol Plumbing</span>
+        <h2 id="why-heading" class="section-title">The Difference Is in the Details</h2>
+      </div>
+      <div class="why-grid">
+
+        <div class="why-card reveal">
+          <div class="why-icon" aria-hidden="true">
+            <i class="bi bi-patch-check-fill"></i>
+          </div>
+          <h3 class="why-title">Licensed &amp; Bonded</h3>
+          <p class="why-desc">Fully licensed with the state of Washington and bonded for your protection. WA Lic# CAPITPP123AB. No shortcuts, no surprises.</p>
+        </div>
+
+        <div class="why-card reveal">
+          <div class="why-icon" aria-hidden="true">
+            <i class="bi bi-tag-fill"></i>
+          </div>
+          <h3 class="why-title">Upfront Pricing</h3>
+          <p class="why-desc">You'll know the full cost before we turn a wrench. No hidden fees, no after-the-fact surprises. Honest pricing, every time.</p>
+        </div>
+
+        <div class="why-card reveal">
+          <div class="why-icon" aria-hidden="true">
+            <i class="bi bi-lightning-charge-fill"></i>
+          </div>
+          <h3 class="why-title">Same-Day Service</h3>
+          <p class="why-desc">We know plumbing problems can't always wait. Same-day appointments available seven days a week — call us before noon to get on today's schedule.</p>
+        </div>
+
+        <div class="why-card reveal">
+          <div class="why-icon" aria-hidden="true">
+            <i class="bi bi-house-heart-fill"></i>
+          </div>
+          <h3 class="why-title">Family-Owned Since 1984</h3>
+          <p class="why-desc">Three generations of the Hendricks family serving Thurston County. We treat your home like our own and stand behind every job we do.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       ABOUT
+  ====================================================================== -->
+  <section class="section section-about" id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrap reveal">
+          <img
+            src="https://picsum.photos/seed/plumber84/600/500"
+            alt="Mike Hendricks, owner of Capitol Plumbing & Drain, standing in front of a service van in Olympia, WA"
+            class="about-photo"
+            width="600"
+            height="500"
+            loading="lazy"
+          />
+          <div class="about-badge" aria-label="40 plus years in business">
+            <span class="badge-number">40+</span>
+            <span class="badge-label">Years Serving<br>Olympia</span>
+          </div>
+        </div>
+        <div class="about-content reveal">
+          <span class="section-eyebrow">Our Story</span>
+          <h2 id="about-heading" class="section-title">Three Generations of Trusted Plumbing</h2>
+          <p>Capitol Plumbing &amp; Drain was founded in 1984 by Harold Hendricks, a master plumber who believed that homeowners deserved honest, skilled service from someone who lived in the same community. His son Dave took over in 2002, and today Dave's son <strong>Mike Hendricks</strong> leads the company as a third-generation master plumber with 18 years in the trade.</p>
+          <p>Mike grew up on job sites, apprenticed under his father, and earned his master plumber license in 2008. He's seen every kind of plumbing problem this region throws at a house — from the old cast-iron drain systems in South Capitol Hill bungalows to the new construction in Lacey's growing neighborhoods.</p>
+          <p>"My grandfather started this business on a handshake. That hasn't changed. We still show up on time, do the work right, and make sure you're happy before we leave."</p>
+          <p class="about-sig"><strong>— Mike Hendricks, Owner &amp; Master Plumber</strong></p>
+          <div class="about-areas">
+            <h3 class="areas-label"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Service Area</h3>
+            <ul class="areas-list" role="list">
+              <li>Olympia</li>
+              <li>Lacey</li>
+              <li>Tumwater</li>
+              <li>Yelm</li>
+              <li>Tenino</li>
+              <li>Rainier</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       TESTIMONIALS
+  ====================================================================== -->
+  <section class="section section-testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Customer Reviews</span>
+        <h2 id="testimonials-heading" class="section-title">What Our Neighbors Are Saying</h2>
+        <div class="overall-rating" aria-label="Overall rating: 4.9 out of 5 stars based on 200 plus reviews">
+          <div class="stars" aria-hidden="true">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <span class="rating-text">4.9 / 5 &nbsp;&bull;&nbsp; 200+ Reviews</span>
+        </div>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <blockquote class="testimonial-card reveal">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
+          </div>
+          <p class="testimonial-text">"Woke up at 6am on a Sunday to a burst pipe under the kitchen sink. Called Capitol Plumbing and Mike was at my door within the hour. Fixed it fast, cleaned up, and the price was fair. These guys are the real deal."</p>
+          <footer class="testimonial-author">
+            <div class="author-avatar" aria-hidden="true">
+              <img src="https://picsum.photos/seed/reviewer1/60/60" alt="" width="60" height="60" loading="lazy" />
+            </div>
+            <div class="author-info">
+              <cite class="author-name">Sandra W.</cite>
+              <span class="author-location"><i class="bi bi-geo-alt" aria-hidden="true"></i> South Capitol Hill, Olympia</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial-card reveal">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
+          </div>
+          <p class="testimonial-text">"Had a water heater go out right before Thanksgiving. They squeezed us in the same afternoon, installed a new tankless unit, and walked me through the whole system. Super professional, and they didn't try to upsell me on anything I didn't need."</p>
+          <footer class="testimonial-author">
+            <div class="author-avatar" aria-hidden="true">
+              <img src="https://picsum.photos/seed/reviewer2/60/60" alt="" width="60" height="60" loading="lazy" />
+            </div>
+            <div class="author-info">
+              <cite class="author-name">Tom &amp; Diane K.</cite>
+              <span class="author-location"><i class="bi bi-geo-alt" aria-hidden="true"></i> Lacey, WA</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial-card reveal">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i><i class="bi bi-star-fill" aria-hidden="true"></i>
+          </div>
+          <p class="testimonial-text">"Third time using Capitol Plumbing. They remodeled both of our bathrooms and did the sewer camera inspection on our 1960s house. Every time: on time, transparent about pricing, and clean work. I recommend them to everyone."</p>
+          <footer class="testimonial-author">
+            <div class="author-avatar" aria-hidden="true">
+              <img src="https://picsum.photos/seed/reviewer3/60/60" alt="" width="60" height="60" loading="lazy" />
+            </div>
+            <div class="author-info">
+              <cite class="author-name">Ray M.</cite>
+              <span class="author-location"><i class="bi bi-geo-alt" aria-hidden="true"></i> Tumwater, WA</span>
+            </div>
+          </footer>
+        </blockquote>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       CONTACT / REQUEST SERVICE
+  ====================================================================== -->
+  <section class="section section-contact" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Get In Touch</span>
+        <h2 id="contact-heading" class="section-title">Request Service</h2>
+        <p class="section-sub">Fill out the form below and we'll call you back within the hour during business hours. For emergencies, call us directly.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- FORM -->
+        <div class="contact-form-wrap reveal">
+          <form id="serviceForm" class="service-form" novalidate aria-label="Service request form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname" class="form-label">Full Name <span class="req" aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="fname"
+                  name="name"
+                  class="form-control"
+                  placeholder="Jane Smith"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                  aria-describedby="fname-error"
+                />
+                <span class="form-error" id="fname-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="fphone" class="form-label">Phone Number <span class="req" aria-hidden="true">*</span></label>
+                <input
+                  type="tel"
+                  id="fphone"
+                  name="phone"
+                  class="form-control"
+                  placeholder="(360) 555-____"
+                  autocomplete="tel"
+                  required
+                  aria-required="true"
+                  aria-describedby="fphone-error"
+                />
+                <span class="form-error" id="fphone-error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fservice" class="form-label">Service Needed <span class="req" aria-hidden="true">*</span></label>
+              <div class="select-wrap">
+                <select
+                  id="fservice"
+                  name="service"
+                  class="form-control"
+                  required
+                  aria-required="true"
+                  aria-describedby="fservice-error"
+                >
+                  <option value="">— Select a service —</option>
+                  <option value="drain-cleaning">Drain Cleaning</option>
+                  <option value="water-heater">Water Heater Install / Repair</option>
+                  <option value="leak-detection">Leak Detection</option>
+                  <option value="sewer-line">Sewer Line Service</option>
+                  <option value="bathroom-remodel">Bathroom Remodel Plumbing</option>
+                  <option value="backflow">Backflow Prevention</option>
+                  <option value="emergency">Emergency Service</option>
+                  <option value="other">Other / Not Sure</option>
+                </select>
+                <i class="bi bi-chevron-down select-arrow" aria-hidden="true"></i>
+              </div>
+              <span class="form-error" id="fservice-error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="fdescription" class="form-label">Describe the Problem</label>
+              <textarea
+                id="fdescription"
+                name="description"
+                class="form-control"
+                rows="4"
+                placeholder="Tell us what's going on — the more detail, the better we can help..."
+                aria-describedby="fdescription-hint"
+              ></textarea>
+              <span class="form-hint" id="fdescription-hint">Optional, but helpful for scheduling and estimates.</span>
+            </div>
+            <div class="form-group">
+              <label for="ftime" class="form-label">Preferred Time</label>
+              <div class="select-wrap">
+                <select id="ftime" name="preferred_time" class="form-control">
+                  <option value="">— Any time works —</option>
+                  <option value="asap">As Soon As Possible</option>
+                  <option value="morning">Morning (8am–12pm)</option>
+                  <option value="afternoon">Afternoon (12pm–5pm)</option>
+                  <option value="weekend">Weekend</option>
+                </select>
+                <i class="bi bi-chevron-down select-arrow" aria-hidden="true"></i>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-accent btn-lg btn-block" id="submitBtn">
+              <i class="bi bi-send-fill" aria-hidden="true"></i>
+              <span class="btn-text">Send Request</span>
+              <span class="btn-loading" aria-hidden="true" hidden>
+                <i class="bi bi-arrow-repeat spin"></i> Sending...
+              </span>
+            </button>
+          </form>
+
+          <!-- SUCCESS STATE -->
+          <div class="form-success" id="formSuccess" hidden aria-live="polite" role="status">
+            <div class="success-icon" aria-hidden="true"><i class="bi bi-check-circle-fill"></i></div>
+            <h3 class="success-title">Request Received!</h3>
+            <p class="success-msg">Thanks! We'll call you back within the hour during business hours. For immediate help, call <a href="tel:+13605550192" class="phone-link" data-track="success">(360) 555-0192</a>.</p>
+            <button class="btn btn-outline-primary btn-sm" id="resetFormBtn">Submit Another Request</button>
+          </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="contact-sidebar reveal" aria-label="Contact information">
+          <div class="sidebar-card">
+            <h3 class="sidebar-heading"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call or Text</h3>
+            <a href="tel:+13605550192" class="sidebar-phone phone-link" data-track="sidebar">(360) 555-0192</a>
+            <p class="sidebar-note">Emergencies answered 24/7. For non-urgent requests, we'll call you back within the hour.</p>
+          </div>
+          <div class="sidebar-card">
+            <h3 class="sidebar-heading"><i class="bi bi-clock-fill" aria-hidden="true"></i> Business Hours</h3>
+            <dl class="hours-list">
+              <div class="hours-row">
+                <dt>Mon – Fri</dt>
+                <dd>7:00 am – 6:00 pm</dd>
+              </div>
+              <div class="hours-row">
+                <dt>Saturday</dt>
+                <dd>8:00 am – 4:00 pm</dd>
+              </div>
+              <div class="hours-row">
+                <dt>Sunday</dt>
+                <dd>Emergency Only</dd>
+              </div>
+            </dl>
+            <div class="emergency-note">
+              <i class="bi bi-lightning-charge-fill" aria-hidden="true"></i>
+              Emergency line staffed 24/7/365
+            </div>
+          </div>
+          <div class="sidebar-card">
+            <h3 class="sidebar-heading"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Service Area</h3>
+            <p class="sidebar-areas">Olympia &bull; Lacey &bull; Tumwater &bull; Yelm &bull; Tenino &bull; Rainier</p>
+            <p class="sidebar-note">Thurston County and surrounding areas. Call to confirm service to your location.</p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       FOOTER
+  ====================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-brand footer-logo" aria-label="Capitol Plumbing & Drain — Back to top">
+          <span class="brand-icon" aria-hidden="true"><i class="bi bi-wrench-adjustable"></i></span>
+          <span class="brand-text">
+            <span class="brand-name">Capitol Plumbing</span>
+            <span class="brand-sub">&amp; Drain</span>
+          </span>
+        </a>
+        <p class="footer-tagline">Family-owned. Locally trusted. Serving Olympia since 1984.</p>
+        <p class="footer-license">WA Lic# CAPITPP123AB &nbsp;&bull;&nbsp; Bonded &amp; Insured</p>
+        <a href="tel:+13605550192" class="footer-phone phone-link" data-track="footer">
+          <i class="bi bi-telephone-fill" aria-hidden="true"></i> (360) 555-0192
+        </a>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">Services</h4>
+          <ul role="list">
+            <li><a href="#services">Drain Cleaning</a></li>
+            <li><a href="#services">Water Heater Service</a></li>
+            <li><a href="#services">Leak Detection</a></li>
+            <li><a href="#services">Sewer Line</a></li>
+            <li><a href="#services">Bathroom Remodels</a></li>
+            <li><a href="#services">Backflow Prevention</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">Company</h4>
+          <ul role="list">
+            <li><a href="#why-us">Why Choose Us</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Request Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">Service Area</h4>
+          <ul role="list">
+            <li><a href="#contact">Olympia, WA</a></li>
+            <li><a href="#contact">Lacey, WA</a></li>
+            <li><a href="#contact">Tumwater, WA</a></li>
+            <li><a href="#contact">Yelm, WA</a></li>
+            <li><a href="#contact">Tenino, WA</a></li>
+            <li><a href="#contact">Rainier, WA</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span id="footerYear"></span> Capitol Plumbing &amp; Drain. All rights reserved.</p>
+        <p class="footer-credit">
+          Site by <a href="https://github.com/Molly-Olson" target="_blank" rel="noopener noreferrer">Mo Olson</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back-to-top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" hidden>
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
