@@ -115,6 +115,45 @@ body {
   box-shadow: 0 0 0 8px rgba(167,139,250,.1), 0 0 60px rgba(167,139,250,.25);
   display: block;
 }
+
+/* ── Initials avatar (replaces headshot) ─────────────────────────────── */
+.hero-avatar {
+  width: 260px; height: 260px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a0a3a 0%, var(--bg-card) 65%);
+  border: 3px solid var(--amethyst);
+  box-shadow: 0 0 0 8px rgba(167,139,250,.1), 0 0 60px rgba(167,139,250,.3);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.hero-avatar::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 35% 30%, rgba(52,211,153,.14) 0%, transparent 55%),
+              radial-gradient(circle at 70% 75%, rgba(167,139,250,.14) 0%, transparent 50%);
+}
+.hero-avatar-initials {
+  font-size: 4.8rem;
+  font-weight: 800;
+  letter-spacing: -.04em;
+  background: linear-gradient(135deg, var(--amethyst), var(--aurora));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  position: relative; z-index: 1;
+  animation: shimmer 5s linear infinite;
+  background-size: 300% 100%;
+}
+.hero-avatar-sub {
+  color: var(--muted);
+  font-size: .7rem;
+  margin-top: .55rem;
+  position: relative; z-index: 1;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
 .hero-photo-ring {
   position: absolute; inset: -16px;
   border-radius: 50%;
@@ -416,6 +455,8 @@ body {
 @media(max-width:991px){
   .project-featured-visual { min-height:220px; }
   .hero-photo { width:200px;height:200px; }
+  .hero-avatar { width:200px;height:200px; }
+  .hero-avatar-initials { font-size:3.6rem; }
 }
 @media(max-width:575px){
   .hero-name { font-size:2.4rem; }

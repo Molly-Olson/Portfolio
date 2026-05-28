@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Casa Verde — Authentic Mexican Flavors</title>
-  <meta name="description" content="Casa Verde has been serving the neighborhood authentic Mexican cuisine since 2009. Fresh ingredients, family recipes, dine-in and takeout." />
+  <title>Casa Verde — Authentic Mexican Restaurant in Olympia, WA</title>
+  <meta name="description" content="Casa Verde serves authentic Mexican cuisine in Olympia, WA. Fresh ingredients, family recipes, dine-in and takeout. Open Tue–Sun 11am–9pm." />
 
-  <!-- Bootstrap Icons -->
+  <!-- Bootstrap Icons only — no Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Fraunces + Caveat + Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400&family=Caveat:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -22,7 +22,7 @@
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="#home" class="nav-logo">
-        <i class="bi bi-flower1"></i>
+        <i class="bi bi-fire"></i>
         Casa Verde
       </a>
 
@@ -31,13 +31,14 @@
       </button>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#home" class="nav-link">Home</a></li>
         <li><a href="#menu" class="nav-link">Menu</a></li>
         <li><a href="#about" class="nav-link">Our Story</a></li>
-        <li><a href="#gallery" class="nav-link">Gallery</a></li>
-        <li><a href="#reservations" class="nav-link">Contact</a></li>
+        <li><a href="#specials" class="nav-link">Specials</a></li>
+        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
         <li>
-          <a href="#reservations" class="btn btn-gold nav-cta">
+          <a href="#contact" class="btn-nav-cta">
             <i class="bi bi-calendar2-check"></i> Reserve a Table
           </a>
         </li>
@@ -47,95 +48,93 @@
 
   <!-- ===================== HERO ===================== -->
   <section class="hero" id="home">
-    <div class="hero-overlay"></div>
     <div class="hero-content container">
       <p class="hero-eyebrow">
-        <i class="bi bi-geo-alt-fill"></i> Serving Our Community Since 2009
+        <i class="bi bi-geo-alt-fill"></i> Olympia, WA &nbsp;·&nbsp; Open Since 2009
       </p>
-      <h1 class="hero-headline">
-        Authentic Mexican Flavors,<br />
-        <span class="text-gold">Made with Love</span>
-      </h1>
+
+      <div class="hero-headline-wrap">
+        <span class="hero-bg-word" aria-hidden="true">AUTHENTIC</span>
+        <h1 class="hero-headline">
+          Real Mexican Food,<br />
+          <em>Made with Soul</em>
+        </h1>
+      </div>
+
       <p class="hero-sub">
-        Every dish is crafted from fresh, locally sourced ingredients and time-honored
-        family recipes passed down through three generations of the Ramirez family.
+        Three generations of family recipes. Locally sourced ingredients.
+        Every tortilla made by hand — just like abuela taught us.
       </p>
+
       <div class="hero-ctas">
-        <a href="#menu" class="btn btn-gold btn-lg">
+        <a href="#menu" class="btn btn-orange btn-lg">
           <i class="bi bi-book-half"></i> View Our Menu
         </a>
-        <a href="#reservations" class="btn btn-outline btn-lg">
+        <a href="#contact" class="btn btn-outline-dark btn-lg">
           <i class="bi bi-calendar2-check"></i> Reserve a Table
         </a>
       </div>
 
-      <div class="trust-badges">
-        <div class="badge-item">
-          <i class="bi bi-house-heart"></i>
-          <span>Family Owned Since 2009</span>
+      <div class="hero-badges">
+        <div class="hero-badge">
+          <i class="bi bi-house-heart-fill"></i>
+          <span>Family Owned</span>
         </div>
-        <div class="badge-divider"></div>
-        <div class="badge-item">
-          <i class="bi bi-sun"></i>
+        <div class="hero-badge-divider"></div>
+        <div class="hero-badge">
+          <i class="bi bi-sun-fill"></i>
           <span>Fresh Daily</span>
         </div>
-        <div class="badge-divider"></div>
-        <div class="badge-item">
-          <i class="bi bi-bag-check"></i>
+        <div class="hero-badge-divider"></div>
+        <div class="hero-badge">
+          <i class="bi bi-bag-check-fill"></i>
           <span>Dine-In &amp; Takeout</span>
+        </div>
+        <div class="hero-badge-divider"></div>
+        <div class="hero-badge">
+          <i class="bi bi-trophy-fill"></i>
+          <span>5× Best of Olympia</span>
         </div>
       </div>
     </div>
 
-    <a href="#features" class="hero-scroll" aria-label="Scroll down">
-      <i class="bi bi-chevron-double-down"></i>
-    </a>
+    <!-- Mexican tile border -->
+    <div class="hero-tile-border" aria-hidden="true">
+      <div class="tile-repeat"></div>
+    </div>
   </section>
 
   <!-- ===================== FEATURES BAR ===================== -->
-  <section class="features-bar" id="features">
+  <section class="features-bar">
     <div class="container features-grid">
-
       <div class="feature-item">
-        <div class="feature-icon">
-          <i class="bi bi-basket2-fill"></i>
-        </div>
-        <div class="feature-text">
-          <h3>Fresh Ingredients</h3>
-          <p>Locally sourced produce delivered every morning. No frozen shortcuts — ever.</p>
+        <div class="feature-icon"><i class="bi bi-basket2-fill"></i></div>
+        <div>
+          <h3>Farm Fresh</h3>
+          <p>Produce delivered every morning from three local farms within 30 miles.</p>
         </div>
       </div>
-
       <div class="feature-item">
-        <div class="feature-icon">
-          <i class="bi bi-journal-richtext"></i>
-        </div>
-        <div class="feature-text">
+        <div class="feature-icon"><i class="bi bi-journal-richtext"></i></div>
+        <div>
           <h3>Family Recipes</h3>
-          <p>Three generations of cooking wisdom in every sauce, salsa, and seasoning blend.</p>
+          <p>Three generations of cooking wisdom in every sauce and seasoning.</p>
         </div>
       </div>
-
       <div class="feature-item">
-        <div class="feature-icon">
-          <i class="bi bi-star-fill"></i>
-        </div>
-        <div class="feature-text">
-          <h3>Daily Specials</h3>
-          <p>Rotating chef's specials every week, inspired by the seasons and what's fresh.</p>
+        <div class="feature-icon"><i class="bi bi-hand-thumbs-up-fill"></i></div>
+        <div>
+          <h3>Handmade Tortillas</h3>
+          <p>Every single tortilla pressed and cooked fresh throughout the day.</p>
         </div>
       </div>
-
       <div class="feature-item">
-        <div class="feature-icon">
-          <i class="bi bi-trophy-fill"></i>
-        </div>
-        <div class="feature-text">
-          <h3>Local Favorite</h3>
-          <p>Voted best Mexican restaurant in the neighborhood five years running.</p>
+        <div class="feature-icon"><i class="bi bi-star-fill"></i></div>
+        <div>
+          <h3>5× Award Winner</h3>
+          <p>Voted Best Mexican Restaurant in Olympia five years running.</p>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -147,143 +146,238 @@
         <span class="section-eyebrow">What We Serve</span>
         <h2 class="section-title">Our Menu</h2>
         <p class="section-sub">
-          Handcrafted with tradition. Every item tells a story that started in Oaxaca
-          and found its home right here in your neighborhood.
+          Handcrafted with tradition. Every dish tells a story that started in Oaxaca
+          and found its home right here in Olympia.
         </p>
       </div>
 
       <!-- Tab Nav -->
-      <div class="menu-tabs">
-        <button class="menu-tab active" data-tab="tacos">
+      <div class="menu-tabs" role="tablist">
+        <button class="menu-tab active" data-tab="tacos" role="tab" aria-selected="true" aria-controls="tab-tacos">
           <i class="bi bi-fire"></i> Tacos
         </button>
-        <button class="menu-tab" data-tab="entrees">
-          <i class="bi bi-egg-fried"></i> Entrees
+        <button class="menu-tab" data-tab="enchiladas" role="tab" aria-selected="false" aria-controls="tab-enchiladas">
+          <i class="bi bi-egg-fried"></i> Enchiladas
         </button>
-        <button class="menu-tab" data-tab="drinks">
-          <i class="bi bi-cup-straw"></i> Drinks &amp; Desserts
+        <button class="menu-tab" data-tab="sides" role="tab" aria-selected="false" aria-controls="tab-sides">
+          <i class="bi bi-cup-straw"></i> Sides &amp; Drinks
         </button>
       </div>
 
       <!-- Tacos -->
-      <div class="menu-panel active" id="tab-tacos">
-        <div class="menu-grid">
+      <div class="menu-panel active" id="tab-tacos" role="tabpanel">
+        <div class="menu-list">
 
-          <div class="menu-card">
-            <div class="menu-card-header">
-              <h4>Carne Asada Tacos</h4>
+          <div class="menu-item">
+            <div class="menu-item-main">
+              <div class="menu-item-info">
+                <h4>Carne Asada Tacos</h4>
+                <p>Three street-style corn tortillas with grilled skirt steak, charred scallions, house salsa verde, and cotija cheese. Served with lime.</p>
+                <span class="menu-tag tag-orange">Chef's Favorite</span>
+              </div>
               <span class="menu-price">$13.50</span>
             </div>
-            <p class="menu-desc">Three street-style corn tortillas loaded with grilled skirt steak, charred scallions, house salsa verde, and cotija cheese. Served with lime wedges.</p>
-            <span class="menu-tag">Chef's Favorite</span>
           </div>
 
-          <div class="menu-card">
-            <div class="menu-card-header">
-              <h4>Al Pastor Tacos</h4>
+          <div class="menu-item">
+            <div class="menu-item-main">
+              <div class="menu-item-info">
+                <h4>Al Pastor Tacos</h4>
+                <p>Slow-marinated pork shoulder with fresh pineapple, diced white onion, and cilantro on handmade corn tortillas.</p>
+                <span class="menu-tag tag-green">House Classic</span>
+              </div>
               <span class="menu-price">$12.00</span>
             </div>
-            <p class="menu-desc">Slow-marinated pork shoulder shaved from the trompo, topped with fresh pineapple, diced white onion, and cilantro on handmade corn tortillas.</p>
-            <span class="menu-tag">House Classic</span>
           </div>
 
-          <div class="menu-card">
-            <div class="menu-card-header">
-              <h4>Baja Fish Tacos</h4>
+          <div class="menu-item">
+            <div class="menu-item-main">
+              <div class="menu-item-info">
+                <h4>Baja Fish Tacos</h4>
+                <p>Crispy beer-battered tilapia, shredded cabbage, pickled jalapeños, and chipotle crema in warm flour tortillas. A coastal classic.</p>
+              </div>
               <span class="menu-price">$14.00</span>
             </div>
-            <p class="menu-desc">Crispy beer-battered tilapia, shredded cabbage, pickled jalapeños, and chipotle crema in warm flour tortillas. A coastal favorite.</p>
           </div>
 
-          <div class="menu-card">
-            <div class="menu-card-header">
-              <h4>Rajas con Queso Tacos</h4>
+          <div class="menu-item">
+            <div class="menu-item-main">
+              <div class="menu-item-info">
+                <h4>Rajas con Queso Tacos</h4>
+                <p>Fire-roasted poblano strips sautéed with sweet onions, cream, and melted Oaxacan cheese. A hearty vegetarian option.</p>
+                <span class="menu-tag tag-green">Vegetarian</span>
+              </div>
               <span class="menu-price">$11.00</span>
             </div>
-            <p class="menu-desc">Fire-roasted poblano strips sautéed with sweet onions, cream, and melted Oaxacan cheese. A hearty vegetarian option you won't forget.</p>
-            <span class="menu-tag">Vegetarian</span>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-main">
+              <div class="menu-item-info">
+                <h4>Birria Tacos</h4>
+                <p>Braised beef birria in corn tortillas, crispy-fried with consommé for dipping. Topped with diced onion, cilantro, and lime.</p>
+                <span class="menu-tag tag-red">Weekend Special</span>
+              </div>
+              <span class="menu-price">$15.00</span>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-main">
+              <div class="menu-item-info">
+                <h4>Camarones Tacos</h4>
+                <p>Grilled gulf shrimp with mango salsa, avocado crema, and micro cilantro on warm corn tortillas.</p>
+              </div>
+              <span class="menu-price">$14.50</span>
+            </div>
           </div>
 
         </div>
       </div>
 
-      <!-- Entrees -->
-      <div class="menu-panel" id="tab-entrees">
-        <div class="menu-grid">
+      <!-- Enchiladas -->
+      <div class="menu-panel" id="tab-enchiladas" role="tabpanel">
+        <div class="menu-list">
 
-          <div class="menu-card">
-            <div class="menu-card-header">
-              <h4>Enchiladas Verdes</h4>
+          <div class="menu-item">
+            <div class="menu-item-main">
+              <div class="menu-item-info">
+                <h4>Enchiladas Verdes</h4>
+                <p>Three corn tortillas stuffed with slow-braised chicken, smothered in our signature tomatillo sauce. Topped with crema and queso fresco.</p>
+                <span class="menu-tag tag-orange">Chef's Favorite</span>
+              </div>
               <span class="menu-price">$16.50</span>
             </div>
-            <p class="menu-desc">Three corn tortillas stuffed with slow-braised chicken, rolled and smothered in our signature tomatillo sauce. Topped with crema, queso fresco, and sliced onion.</p>
-            <span class="menu-tag">Chef's Favorite</span>
           </div>
 
-          <div class="menu-card">
-            <div class="menu-card-header">
-              <h4>Mole Negro Plate</h4>
+          <div class="menu-item">
+            <div class="menu-item-main">
+              <div class="menu-item-info">
+                <h4>Enchiladas Rojas</h4>
+                <p>Pulled chicken in a rich guajillo chile sauce, topped with crumbled cotija, white onion, and Mexican crema.</p>
+              </div>
+              <span class="menu-price">$16.00</span>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-main">
+              <div class="menu-item-info">
+                <h4>Mole Negro Plate</h4>
+                <p>Tender chicken thigh in our grandmother's seven-chile mole negro — a recipe 30 years in the making. Served with arroz rojo.</p>
+                <span class="menu-tag tag-green">Family Recipe</span>
+              </div>
               <span class="menu-price">$19.00</span>
             </div>
-            <p class="menu-desc">Tender chicken thigh in our grandmother's seven-chile mole negro — a recipe 30 years in the making. Served with arroz rojo and fresh-made corn tortillas.</p>
-            <span class="menu-tag">Family Recipe</span>
           </div>
 
-          <div class="menu-card">
-            <div class="menu-card-header">
-              <h4>Chile Relleno</h4>
+          <div class="menu-item">
+            <div class="menu-item-main">
+              <div class="menu-item-info">
+                <h4>Chile Relleno</h4>
+                <p>Fire-roasted poblano stuffed with seasoned picadillo and melted Manchego, lightly battered and fried in rich tomato broth.</p>
+              </div>
               <span class="menu-price">$17.50</span>
             </div>
-            <p class="menu-desc">Fire-roasted poblano chile stuffed with seasoned picadillo and melted Manchego cheese, lightly battered and fried, served in a rich tomato broth.</p>
           </div>
 
-          <div class="menu-card">
-            <div class="menu-card-header">
-              <h4>Carnitas Platter</h4>
+          <div class="menu-item">
+            <div class="menu-item-main">
+              <div class="menu-item-info">
+                <h4>Carnitas Platter</h4>
+                <p>Copper-pot braised pork carnitas with refried beans, Mexican rice, house guacamole, and warm tortillas.</p>
+              </div>
               <span class="menu-price">$18.00</span>
             </div>
-            <p class="menu-desc">Eight ounces of copper-pot braised pork carnitas, crisped and served with refried beans, Mexican rice, house-made guacamole, and warm tortillas.</p>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-main">
+              <div class="menu-item-info">
+                <h4>Enchiladas Suizas</h4>
+                <p>Corn tortillas filled with roasted chicken, covered in creamy tomatillo and sour cream sauce, finished with melted Monterey Jack.</p>
+                <span class="menu-tag tag-red">Fan Favorite</span>
+              </div>
+              <span class="menu-price">$17.00</span>
+            </div>
           </div>
 
         </div>
       </div>
 
-      <!-- Drinks & Desserts -->
-      <div class="menu-panel" id="tab-drinks">
-        <div class="menu-grid">
+      <!-- Sides & Drinks -->
+      <div class="menu-panel" id="tab-sides" role="tabpanel">
+        <div class="menu-list">
 
-          <div class="menu-card">
-            <div class="menu-card-header">
-              <h4>Agua Fresca Flight</h4>
+          <div class="menu-item">
+            <div class="menu-item-main">
+              <div class="menu-item-info">
+                <h4>Guacamole &amp; Chips</h4>
+                <p>Fresh avocado mashed tableside with lime, diced jalapeño, onion, and cilantro. Served with house-fried tortilla chips.</p>
+              </div>
+              <span class="menu-price">$9.00</span>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-main">
+              <div class="menu-item-info">
+                <h4>Elote en Vaso</h4>
+                <p>Street-style corn kernels with cotija cheese, chili powder, lime juice, and crema. A crowd favorite from the first bite.</p>
+                <span class="menu-tag tag-orange">Street Food</span>
+              </div>
+              <span class="menu-price">$6.50</span>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-main">
+              <div class="menu-item-info">
+                <h4>Agua Fresca Flight</h4>
+                <p>Three seasonal agua frescas made in-house daily: horchata, tamarindo, and a rotating seasonal fruit flavor.</p>
+              </div>
               <span class="menu-price">$6.00</span>
             </div>
-            <p class="menu-desc">Three seasonal agua frescas made in-house daily: horchata, tamarindo, and a rotating seasonal fruit flavor. The perfect way to cool down.</p>
           </div>
 
-          <div class="menu-card">
-            <div class="menu-card-header">
-              <h4>Margarita Clásica</h4>
+          <div class="menu-item">
+            <div class="menu-item-main">
+              <div class="menu-item-info">
+                <h4>Margarita Clásica</h4>
+                <p>Silver tequila, fresh-squeezed lime, Cointreau, and agave syrup on the rocks with a salted rim. Simply perfect.</p>
+                <span class="menu-tag tag-red">21+ Only</span>
+              </div>
               <span class="menu-price">$9.50</span>
             </div>
-            <p class="menu-desc">Silver tequila, fresh-squeezed lime juice, Cointreau, and a touch of agave syrup. Served on the rocks with a salted rim. Simply perfect.</p>
-            <span class="menu-tag">21+ Only</span>
           </div>
 
-          <div class="menu-card">
-            <div class="menu-card-header">
-              <h4>Tres Leches Cake</h4>
+          <div class="menu-item">
+            <div class="menu-item-main">
+              <div class="menu-item-info">
+                <h4>Tres Leches Cake</h4>
+                <p>Airy sponge soaked in three milks, topped with house whipped cream and a dusting of cinnamon. Pure comfort.</p>
+                <span class="menu-tag tag-green">Fan Favorite</span>
+              </div>
               <span class="menu-price">$7.50</span>
             </div>
-            <p class="menu-desc">Light, airy sponge cake soaked in three milks — whole, evaporated, and sweetened condensed — topped with house whipped cream and a dusting of cinnamon.</p>
-            <span class="menu-tag">Fan Favorite</span>
+          </div>
+
+          <div class="menu-item">
+            <div class="menu-item-main">
+              <div class="menu-item-info">
+                <h4>Churros con Chocolate</h4>
+                <p>Crispy cinnamon-sugar churros served warm with house-made dark chocolate dipping sauce and a scoop of vanilla.</p>
+              </div>
+              <span class="menu-price">$8.00</span>
+            </div>
           </div>
 
         </div>
       </div>
 
       <div class="menu-footer">
-        <p>Menu items and prices subject to change. Ask your server about daily specials and seasonal offerings.</p>
-        <a href="#reservations" class="btn btn-green">
+        <p>Prices and availability subject to change. Ask your server about daily specials and seasonal offerings.</p>
+        <a href="#contact" class="btn btn-orange">
           <i class="bi bi-calendar2-check"></i> Book Your Table
         </a>
       </div>
@@ -292,31 +386,41 @@
   </section>
 
   <!-- ===================== ABOUT ===================== -->
-  <section class="section about-section" id="about">
-    <div class="container about-grid">
+  <section class="about-section" id="about">
+    <div class="about-left">
+      <div class="about-left-inner">
+        <span class="about-eyebrow">Our Story</span>
+        <blockquote class="about-big-quote">
+          "When you eat at Casa Verde, you're sitting at our family table."
+        </blockquote>
+        <cite class="about-cite">— Elena Ramirez, Co-Founder</cite>
 
-      <div class="about-image-wrap">
-        <img
-          src="https://picsum.photos/seed/casaverde-family/600/700"
-          alt="The Ramirez family in the Casa Verde kitchen"
-          class="about-img"
-          loading="lazy"
-        />
-        <div class="about-years-badge">
-          <span class="years-number">15+</span>
-          <span class="years-label">Years of Family Cooking</span>
+        <div class="about-stats">
+          <div class="about-stat">
+            <span class="stat-num">2009</span>
+            <span class="stat-lbl">Year Founded</span>
+          </div>
+          <div class="about-stat">
+            <span class="stat-num">3</span>
+            <span class="stat-lbl">Local Farm Partners</span>
+          </div>
+          <div class="about-stat">
+            <span class="stat-num">30+</span>
+            <span class="stat-lbl">Items Made Fresh Daily</span>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="about-content">
-        <span class="section-eyebrow">Our Story</span>
-        <h2 class="section-title left">A Family Table, Open to Everyone</h2>
+    <div class="about-right">
+      <div class="about-right-inner">
+        <h2 class="about-title">A Family Table,<br />Open to Everyone</h2>
 
         <p>
           Casa Verde opened its doors in 2009 with a simple promise: cook the food we
           grew up eating and serve it with the same love our grandmother showed every
           guest at her table. What began as a twelve-seat family operation has grown
-          into a beloved neighborhood institution — but the heart of it has never changed.
+          into a beloved Olympia institution — but the heart of it has never changed.
         </p>
 
         <p>
@@ -330,111 +434,163 @@
         <p>
           Today, their daughter Sofia runs the kitchen, carrying those traditions
           forward while bringing her own culinary training to the menu. We source from
-          three local farms within thirty miles, we grind our own chiles, and we make
-          every tortilla by hand. That's not a marketing line — it's just how we do things.
+          three local farms, we grind our own chiles, and we make every tortilla by hand.
+          That's not marketing — it's just how we do things.
         </p>
 
-        <blockquote class="about-quote">
-          <i class="bi bi-quote"></i>
-          "When you eat at Casa Verde, you're sitting at our family table.
-          We want you to leave full, happy, and already planning when you'll come back."
-          <cite>— Elena Ramirez, Co-Founder</cite>
-        </blockquote>
-
-        <div class="about-stats">
-          <div class="stat">
-            <span class="stat-number">2009</span>
-            <span class="stat-label">Year Founded</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">3</span>
-            <span class="stat-label">Local Farm Partners</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">30+</span>
-            <span class="stat-label">Menu Items Made Fresh Daily</span>
-          </div>
+        <div class="about-photo-wrap">
+          <img
+            src="https://picsum.photos/seed/casaverde-kitchen/640/400"
+            alt="The Ramirez family in the Casa Verde kitchen"
+            class="about-photo"
+            loading="lazy"
+          />
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ===================== GALLERY ===================== -->
-  <section class="section gallery-section" id="gallery">
+  <!-- ===================== SPECIALS ===================== -->
+  <section class="specials-section" id="specials">
     <div class="container">
-
-      <div class="section-header">
-        <span class="section-eyebrow">Take a Look</span>
-        <h2 class="section-title">Life at Casa Verde</h2>
-        <p class="section-sub">From our kitchen to your table — a glimpse of the warmth, color, and craft that goes into every meal we serve.</p>
+      <div class="section-header section-header-light">
+        <span class="section-eyebrow eyebrow-dark">This Week</span>
+        <h2 class="section-title">Chef's Specials</h2>
+        <p class="section-sub">Rotating weekly creations from Sofia's kitchen. Available Tuesday through Sunday while supplies last.</p>
       </div>
 
-      <div class="gallery-grid">
-        <div class="gallery-item gallery-item--tall">
-          <img src="https://picsum.photos/seed/casaverde1/600/800" alt="Tacos al pastor freshly prepared" loading="lazy" />
-          <div class="gallery-overlay"><span>Al Pastor Tacos</span></div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://picsum.photos/seed/casaverde2/600/400" alt="Casa Verde dining room interior" loading="lazy" />
-          <div class="gallery-overlay"><span>Our Dining Room</span></div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://picsum.photos/seed/casaverde3/600/400" alt="Freshly made enchiladas verde" loading="lazy" />
-          <div class="gallery-overlay"><span>Enchiladas Verdes</span></div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://picsum.photos/seed/casaverde4/600/400" alt="Colorful agua frescas in glass pitchers" loading="lazy" />
-          <div class="gallery-overlay"><span>Agua Frescas</span></div>
-        </div>
-        <div class="gallery-item gallery-item--wide">
-          <img src="https://picsum.photos/seed/casaverde5/1200/400" alt="The Casa Verde team in the kitchen" loading="lazy" />
-          <div class="gallery-overlay"><span>Our Kitchen Team</span></div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://picsum.photos/seed/casaverde6/600/400" alt="Tres leches cake with cream topping" loading="lazy" />
-          <div class="gallery-overlay"><span>Tres Leches Cake</span></div>
-        </div>
-      </div>
+      <div class="specials-grid">
 
+        <div class="special-card special-orange">
+          <div class="special-icon"><i class="bi bi-fire"></i></div>
+          <span class="special-label">Tuesday – Thursday</span>
+          <h3>Taco Tuesday Trio</h3>
+          <p>Pick any three tacos from our menu — carne asada, al pastor, or fish — served with rice, beans, and house salsa for one great price.</p>
+          <span class="special-price">$18.00</span>
+        </div>
+
+        <div class="special-card special-green">
+          <div class="special-icon"><i class="bi bi-cup-hot-fill"></i></div>
+          <span class="special-label">Wednesday Only</span>
+          <h3>Mole Wednesday</h3>
+          <p>Our grandmother's legendary mole negro — made fresh every Tuesday night — served as a full plate or over enchiladas. Don't miss it.</p>
+          <span class="special-price">$16.00</span>
+        </div>
+
+        <div class="special-card special-red">
+          <div class="special-icon"><i class="bi bi-stars"></i></div>
+          <span class="special-label">Friday &amp; Saturday</span>
+          <h3>Weekend Birria</h3>
+          <p>Slow-braised beef birria tacos with rich consommé for dipping. Only available on weekends — and they sell out. Come early.</p>
+          <span class="special-price">$15.00</span>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <!-- ===================== RESERVATIONS ===================== -->
-  <section class="section reservations-section" id="reservations">
-    <div class="container reservations-grid">
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">What People Say</span>
+        <h2 class="section-title">Our Guests Love Us</h2>
+      </div>
 
-      <div class="reservations-form-wrap">
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <blockquote>
+            The carne asada tacos are the best I've had outside of Mexico. The tortillas are genuinely handmade — you can taste the difference instantly. This place is a gem.
+          </blockquote>
+          <div class="testimonial-author">
+            <span class="t-name">Marco V.</span>
+            <span class="t-source"><i class="bi bi-google"></i> Google Review</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <blockquote>
+            We've been coming here for seven years. The mole negro is unlike anything I've ever tasted — complex, rich, and made with so much care. The Ramirez family are treasure.
+          </blockquote>
+          <div class="testimonial-author">
+            <span class="t-name">Diane & Tom K.</span>
+            <span class="t-source"><i class="bi bi-yelp"></i> Yelp</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <blockquote>
+            Brought my whole team here for a birthday lunch. The food was incredible, the service was warm and attentive, and the birria tacos had everyone speechless. Already planning our return.
+          </blockquote>
+          <div class="testimonial-author">
+            <span class="t-name">Priya S.</span>
+            <span class="t-source"><i class="bi bi-google"></i> Google Review</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <blockquote>
+            As someone who grew up in Oaxaca, eating here genuinely made me homesick — in the best possible way. The flavors are authentic, the atmosphere is warm, and the staff feels like family.
+          </blockquote>
+          <div class="testimonial-author">
+            <span class="t-name">Rosa M.</span>
+            <span class="t-source"><i class="bi bi-yelp"></i> Yelp</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT / RESERVATIONS ===================== -->
+  <section class="section contact-section" id="contact">
+    <div class="container contact-grid">
+
+      <div class="contact-form-wrap">
         <span class="section-eyebrow">Join Us</span>
         <h2 class="section-title left">Reserve Your Table</h2>
-        <p class="reservations-sub">
-          We'd love to have you. Fill out the form and we'll confirm your
-          reservation by phone within two hours.
+        <p class="contact-sub">
+          Fill out the form and we'll confirm your reservation by phone within two hours.
+          We can't wait to cook for you.
         </p>
 
         <form class="reservation-form" id="reservationForm" novalidate>
           <div class="form-row">
             <div class="form-group">
-              <label for="res-name">Full Name <span class="required">*</span></label>
+              <label for="res-name">Full Name <span class="req">*</span></label>
               <input type="text" id="res-name" name="name" placeholder="Maria Garcia" required />
               <span class="field-error" id="err-name"></span>
             </div>
             <div class="form-group">
-              <label for="res-phone">Phone Number <span class="required">*</span></label>
-              <input type="tel" id="res-phone" name="phone" placeholder="(555) 867-5309" required />
+              <label for="res-phone">Phone Number <span class="req">*</span></label>
+              <input type="tel" id="res-phone" name="phone" placeholder="(360) 555-0000" required />
               <span class="field-error" id="err-phone"></span>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label for="res-date">Preferred Date <span class="required">*</span></label>
+              <label for="res-date">Preferred Date <span class="req">*</span></label>
               <input type="date" id="res-date" name="date" required />
               <span class="field-error" id="err-date"></span>
             </div>
             <div class="form-group">
-              <label for="res-time">Preferred Time <span class="required">*</span></label>
+              <label for="res-time">Preferred Time <span class="req">*</span></label>
               <select id="res-time" name="time" required>
                 <option value="" disabled selected>Select a time</option>
+                <option>11:00 AM</option>
                 <option>11:30 AM</option>
                 <option>12:00 PM</option>
                 <option>12:30 PM</option>
@@ -451,7 +607,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="res-party">Party Size <span class="required">*</span></label>
+            <label for="res-party">Party Size <span class="req">*</span></label>
             <select id="res-party" name="partySize" required>
               <option value="" disabled selected>Number of guests</option>
               <option>1 guest</option>
@@ -470,58 +626,63 @@
             <textarea id="res-notes" name="notes" rows="3" placeholder="Allergies, high chair needed, special occasion…"></textarea>
           </div>
 
-          <button type="submit" class="btn btn-gold btn-lg btn-full">
+          <button type="submit" class="btn btn-orange btn-lg btn-full">
             <i class="bi bi-calendar2-check"></i> Request Reservation
           </button>
         </form>
 
-        <!-- Success message (hidden by default) -->
         <div class="form-success" id="formSuccess" hidden>
-          <i class="bi bi-check-circle-fill"></i>
-          <h3>We've received your request!</h3>
-          <p>
-            Thank you! A member of the Casa Verde team will call you at the
-            number provided to confirm your reservation within two hours.
-          </p>
-          <p class="success-sub">Can't wait to see you at the table.</p>
+          <div class="success-icon"><i class="bi bi-check-circle-fill"></i></div>
+          <h3>We've got your request!</h3>
+          <p>A member of the Casa Verde team will call to confirm your reservation within two hours.</p>
+          <p class="success-note">We can't wait to see you at the table. ¡Hasta pronto!</p>
         </div>
       </div>
 
-      <!-- Info panel -->
-      <div class="reservations-info">
-        <div class="info-card">
-          <h3><i class="bi bi-geo-alt-fill"></i> Find Us</h3>
-          <address>
-            1847 Verde Avenue<br />
-            Riverview, TX 78201
-          </address>
-          <a href="#" class="info-link">
-            <i class="bi bi-map"></i> Get Directions
-          </a>
+      <div class="contact-info">
+        <div class="info-block">
+          <div class="info-block-icon"><i class="bi bi-geo-alt-fill"></i></div>
+          <div>
+            <h3>Find Us</h3>
+            <address>
+              612 4th Ave E<br />
+              Olympia, WA 98506
+            </address>
+            <a href="https://maps.google.com/?q=612+4th+Ave+E+Olympia+WA+98506" target="_blank" rel="noopener" class="info-link">
+              <i class="bi bi-map"></i> Get Directions
+            </a>
+          </div>
         </div>
 
-        <div class="info-card">
-          <h3><i class="bi bi-clock-fill"></i> Hours</h3>
-          <ul class="hours-list">
-            <li><span>Monday – Tuesday</span><span>Closed</span></li>
-            <li><span>Wednesday – Thursday</span><span>11am – 9pm</span></li>
-            <li><span>Friday – Saturday</span><span>11am – 10pm</span></li>
-            <li><span>Sunday</span><span>10am – 8pm</span></li>
-          </ul>
+        <div class="info-block">
+          <div class="info-block-icon"><i class="bi bi-clock-fill"></i></div>
+          <div>
+            <h3>Hours</h3>
+            <ul class="hours-list">
+              <li><span>Monday</span><span class="closed">Closed</span></li>
+              <li><span>Tuesday – Sunday</span><span>11am – 9pm</span></li>
+            </ul>
+          </div>
         </div>
 
-        <div class="info-card">
-          <h3><i class="bi bi-telephone-fill"></i> Call Us</h3>
-          <a href="tel:+15558675309" class="info-phone">(555) 867-5309</a>
-          <p class="info-note">For large parties of 10 or more, please call directly to ensure we can accommodate your group comfortably.</p>
+        <div class="info-block">
+          <div class="info-block-icon"><i class="bi bi-telephone-fill"></i></div>
+          <div>
+            <h3>Call Us</h3>
+            <a href="tel:+13605550231" class="info-phone">(360) 555-0231</a>
+            <p class="info-note">For parties of 10 or more, please call directly.</p>
+          </div>
         </div>
 
-        <div class="info-card info-card--highlight">
-          <h3><i class="bi bi-bag-fill"></i> Takeout &amp; Catering</h3>
-          <p>Craving Casa Verde at home? Order takeout by phone. We also offer full-service catering for events, office lunches, and celebrations.</p>
-          <a href="tel:+15558675309" class="btn btn-gold btn-sm">
-            <i class="bi bi-telephone"></i> Call to Order
-          </a>
+        <div class="info-block info-block-cta">
+          <div class="info-block-icon"><i class="bi bi-bag-fill"></i></div>
+          <div>
+            <h3>Takeout &amp; Catering</h3>
+            <p>Order takeout by phone. We also offer full-service catering for events, office lunches, and celebrations.</p>
+            <a href="tel:+13605550231" class="btn btn-orange btn-sm">
+              <i class="bi bi-telephone"></i> Call to Order
+            </a>
+          </div>
         </div>
       </div>
 
@@ -534,7 +695,7 @@
 
       <div class="footer-brand">
         <a href="#home" class="footer-logo">
-          <i class="bi bi-flower1"></i> Casa Verde
+          <i class="bi bi-fire"></i> Casa Verde
         </a>
         <p class="footer-tagline">
           Authentic flavors. Honest ingredients.<br />A family table open to all.
@@ -543,7 +704,7 @@
           <a href="#" aria-label="Facebook" class="social-icon"><i class="bi bi-facebook"></i></a>
           <a href="#" aria-label="Instagram" class="social-icon"><i class="bi bi-instagram"></i></a>
           <a href="#" aria-label="Yelp" class="social-icon"><i class="bi bi-yelp"></i></a>
-          <a href="#" aria-label="Google Maps" class="social-icon"><i class="bi bi-google"></i></a>
+          <a href="#" aria-label="Google" class="social-icon"><i class="bi bi-google"></i></a>
         </div>
       </div>
 
@@ -553,24 +714,25 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#menu">Menu</a></li>
           <li><a href="#about">Our Story</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#reservations">Reserve a Table</a></li>
+          <li><a href="#specials">Specials</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Reserve a Table</a></li>
         </ul>
       </div>
 
       <div class="footer-contact">
         <h4>Visit Us</h4>
-        <p>1847 Verde Avenue<br />Riverview, TX 78201</p>
-        <p><a href="tel:+15558675309">(555) 867-5309</a></p>
-        <p>Wed–Thu: 11am–9pm<br />Fri–Sat: 11am–10pm<br />Sun: 10am–8pm</p>
+        <p>612 4th Ave E<br />Olympia, WA 98506</p>
+        <p><a href="tel:+13605550231">(360) 555-0231</a></p>
+        <p>Tuesday – Sunday<br />11:00am – 9:00pm<br /><strong>Closed Mondays</strong></p>
       </div>
 
     </div>
 
     <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; 2024 Casa Verde Restaurant. All rights reserved.</p>
-        <p class="footer-credit">Site designed by <a href="#">Mo Olson Web Design</a></p>
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2025 Casa Verde Restaurant. All rights reserved.</p>
+        <p class="footer-credit">Designed by <a href="#">Mo Olson Web Design</a></p>
       </div>
     </div>
   </footer>
