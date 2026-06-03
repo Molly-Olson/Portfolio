@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aya Sushi | Authentic Japanese Cuisine — Olympia, WA</title>
+  <meta name="description" content="Aya Sushi in Olympia, WA. Fresh sushi, specialty rolls, ramen, and more. Dine in, takeout, or delivery. 1540 Cooper Point Rd SW.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%23C8102E'/><text x='16' y='24' font-family='Georgia,serif' font-size='22' font-weight='700' fill='%23C9A84C' text-anchor='middle'>A</text></svg>">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #080808;
+      --surface: #111111;
+      --surface2: #181818;
+      --red: #C8102E;
+      --red-dark: #9b0c23;
+      --gold: #C9A84C;
+      --gold-light: #e8c96a;
+      --text: #F2EFE9;
+      --muted: #888880;
+      --border: rgba(255,255,255,0.07);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--red); border-radius: 2px; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1.5rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.4s, padding 0.4s, backdrop-filter 0.4s;
+    }
+    nav.scrolled {
+      background: rgba(8,8,8,0.92);
+      backdrop-filter: blur(16px);
+      padding: 1rem 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--red);
+      color: #fff !important;
+      padding: 0.6rem 1.4rem;
+      border-radius: 2px;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--red-dark) !important; color: #fff !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { display: block; width: 24px; height: 1.5px; background: var(--text); transition: 0.3s; }
+
+    /* ── HERO ── */
+    #hero {
+      position: relative;
+      height: 100vh;
+      min-height: 680px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(200,16,46,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.08) 0%, transparent 50%),
+        linear-gradient(180deg, #080808 0%, #0f0808 50%, #080808 100%);
+    }
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    }
+    .hero-jp {
+      position: absolute;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22vw;
+      font-weight: 300;
+      color: rgba(255,255,255,0.018);
+      letter-spacing: 0.05em;
+      user-select: none;
+      white-space: nowrap;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 800px; padding: 0 2rem; }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+    .hero-eyebrow::before,
+    .hero-eyebrow::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.5;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(4.5rem, 12vw, 9rem);
+      font-weight: 300;
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.2em;
+    }
+    h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-sub {
+      font-size: clamp(0.9rem, 2vw, 1.05rem);
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      margin-bottom: 2.5rem;
+    }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--red);
+      color: #fff;
+      border: none;
+      padding: 0.85rem 2.2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover { background: var(--red-dark); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 0.85rem 2.2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: border-color 0.2s, color 0.2s, transform 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-1px); }
+    .hero-stats {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 3rem;
+      z-index: 2;
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.3rem;
+    }
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      right: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--muted);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollLine 1.5s ease-in-out infinite;
+    }
+    @keyframes scrollLine {
+      0%, 100% { opacity: 1; transform: scaleY(1); }
+      50% { opacity: 0.4; transform: scaleY(0.6); }
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 7rem 0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 3rem; }
+    .section-tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .section-tag::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--gold);
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── ABOUT ── */
+    #about { background: var(--surface); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+    .about-text p {
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+    .about-text p strong { color: var(--text); font-weight: 500; }
+    .about-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .highlight {
+      border: 1px solid var(--border);
+      border-left: 2px solid var(--red);
+      padding: 1.2rem;
+      border-radius: 2px;
+    }
+    .highlight-icon { font-size: 1.3rem; margin-bottom: 0.5rem; }
+    .highlight-title { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.3rem; }
+    .highlight-desc { font-size: 0.82rem; color: var(--muted); }
+    .about-visual {
+      position: relative;
+    }
+    .about-img-frame {
+      position: relative;
+      aspect-ratio: 4/5;
+      background: var(--surface2);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-img-placeholder {
+      text-align: center;
+      color: var(--muted);
+    }
+    .about-img-placeholder .big-jp {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 8rem;
+      font-weight: 300;
+      line-height: 1;
+      color: rgba(201,168,76,0.15);
+      display: block;
+    }
+    .about-img-placeholder p { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; }
+    .about-badge {
+      position: absolute;
+      bottom: -1.5rem;
+      left: -1.5rem;
+      background: var(--red);
+      color: #fff;
+      padding: 1.5rem;
+      border-radius: 4px;
+      text-align: center;
+      min-width: 120px;
+    }
+    .badge-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      line-height: 1;
+    }
+    .badge-text { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.85; }
+
+    /* ── SIGNATURE ROLLS ── */
+    #signature { background: var(--bg); }
+    .rolls-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .rolls-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+    }
+    .roll-card {
+      background: var(--surface);
+      padding: 2rem 1.75rem;
+      transition: background 0.3s, transform 0.3s;
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+    .roll-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, var(--red), var(--gold));
+      transition: width 0.4s;
+    }
+    .roll-card:hover::before { width: 100%; }
+    .roll-card:hover { background: var(--surface2); transform: translateY(-3px); }
+    .roll-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: rgba(201,168,76,0.12);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+    .roll-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+    }
+    .roll-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem; }
+    .roll-price {
+      font-size: 0.85rem;
+      color: var(--gold);
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+    .roll-tag {
+      position: absolute;
+      top: 1.25rem; right: 1.25rem;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--red);
+      background: rgba(200,16,46,0.1);
+      border: 1px solid rgba(200,16,46,0.2);
+      padding: 0.2rem 0.5rem;
+      border-radius: 2px;
+    }
+
+    /* ── MENU ── */
+    #menu { background: var(--surface); }
+    .menu-tabs {
+      display: flex;
+      gap: 0;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .menu-tabs::-webkit-scrollbar { display: none; }
+    .tab-btn {
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .tab-btn.active { color: var(--text); border-bottom-color: var(--red); }
+    .tab-btn:hover:not(.active) { color: var(--text); }
+    .menu-panel { display: none; }
+    .menu-panel.active { display: block; }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 3rem;
+      row-gap: 0;
+    }
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+      gap: 1.5rem;
+    }
+    .menu-item-info { flex: 1; min-width: 0; }
+    .menu-item-name {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+    .menu-item-desc {
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .menu-item-price {
+      font-size: 0.85rem;
+      color: var(--gold);
+      font-weight: 500;
+      white-space: nowrap;
+      flex-shrink: 0;
+      padding-top: 0.05rem;
+    }
+
+    /* ── HOURS & LOCATION ── */
+    #location { background: var(--bg); }
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .hours-list { list-style: none; margin-top: 1.5rem; }
+    .hours-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+    .hours-list li .day { color: var(--muted); }
+    .hours-list li .time { color: var(--text); }
+    .hours-list li.today .day { color: var(--gold); font-weight: 500; }
+    .hours-list li.today .time { color: var(--gold); }
+    .hours-list li.closed .time { color: var(--muted); font-style: italic; }
+    .contact-info { margin-top: 2rem; }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+    .contact-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.9rem;
+    }
+    .contact-label { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); }
+    .contact-value { color: var(--text); font-size: 0.9rem; }
+    .map-frame {
+      aspect-ratio: 1;
+      background: var(--surface);
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+    .map-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      filter: grayscale(100%) invert(90%) contrast(90%);
+      opacity: 0.7;
+    }
+    .map-overlay {
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* ── ORDER ONLINE ── */
+    #order { background: var(--surface); }
+    .order-inner {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .order-inner h2 { margin-bottom: 1rem; }
+    .order-inner p { color: var(--muted); margin-bottom: 3rem; font-size: 0.95rem; }
+    .order-apps {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .order-app {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      padding: 1rem 1.75rem;
+      border-radius: 4px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: border-color 0.2s, background 0.2s, transform 0.2s;
+      min-width: 160px;
+      justify-content: center;
+    }
+    .order-app:hover {
+      border-color: var(--gold);
+      background: rgba(201,168,76,0.05);
+      transform: translateY(-2px);
+    }
+    .app-icon { font-size: 1.3rem; }
+    .order-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2.5rem 0;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .order-divider::before, .order-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .phone-cta {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: var(--gold);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .phone-cta:hover { color: var(--gold-light); }
+
+    /* ── BANNER ── */
+    #banner {
+      background: var(--red);
+      padding: 1rem 0;
+      overflow: hidden;
+    }
+    .banner-track {
+      display: flex;
+      white-space: nowrap;
+      animation: marquee 20s linear infinite;
+    }
+    .banner-text {
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      padding-right: 4rem;
+    }
+    .banner-dot { color: rgba(255,255,255,0.4); margin-right: 4rem; }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #040404;
+      padding: 4rem 0 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 4rem;
+      margin-bottom: 3rem;
+    }
+    .footer-brand .nav-logo { display: block; margin-bottom: 1rem; font-size: 1.8rem; }
+    .footer-brand p { font-size: 0.82rem; color: var(--muted); line-height: 1.7; max-width: 280px; }
+    .footer-col h4 {
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li {
+      margin-bottom: 0.6rem;
+    }
+    .footer-col ul li a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: var(--text); }
+    .footer-col address {
+      font-style: normal;
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    /* ── ANIMATIONS ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .fade-up:nth-child(2) { transition-delay: 0.1s; }
+    .fade-up:nth-child(3) { transition-delay: 0.2s; }
+    .fade-up:nth-child(4) { transition-delay: 0.3s; }
+    .fade-up:nth-child(5) { transition-delay: 0.4s; }
+    .fade-up:nth-child(6) { transition-delay: 0.5s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .about-grid, .location-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-visual { display: none; }
+      .rolls-grid { grid-template-columns: repeat(2, 1fr); }
+      .menu-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .footer-brand { grid-column: 1/-1; }
+    }
+    @media (max-width: 680px) {
+      nav { padding: 1.2rem 1.5rem; }
+      nav.scrolled { padding: 0.85rem 1.5rem; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .container { padding: 0 1.5rem; }
+      section { padding: 5rem 0; }
+      .rolls-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 1.5rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+      h2 { font-size: 2.2rem; }
+      .menu-tabs { gap: 0; }
+      .tab-btn { padding: 0.85rem 1rem; font-size: 0.68rem; }
+    }
+
+    /* ── MOBILE MENU ── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(8,8,8,0.98);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 300;
+      transition: color 0.2s;
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-close {
+      position: absolute;
+      top: 1.5rem; right: 1.5rem;
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" onclick="closeMobileMenu()">✕</button>
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#signature" onclick="closeMobileMenu()">Specialty Rolls</a>
+    <a href="#menu" onclick="closeMobileMenu()">Menu</a>
+    <a href="#location" onclick="closeMobileMenu()">Location</a>
+    <a href="#order" onclick="closeMobileMenu()">Order Online</a>
+  </div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#" class="nav-logo">AYA <span>寿司</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#signature">Specialty Rolls</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="#order" class="nav-cta">Order Online</a></li>
+    </ul>
+    <div class="hamburger" onclick="openMobileMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-jp">寿司</div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Olympia, Washington</div>
+      <h1>Aya<br><em>Sushi</em></h1>
+      <p class="hero-sub">Authentic Japanese Cuisine — Fresh. Bold. Unforgettable.</p>
+      <div class="hero-btns">
+        <a href="#menu" class="btn-primary">Explore Menu</a>
+        <a href="#order" class="btn-outline">Order Online</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">4.7★</div>
+        <div class="stat-label">Rating</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">2,000+</div>
+        <div class="stat-label">Reviews</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">40+</div>
+        <div class="stat-label">Signature Rolls</div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      Scroll
+    </div>
+  </section>
+
+  <!-- BANNER -->
+  <div id="banner">
+    <div class="banner-track">
+      <span class="banner-text">Fresh Sushi Daily</span>
+      <span class="banner-dot">◆</span>
+      <span class="banner-text">Specialty Rolls</span>
+      <span class="banner-dot">◆</span>
+      <span class="banner-text">Sashimi &amp; Nigiri</span>
+      <span class="banner-dot">◆</span>
+      <span class="banner-text">Ramen &amp; Udon</span>
+      <span class="banner-dot">◆</span>
+      <span class="banner-text">Takeout &amp; Delivery</span>
+      <span class="banner-dot">◆</span>
+      <span class="banner-text">Dine In</span>
+      <span class="banner-dot">◆</span>
+      <span class="banner-text">West Olympia</span>
+      <span class="banner-dot">◆</span>
+      <span class="banner-text">Fresh Sushi Daily</span>
+      <span class="banner-dot">◆</span>
+      <span class="banner-text">Specialty Rolls</span>
+      <span class="banner-dot">◆</span>
+      <span class="banner-text">Sashimi &amp; Nigiri</span>
+      <span class="banner-dot">◆</span>
+      <span class="banner-text">Ramen &amp; Udon</span>
+      <span class="banner-dot">◆</span>
+      <span class="banner-text">Takeout &amp; Delivery</span>
+      <span class="banner-dot">◆</span>
+      <span class="banner-text">Dine In</span>
+      <span class="banner-dot">◆</span>
+      <span class="banner-text">West Olympia</span>
+      <span class="banner-dot">◆</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text fade-up">
+          <div class="section-tag">Our Story</div>
+          <h2>Crafted with<br><em>passion &amp; precision</em></h2>
+          <p>Nestled in West Olympia, Aya Sushi has earned its reputation as the city's premier destination for authentic Japanese cuisine. <strong>Beautifully decorated and immaculately clean</strong>, every detail of the dining experience has been thoughtfully considered.</p>
+          <p>From the first bite of a signature roll to the last sip of miso soup, you'll taste the difference that comes from <strong>using only the freshest ingredients</strong> and a kitchen that genuinely cares about its craft.</p>
+          <p>Whether you're coming in for a quick lunch, a date night, or a family meal — Aya Sushi delivers every time.</p>
+          <div class="about-highlights">
+            <div class="highlight">
+              <div class="highlight-icon">🎋</div>
+              <div class="highlight-title">Fresh Daily</div>
+              <div class="highlight-desc">Ingredients sourced and prepped fresh every day</div>
+            </div>
+            <div class="highlight">
+              <div class="highlight-icon">🍱</div>
+              <div class="highlight-title">Full Menu</div>
+              <div class="highlight-desc">Rolls, sashimi, ramen, bento, donburi &amp; more</div>
+            </div>
+            <div class="highlight">
+              <div class="highlight-icon">🚗</div>
+              <div class="highlight-title">Dine In &amp; Takeout</div>
+              <div class="highlight-desc">Eat with us or take it home — delivery available too</div>
+            </div>
+            <div class="highlight">
+              <div class="highlight-icon">👨‍👩‍👧</div>
+              <div class="highlight-title">Family Friendly</div>
+              <div class="highlight-desc">Kids menu, high chairs, and a welcoming atmosphere</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual fade-up">
+          <div class="about-img-frame">
+            <div class="about-img-placeholder">
+              <span class="big-jp">寿</span>
+              <p>Your Photo Here</p>
+            </div>
+          </div>
+          <div class="about-badge">
+            <div class="badge-num">4.7</div>
+            <div class="badge-text">Star Rating</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE ROLLS -->
+  <section id="signature">
+    <div class="container">
+      <div class="rolls-header">
+        <div>
+          <div class="section-tag fade-up">Chef's Selection</div>
+          <h2 class="fade-up">Signature<br><em>Specialty Rolls</em></h2>
+        </div>
+        <a href="#menu" class="btn-outline fade-up">View Full Menu</a>
+      </div>
+      <div class="rolls-grid">
+        <div class="roll-card fade-up">
+          <div class="roll-tag">Fan Favorite</div>
+          <div class="roll-num">01</div>
+          <div class="roll-name">Nude on the Beach</div>
+          <div class="roll-desc">Shrimp tempura, crab, avocado & cucumber with spicy tuna, salmon and tuna on top — wrapped in pickled radish with spicy mayo, wasabi, eel and sesame sauce.</div>
+          <div class="roll-price">$14.95</div>
+        </div>
+        <div class="roll-card fade-up">
+          <div class="roll-tag">Must Try</div>
+          <div class="roll-num">02</div>
+          <div class="roll-name">911 Roll</div>
+          <div class="roll-desc">Shrimp tempura and spicy crab, topped with avocado, spicy mayo, sriracha and eel sauce. One of Olympia's most-ordered rolls.</div>
+          <div class="roll-price">$11.95</div>
+        </div>
+        <div class="roll-card fade-up">
+          <div class="roll-num">03</div>
+          <div class="roll-name">Dragon Roll</div>
+          <div class="roll-desc">Crab, avocado and cucumber inside — freshwater eel draped on top with rich eel sauce. A timeless classic, executed perfectly.</div>
+          <div class="roll-price">$13.95</div>
+        </div>
+        <div class="roll-card fade-up">
+          <div class="roll-tag">House Special</div>
+          <div class="roll-num">04</div>
+          <div class="roll-name">Volcano Roll</div>
+          <div class="roll-desc">Eel, crab, avocado and cream cheese — deep fried with crunchy potato, red & black tobiko, spicy mayo, eel and wasabi sauce.</div>
+          <div class="roll-price">$13.95</div>
+        </div>
+        <div class="roll-card fade-up">
+          <div class="roll-num">05</div>
+          <div class="roll-name">Rock Star Roll</div>
+          <div class="roll-desc">Crab, avocado and asparagus with baked lobster on top — finished with spicy mayo, green onion and smelt eggs.</div>
+          <div class="roll-price">$13.95</div>
+        </div>
+        <div class="roll-card fade-up">
+          <div class="roll-num">06</div>
+          <div class="roll-name">Aya Roll</div>
+          <div class="roll-desc">The house signature — tuna, salmon, shrimp tempura, avocado and crab with soybean paper, crunch powder, tobiko, wasabi and eel sauce.</div>
+          <div class="roll-price">$12.95</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL MENU -->
+  <section id="menu">
+    <div class="container">
+      <div class="section-tag fade-up">Full Menu</div>
+      <h2 class="fade-up">Everything<br><em>we serve</em></h2>
+      <div class="menu-tabs fade-up" id="menuTabs">
+        <button class="tab-btn active" data-tab="rolls">Specialty Rolls</button>
+        <button class="tab-btn" data-tab="appetizers">Appetizers</button>
+        <button class="tab-btn" data-tab="alacarte">A La Carte</button>
+        <button class="tab-btn" data-tab="noodles">Noodles</button>
+        <button class="tab-btn" data-tab="donburi">Donburi</button>
+        <button class="tab-btn" data-tab="bento">Bento</button>
+        <button class="tab-btn" data-tab="kids">Kids</button>
+      </div>
+
+      <!-- SPECIALTY ROLLS -->
+      <div class="menu-panel active" id="tab-rolls">
+        <div class="menu-grid">
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Nude on the Beach</div><div class="menu-item-desc">Shrimp tempura, crab, avocado & cucumber, spicy tuna, salmon & tuna on top, pickled radish wrap, spicy mayo, wasabi, eel & sesame sauce</div></div><div class="menu-item-price">$14.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Volcano Roll</div><div class="menu-item-desc">Eel, crab, avocado & cream cheese deep fried, crunchy potato, red & black tobiko, spicy mayo, eel & wasabi sauce</div></div><div class="menu-item-price">$13.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Dragon Roll</div><div class="menu-item-desc">Crab, avocado & cucumber inside, eel on top with eel sauce</div></div><div class="menu-item-price">$13.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Hawaiian Roll</div><div class="menu-item-desc">Real crab and avocado with tuna on top and sesame sauce</div></div><div class="menu-item-price">$13.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Caterpillar Roll</div><div class="menu-item-desc">Freshwater eel, crab, cucumber with avocado & tobiko on top, spicy mayo, eel sauce & wasabi sauce</div></div><div class="menu-item-price">$13.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Three Times a Lady</div><div class="menu-item-desc">Tuna, salmon, albacore, crab & shrimp with seaweed & soybean paper, red, black & orange tobiko, ponzu & sesame sauce</div></div><div class="menu-item-price">$13.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Rock Star Roll</div><div class="menu-item-desc">Crab, avocado & asparagus with baked lobster, spicy mayo, green onion & smelt eggs</div></div><div class="menu-item-price">$13.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Yanagi Roll</div><div class="menu-item-desc">Fried soft shell crab and crab with eel and avocado on top with eel sauce</div></div><div class="menu-item-price">$13.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Aya Roll</div><div class="menu-item-desc">Tuna, salmon, shrimp tempura, avocado & crab with soybean paper, crunch powder, tobiko, wasabi & eel sauce</div></div><div class="menu-item-price">$12.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Rainbow Roll</div><div class="menu-item-desc">Crab, avocado & cucumber topped with tuna, salmon, white tuna, tai & avocado</div></div><div class="menu-item-price">$12.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Baked Salmon Dynamite</div><div class="menu-item-desc">Crab, avocado & cucumber with baked salmon on top, spicy mayo, green onion & smelt eggs</div></div><div class="menu-item-price">$12.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Alaskan Roll</div><div class="menu-item-desc">Spicy tuna and shrimp with salmon on top, sesame sauce</div></div><div class="menu-item-price">$12.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Hot Night Roll</div><div class="menu-item-desc">Shrimp tempura and spicy crab with spicy tuna on top, eel sauce</div></div><div class="menu-item-price">$12.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Sunshine Roll</div><div class="menu-item-desc">Crab, avocado & cucumber in seaweed & soy paper, topped with poki tuna</div></div><div class="menu-item-price">$12.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Orange Delight Roll</div><div class="menu-item-desc">Scallop and crab with salmon on top, topped with slices of lemon</div></div><div class="menu-item-price">$12.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Fireball Roll</div><div class="menu-item-desc">Spicy tuna and cucumber with spicy crab & crunchy potato, spicy mayo, sriracha & green onions</div></div><div class="menu-item-price">$12.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Ichi Roll</div><div class="menu-item-desc">Shrimp tempura and crab, shrimp & avocado on top with sesame sauce</div></div><div class="menu-item-price">$12.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Jack in the Box</div><div class="menu-item-desc">Salmon, shrimp, avocado, masago & crunch powder with sliced lemon on top with special sauce</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">911 Roll</div><div class="menu-item-desc">Shrimp tempura & spicy crab topped with avocado, spicy mayo, sriracha & eel sauce</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Crunch Roll</div><div class="menu-item-desc">Shrimp tempura, crab, avocado, cucumber, crunch powder outside with eel sauce</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Spider Roll</div><div class="menu-item-desc">Soft shell crab, crab, avocado, cucumber & masago with crunchy potato on top, eel sauce</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Matador Roll</div><div class="menu-item-desc">Spicy crabmeat, shrimp tempura, avocado & cucumber with smelt eggs on the outside</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Albacore Delight Roll</div><div class="menu-item-desc">Albacore tuna, avocado, crab, cucumber with albacore on top, ponzu & sashimi dressing</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Tiger Skin Roll</div><div class="menu-item-desc">Crab, avocado and cucumber with shrimp on top, sesame sauce</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Aka Hako</div><div class="menu-item-desc">Tuna, crab, shrimp, avocado, masago & crunch powder with sesame sauce</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Aka Hiro Roll</div><div class="menu-item-desc">Spicy salmon and cucumber, tuna & white tuna on top with sesame sauce</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Hiryu Hako</div><div class="menu-item-desc">Eel, crab, avocado, masago & crunch powder with tamago on top and sweet sauce</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Tiger Hako</div><div class="menu-item-desc">Shrimp, crab, avocado, masago & crunch powder with shrimp on top, sesame sauce</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Crunch Calamari Roll</div><div class="menu-item-desc">Calamari tempura, crab, avocado & cucumber with crunchy potato, eel & wasabi sauce</div></div><div class="menu-item-price">$10.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Las Vegas Roll</div><div class="menu-item-desc">Eel, crab, avocado & cream cheese deep fried, spicy mayo, sashimi dressing, eel & wasabi sauce</div></div><div class="menu-item-price">$10.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Olympia Roll</div><div class="menu-item-desc">Salmon, crab, cream cheese & avocado deep fried and re-rolled in crunchy potato with eel sauce</div></div><div class="menu-item-price">$10.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Super Washington</div><div class="menu-item-desc">Spicy crab, cucumber & avocado with seared salmon on top with sesame sauce</div></div><div class="menu-item-price">$10.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Vegetable Tempura Roll</div><div class="menu-item-desc">Deep fried tempura vegetables with crunch powder, ponzu & eel sauce</div></div><div class="menu-item-price">$8.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Green Land Roll</div><div class="menu-item-desc">Assorted vegetables wrapped in rice & seaweed then wrapped in soybean paper</div></div><div class="menu-item-price">$8.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Baked Scallop Dynamite</div><div class="menu-item-desc">Crab, avocado & cucumber with baked scallop on top, spicy mayo, green onion & smelt eggs</div></div><div class="menu-item-price">$12.95</div></div>
+        </div>
+      </div>
+
+      <!-- APPETIZERS -->
+      <div class="menu-panel" id="tab-appetizers">
+        <div class="menu-grid">
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Tuna Tataki</div><div class="menu-item-desc">Thinly sliced seared tuna sashimi with ponzu sauce</div></div><div class="menu-item-price">$13.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Hawaiian Poki Salad</div><div class="menu-item-desc">Diced tuna on seaweed salad with house spicy sauce and ponzu sauce</div></div><div class="menu-item-price">$13.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Albacore Tataki</div><div class="menu-item-desc">Thinly sliced seared albacore with green onion and garlic ponzu sauce</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Japanese Ceviche</div><div class="menu-item-desc">Thinly sliced assorted sashimi with ponzu sauce</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Beef Bulgogi</div><div class="menu-item-desc">Marinated Korean-style grilled beef</div></div><div class="menu-item-price">$12.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Tempura</div><div class="menu-item-desc">Deep fried assorted shrimp and vegetables</div></div><div class="menu-item-price">$9.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Soft Shell Crab</div><div class="menu-item-desc">Deep fried soft shell crab</div></div><div class="menu-item-price">$7.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Yellowtail Collar</div><div class="menu-item-desc">Served with ponzu sauce</div></div><div class="menu-item-price">$7.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Baked Green Mussels</div><div class="menu-item-desc">Baked green mussels with cream sauce</div></div><div class="menu-item-price">$6.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Uni Shooter</div><div class="menu-item-desc">Sea urchin with sake, spicy ponzu sauce and quail egg on top</div></div><div class="menu-item-price">$6.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Gyoza</div><div class="menu-item-desc">Fried pot sticker with pork and vegetables</div></div><div class="menu-item-price">$5.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Fried Calamari</div><div class="menu-item-desc">Deep fried squid sticks</div></div><div class="menu-item-price">$5.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Baby Octopus Taco</div><div class="menu-item-desc">A playful twist on a classic</div></div><div class="menu-item-price">$5.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chicken Karaage</div><div class="menu-item-desc">Deep fried chicken, Japanese style</div></div><div class="menu-item-price">$5.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Sunomono Tako</div><div class="menu-item-desc">Sliced cucumber and seaweed with ponzu sauce</div></div><div class="menu-item-price">$5.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Agedashi Tofu</div><div class="menu-item-desc">Deep fried tofu with bonito flake served in tempura sauce</div></div><div class="menu-item-price">$4.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Tsukemono</div><div class="menu-item-desc">Assorted Japanese pickled vegetables</div></div><div class="menu-item-price">$5.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Croquette</div><div class="menu-item-desc">Deep fried mashed potato and vegetables patty</div></div><div class="menu-item-price">$4.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Egg Roll</div><div class="menu-item-desc">Deep fried pork and vegetables</div></div><div class="menu-item-price">$4.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Stir Fried Vegetables</div><div class="menu-item-desc">Stir fry mixed vegetables</div></div><div class="menu-item-price">$4.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Edamame</div><div class="menu-item-desc">Steamed soy beans</div></div><div class="menu-item-price">$3.95</div></div>
+        </div>
+      </div>
+
+      <!-- A LA CARTE -->
+      <div class="menu-panel" id="tab-alacarte">
+        <div class="menu-grid">
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Beef Bulgogi Dinner</div><div class="menu-item-desc">Full dinner portion of marinated grilled beef</div></div><div class="menu-item-price">$19.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Salmon Shioyaki</div><div class="menu-item-desc">Broiled salt seasoned salmon</div></div><div class="menu-item-price">$13.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Grilled Breast Chicken</div><div class="menu-item-desc">Grilled chicken breast with house sauce</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Grilled Chicken</div><div class="menu-item-desc">Grilled chicken thigh with house sauce</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Grilled Yakiniku</div><div class="menu-item-desc">Grilled sliced beef with house sauce</div></div><div class="menu-item-price">$12.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Spicy Pork</div><div class="menu-item-desc">Sauteed grilled pork with spicy house sauce</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Spicy Chicken</div><div class="menu-item-desc">Sauteed grilled chicken with spicy house sauce</div></div><div class="menu-item-price">$10.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chicken Curry</div><div class="menu-item-desc">Sauteed chicken, carrot, onion & potato with curry sauce over rice</div></div><div class="menu-item-price">$10.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pork Katsu</div><div class="menu-item-desc">Deep fried breaded pork cutlet</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chicken Katsu</div><div class="menu-item-desc">Deep fried breaded chicken thigh cutlet</div></div><div class="menu-item-price">$10.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Mixed Tempura</div><div class="menu-item-desc">Deep fried shrimp and assorted vegetables</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Shrimp Tempura</div><div class="menu-item-desc">Deep fried shrimp</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Beef Bibimbap</div><div class="menu-item-desc">Vegetables with beef and rice and house sauce</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Saba Shioyaki</div><div class="menu-item-desc">Broiled salt seasoned saba (mackerel)</div></div><div class="menu-item-price">$12.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chicken Yakisoba</div><div class="menu-item-desc">Sauteed Japanese noodles with vegetables and chicken</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Beef Fried Rice</div><div class="menu-item-desc">Stir fried rice with beef and vegetables</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chicken Fried Rice</div><div class="menu-item-desc">Stir fried rice with chicken and vegetables</div></div><div class="menu-item-price">$10.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Vegetable Tempura</div><div class="menu-item-desc">Deep fried assorted vegetables</div></div><div class="menu-item-price">$9.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Veggie Rice Bowl</div><div class="menu-item-desc">Stir fried veggies over rice</div></div><div class="menu-item-price">$7.95</div></div>
+        </div>
+      </div>
+
+      <!-- NOODLES -->
+      <div class="menu-panel" id="tab-noodles">
+        <div class="menu-grid">
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Beef Yakisoba</div><div class="menu-item-desc">Sauteed Japanese noodles with vegetables and beef</div></div><div class="menu-item-price">$12.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Tempura Udon</div><div class="menu-item-desc">Japanese noodle soup with tempura vegetables and shrimp</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chicken Breast Yakisoba</div><div class="menu-item-desc">Sauteed Japanese noodles with vegetables and chicken breast</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Shrimp Yakisoba</div><div class="menu-item-desc">Sauteed Japanese noodles with vegetables and shrimp</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Nabeyaki Udon</div><div class="menu-item-desc">Shrimp tempura and egg over delicious Japanese noodle soup</div></div><div class="menu-item-price">$9.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Vegetable Yakisoba</div><div class="menu-item-desc">Sauteed Japanese noodles with vegetables</div></div><div class="menu-item-price">$10.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Miso Ramen</div><div class="menu-item-desc">Sauteed vegetables and miso noodle soup</div></div><div class="menu-item-price">$9.95</div></div>
+        </div>
+      </div>
+
+      <!-- DONBURI -->
+      <div class="menu-panel" id="tab-donburi">
+        <div class="menu-grid">
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Headup Bap</div><div class="menu-item-desc">Assorted sashimi on spring mix salad served with rice and spicy house sauce</div></div><div class="menu-item-price">$16.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chirashi</div><div class="menu-item-desc">Assorted sashimi on sushi rice</div></div><div class="menu-item-price">$16.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Takka Don</div><div class="menu-item-desc">Tuna sashimi over sushi rice</div></div><div class="menu-item-price">$16.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Unagi Don</div><div class="menu-item-desc">Freshwater eel over seasoned rice with eel sauce</div></div><div class="menu-item-price">$16.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Ten Don</div><div class="menu-item-desc">Shrimp and tempura vegetables with sauteed vegetables and egg over rice</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chicken Katsu Don</div><div class="menu-item-desc">Chicken cutlet with sauteed vegetables and egg over rice</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Katsu Don</div><div class="menu-item-desc">Pork cutlet with sauteed vegetables and egg over rice</div></div><div class="menu-item-price">$11.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Oyako Don</div><div class="menu-item-desc">Broiled chicken, vegetables and egg over rice</div></div><div class="menu-item-price">$10.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Kyudon</div><div class="menu-item-desc">Grilled beef with sauteed vegetables and egg over rice</div></div><div class="menu-item-price">$8.95</div></div>
+        </div>
+      </div>
+
+      <!-- BENTO -->
+      <div class="menu-panel" id="tab-bento">
+        <div class="menu-grid">
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Bento Lunch No. 3</div><div class="menu-item-desc">Salmon and assorted tempura with roll</div></div><div class="menu-item-price">$14.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Bento Lunch No. 2</div><div class="menu-item-desc">Yakiniku (marinated beef) and assorted tempura with roll</div></div><div class="menu-item-price">$14.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Bento Lunch No. 1</div><div class="menu-item-desc">Grilled chicken thigh and assorted tempura with roll</div></div><div class="menu-item-price">$13.95</div></div>
+        </div>
+      </div>
+
+      <!-- KIDS -->
+      <div class="menu-panel" id="tab-kids">
+        <div class="menu-grid">
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Kids' Meal No. 1</div><div class="menu-item-desc">Chicken teriyaki, croquette, rice and salad (under 12)</div></div><div class="menu-item-price">$6.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Kids' Meal No. 3</div><div class="menu-item-desc">Chicken teriyaki, crispy roll, rice and salad (under 12)</div></div><div class="menu-item-price">$6.95</div></div>
+          <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Kids' Meal No. 4</div><div class="menu-item-desc">Sweet and sour chicken, crispy roll, rice and salad (under 12)</div></div><div class="menu-item-price">$6.95</div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOURS & LOCATION -->
+  <section id="location">
+    <div class="container">
+      <div class="location-grid">
+        <div class="fade-up">
+          <div class="section-tag">Visit Us</div>
+          <h2>Hours &amp;<br><em>Location</em></h2>
+          <ul class="hours-list">
+            <li><span class="day">Monday</span><span class="time">11:00 AM – 9:30 PM</span></li>
+            <li><span class="day">Tuesday</span><span class="time">11:00 AM – 9:30 PM</span></li>
+            <li><span class="day">Wednesday</span><span class="time">11:00 AM – 9:30 PM</span></li>
+            <li><span class="day">Thursday</span><span class="time">11:00 AM – 9:30 PM</span></li>
+            <li><span class="day">Friday</span><span class="time">11:00 AM – 10:00 PM</span></li>
+            <li><span class="day">Saturday</span><span class="time">11:00 AM – 10:00 PM</span></li>
+            <li class="closed"><span class="day">Sunday</span><span class="time">Closed</span></li>
+          </ul>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <div class="contact-label">Address</div>
+                <div class="contact-value">1540 Cooper Point Rd SW, Ste 430<br>Olympia, WA 98502</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <div class="contact-label">Phone</div>
+                <div class="contact-value"><a href="tel:+13606288944" style="color:inherit;text-decoration:none;">(360) 628-8944</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="map-frame fade-up">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2713.5!2d-122.9427!3d47.0379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5491753e9a9a9a9b%3A0x1234567890abcdef!2s1540+Cooper+Point+Rd+SW%2C+Olympia%2C+WA+98502!5e0!3m2!1sen!2sus!4v1"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Aya Sushi location map">
+          </iframe>
+          <div class="map-overlay">
+            <a href="https://maps.google.com/?q=1540+Cooper+Point+Rd+SW+Olympia+WA" target="_blank" rel="noopener" class="btn-primary" style="font-size:0.7rem; padding: 0.6rem 1.2rem;">Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER ONLINE -->
+  <section id="order">
+    <div class="container">
+      <div class="order-inner fade-up">
+        <div class="section-tag" style="justify-content:center;">Order Now</div>
+        <h2>Get Aya Sushi<br><em>delivered to you</em></h2>
+        <p>Order through your preferred delivery platform or call us directly for pickup.</p>
+        <div class="order-apps">
+          <a href="https://www.doordash.com/store/aya-sushi-olympia-438456/" target="_blank" rel="noopener" class="order-app">
+            <span class="app-icon">🛵</span> DoorDash
+          </a>
+          <a href="https://www.ubereats.com/store/aya-sushi-cooper-point/XDZpuKlXU1a8x3TTpRdpOQ" target="_blank" rel="noopener" class="order-app">
+            <span class="app-icon">🚗</span> Uber Eats
+          </a>
+          <a href="https://postmates.com/store/aya-sushi-cooper-point/XDZpuKlXU1a8x3TTpRdpOQ" target="_blank" rel="noopener" class="order-app">
+            <span class="app-icon">📦</span> Postmates
+          </a>
+        </div>
+        <div class="order-divider">or call ahead for pickup</div>
+        <a href="tel:+13606288944" class="phone-cta">(360) 628-8944</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">AYA <span>寿司</span></a>
+          <p>Authentic Japanese cuisine in the heart of West Olympia. Fresh ingredients, bold flavors, and a dining experience crafted with care.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="#menu" onclick="activateTab('rolls')">Specialty Rolls</a></li>
+            <li><a href="#menu" onclick="activateTab('appetizers')">Appetizers</a></li>
+            <li><a href="#menu" onclick="activateTab('noodles')">Noodles</a></li>
+            <li><a href="#menu" onclick="activateTab('donburi')">Donburi</a></li>
+            <li><a href="#menu" onclick="activateTab('bento')">Bento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit Us</h4>
+          <address>
+            1540 Cooper Point Rd SW<br>Suite 430<br>Olympia, WA 98502<br><br>
+            <a href="tel:+13606288944" style="color:inherit;text-decoration:none;">(360) 628-8944</a>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Aya Sushi. All rights reserved.</span>
+        <span>1540 Cooper Point Rd SW · Olympia, WA</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Mobile menu
+    function openMobileMenu() {
+      document.getElementById('mobileMenu').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // Menu tabs
+    document.getElementById('menuTabs').addEventListener('click', (e) => {
+      const btn = e.target.closest('.tab-btn');
+      if (!btn) return;
+      const tab = btn.dataset.tab;
+      activateTab(tab);
+    });
+
+    function activateTab(tab) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+      document.querySelectorAll('.menu-panel').forEach(p => p.classList.toggle('active', p.id === 'tab-' + tab));
+    }
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Highlight today's hours
+    const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const today = days[new Date().getDay()];
+    document.querySelectorAll('.hours-list li').forEach(li => {
+      if (li.querySelector('.day')?.textContent === today) {
+        li.classList.add('today');
+      }
+    });
+  </script>
+</body>
+</html>
