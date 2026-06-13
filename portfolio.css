@@ -23,8 +23,11 @@ body {
   overflow-x: hidden;
 }
 
+/* All sections sit above the canvas */
+section, nav, footer { position: relative; z-index: 1; }
+
 .py-6 { padding-top: 5rem; padding-bottom: 5rem; }
-.bg-2 { background: var(--bg-2); }
+.bg-2 { background: rgba(15,18,32,0.82); }
 .text-aurora  { color: var(--aurora) !important; }
 .text-amethyst{ color: var(--amethyst) !important; }
 .text-gold    { color: var(--gold) !important; }
@@ -449,7 +452,7 @@ body {
 #matrix-rain {
   position: fixed; inset: 0; z-index: 0;
   pointer-events: none;
-  opacity: 0.45;
+  opacity: 0.55;
 }
 
 /* ── Floating code window ────────────────────────────────────────────── */
