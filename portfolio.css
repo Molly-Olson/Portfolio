@@ -445,6 +445,62 @@ body {
   padding:2rem 0; text-align:center;
 }
 
+/* ── Hero dot-grid background ────────────────────────────────────────── */
+.hero-grid-bg {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image: radial-gradient(rgba(167,139,250,.18) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 40%, black 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 40%, black 30%, transparent 100%);
+}
+
+/* ── Floating code window ────────────────────────────────────────────── */
+.code-window {
+  position: absolute;
+  top: 120px; right: 3%;
+  width: 260px;
+  background: rgba(15,18,32,.88);
+  border: 1px solid rgba(167,139,250,.22);
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.55), 0 0 40px rgba(167,139,250,.07);
+  backdrop-filter: blur(8px);
+  z-index: 0;
+  opacity: .72;
+  transform: rotate(2deg);
+  pointer-events: none;
+  animation: cw-drift 8s ease-in-out infinite alternate;
+}
+@keyframes cw-drift {
+  from { transform: rotate(2deg) translateY(0); }
+  to   { transform: rotate(2deg) translateY(-10px); }
+}
+.cw-bar {
+  background: #1e1e2e;
+  border-radius: 10px 10px 0 0;
+  padding: 7px 10px;
+  display: flex; gap: 5px; align-items: center;
+}
+.cw-bar span { width:8px;height:8px;border-radius:50%; }
+.cw-bar span:nth-child(1){background:#ff5f57;}
+.cw-bar span:nth-child(2){background:#febc2e;}
+.cw-bar span:nth-child(3){background:#28c840;}
+.cw-body {
+  padding: 12px 14px;
+  font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+  font-size: .72rem;
+  line-height: 1.7;
+}
+.cw-line { white-space: nowrap; }
+.cw-indent { padding-left: 1.2em; }
+.cw-indent2 { padding-left: 2.4em; }
+.cw-blank { height: .5em; }
+.cw-kw    { color: #c792ea; }
+.cw-cls   { color: #82aaff; }
+.cw-typ   { color: #ffcb6b; }
+.cw-fn    { color: #82aaff; }
+.cw-num   { color: #f78c6c; }
+.cw-comment { color: #546e7a; font-style: italic; }
+
 /* ── Photo hero from Unsplash ────────────────────────────────────────── */
 .hero-img-container {
   position:relative;
@@ -457,6 +513,7 @@ body {
   .hero-photo { width:200px;height:200px; }
   .hero-avatar { width:200px;height:200px; }
   .hero-avatar-initials { font-size:3.6rem; }
+  .code-window { display:none; }
 }
 @media(max-width:575px){
   .hero-name { font-size:2.4rem; }
