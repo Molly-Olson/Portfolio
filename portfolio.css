@@ -37,7 +37,7 @@ body {
   filter: blur(100px);
   opacity: 0.12;
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
   animation: drift 18s ease-in-out infinite alternate;
 }
 .orb-1 { width:700px;height:700px;background:var(--amethyst-d);top:-200px;left:-200px; animation-duration:20s; }
@@ -445,13 +445,11 @@ body {
   padding:2rem 0; text-align:center;
 }
 
-/* ── Hero dot-grid background ────────────────────────────────────────── */
-.hero-grid-bg {
-  position: absolute; inset: 0; z-index: 0; pointer-events: none;
-  background-image: radial-gradient(rgba(167,139,250,.18) 1px, transparent 1px);
-  background-size: 32px 32px;
-  mask-image: radial-gradient(ellipse 80% 80% at 50% 40%, black 30%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 40%, black 30%, transparent 100%);
+/* ── Matrix rain canvas ──────────────────────────────────────────────── */
+#matrix-rain {
+  position: fixed; inset: 0; z-index: 0;
+  pointer-events: none;
+  opacity: 0.45;
 }
 
 /* ── Floating code window ────────────────────────────────────────────── */

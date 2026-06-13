@@ -10,6 +10,9 @@
 </head>
 <body>
 
+  <!-- Matrix rain canvas -->
+  <canvas id="matrix-rain"></canvas>
+
   <!-- Ambient orbs (background atmosphere) -->
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
@@ -43,7 +46,6 @@
   <!-- ── Hero ───────────────────────────────────────────────────────── -->
   <section id="hero" class="hero-section">
     <!-- Dot grid background -->
-    <div class="hero-grid-bg"></div>
 
 <div class="container position-relative" style="z-index:1;">
       <div class="row align-items-center g-5 justify-content-center">
@@ -700,5 +702,41 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="portfolio.js"></script>
+  <script>
+    (function () {
+      const canvas = document.getElementById('matrix-rain');
+      const ctx = canvas.getContext('2d');
+      const chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>{}[]()=+/*#';
+      const fontSize = 14;
+      let cols, drops;
+
+      function resize() {
+        canvas.width  = window.innerWidth;
+        canvas.height = window.innerHeight;
+        cols  = Math.floor(canvas.width / fontSize);
+        drops = Array(cols).fill(1);
+      }
+
+      function draw() {
+        ctx.fillStyle = 'rgba(11,13,20,0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.font = fontSize + 'px monospace';
+        for (let i = 0; i < drops.length; i++) {
+          const ch = chars[Math.floor(Math.random() * chars.length)];
+          const bright = Math.random() > 0.97;
+          ctx.fillStyle = bright ? '#ffffff' : (Math.random() > 0.5 ? '#a78bfa' : '#34d399');
+          ctx.globalAlpha = bright ? 0.9 : (0.08 + Math.random() * 0.18);
+          ctx.fillText(ch, i * fontSize, drops[i] * fontSize);
+          ctx.globalAlpha = 1;
+          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+          drops[i]++;
+        }
+      }
+
+      resize();
+      window.addEventListener('resize', resize);
+      setInterval(draw, 50);
+    })();
+  </script>
 </body>
 </html>
